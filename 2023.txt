@@ -37,7 +37,7 @@
             {"label": "a", "text": "True"},
             {"label": "b", "text": "False"}
           ],
-          "acceptedAnswer": "b"
+          "acceptedAnswer": "a"
         },
         {
           "id": 4,
@@ -70,7 +70,7 @@
             {"label": "c", "text": "Perception Systems"},
             {"label": "d", "text": "Classification Systems"}
           ],
-          "acceptedAnswer": "b"
+          "acceptedAnswer": "c"
         },
         {
           "id": 7,
