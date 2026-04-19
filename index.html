@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NPTEL Affective Computing — Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  *, *::before, *::after { font-family: 'JetBrains Mono', monospace !important; }
+  .sidebar-scroll { height: calc(100vh - 148px); overflow-y: auto; }
+  .sidebar-scroll::-webkit-scrollbar { width: 3px; }
+  .sidebar-scroll::-webkit-scrollbar-thumb { background: oklch(var(--bc)/0.12); border-radius: 2px; }
+  .main-area { height: calc(100vh - 64px); overflow-y: auto; scroll-behavior: smooth; }
+  .main-area::-webkit-scrollbar { width: 5px; }
+  .main-area::-webkit-scrollbar-thumb { background: oklch(var(--bc)/0.1); border-radius: 3px; }
+  /* Option rows */
+  .opt-row {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 10px 14px; border-radius: 12px; cursor: pointer;
+    border: 1.5px solid oklch(var(--b3)/0.8);
+    transition: border-color .13s, background .13s;
+    margin-bottom: 8px;
+  }
+  .opt-row:last-child { margin-bottom: 0; }
+  .opt-row:hover { border-color: oklch(var(--p)/0.6); background: oklch(var(--p)/0.04); }
+  .opt-row.selected { border-color: oklch(var(--p)); background: oklch(var(--p)/0.08); }
+  .opt-row.is-correct { border-color: oklch(var(--su)); background: oklch(var(--su)/0.08); }
+  .opt-row.is-wrong   { border-color: oklch(var(--er)); background: oklch(var(--er)/0.07); }
+  .opt-row.is-correct .opt-text { color: oklch(var(--su)); font-weight: 600; }
+  .opt-row.is-wrong   .opt-text { color: oklch(var(--er)); }
+</style>
+</head>
+<body class="bg-base-100">
+
+<!-- DaisyUI Drawer for responsive sidebar -->
+<div class="drawer lg:drawer-open" style="height:100vh;">
+  <input id="drawer-toggle" type="checkbox" class="drawer-toggle" />
+
+  <!-- ══ DRAWER CONTENT ══ -->
+  <div class="drawer-content flex flex-col h-screen">
+
+    <!-- NAVBAR -->
+    <div class="navbar bg-base-200 border-b border-base-300 z-40 px-3 min-h-[64px]">
+      <div class="navbar-start gap-2">
+        <!-- Hamburger (mobile only) -->
+        <label for="drawer-toggle" class="btn btn-ghost btn-sm lg:hidden">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </label>
+        <!-- Brand -->
+        <div class="flex items-center gap-2">
+          <div class="badge badge-primary font-extrabold text-sm py-3 px-3">AC</div>
+          <span class="font-bold text-sm">
+            NPTEL <span class="text-primary">Affective Computing</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="navbar-end gap-2">
+        <span class="text-xs text-base-content/40 hidden sm:inline">Theme:</span>
+        <select id="themeSelector"
+                class="select select-bordered select-sm w-28 text-xs"
+                onchange="setTheme(this.value)">
+          <option value="dim">Dim</option>
+          <option value="cmyk">CMYK</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- MAIN SCROLLABLE -->
+    <div class="main-area" id="main">
+      <div class="flex flex-col items-center justify-center h-full gap-3">
+        <span class="loading loading-spinner loading-lg text-primary"></span>
+        <p class="text-xs text-base-content/40">Loading quiz data…</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ DRAWER SIDEBAR ══ -->
+  <div class="drawer-side z-50">
+    <label for="drawer-toggle" aria-label="close sidebar" class="drawer-overlay"></label>
+    <aside class="bg-base-200 border-r border-base-300 flex flex-col"
+           style="width:230px; min-height:100vh;">
+
+      <!-- Year pills -->
+      <div class="p-4 border-b border-base-300">
+        <p class="label-text-alt text-base-content/40 uppercase tracking-widest mb-3 text-xs font-semibold">
+          Year
+        </p>
+        <div class="flex flex-wrap gap-1.5" id="yearPills"></div>
+      </div>
+
+      <!-- Week list -->
+      <div class="sidebar-scroll p-2" id="weekList"></div>
+
+    </aside>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+/* ═══════════ CONFIG — point these at your actual URLs ═══════════ */
+const DATA_URLS = {
+  '2023': '2023.txt',
+  '2024': '2024.txt',
+  '2025': '2025.txt',
+  '2026': '2026.txt',
+};
+const YEARS = Object.keys(DATA_URLS);
+
+/* ═══════════ STATE ═══════════ */
+const S = {
+  data:      {},    // { year: parsedJSON }
+  status:    {},    // { year: 'loading'|'ok'|'error' }
+  year:      null,
+  week:      null,  // number | 'all' | null
+  answers:   {},    // { 'year-week-qid': label }
+  submitted: false,
+};
+
+/* ═══════════ DATA ═══════════ */
+async function loadYear(y) {
+  if (S.status[y] === 'ok') return true;
+  S.status[y] = 'loading';
+  try {
+    const r = await fetch(DATA_URLS[y]);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    S.data[y] = await r.json();
+    S.status[y] = 'ok';
+    return true;
+  } catch (e) {
+    S.status[y] = 'error';
+    console.error(`Load failed for ${y}:`, e);
+    return false;
+  }
+}
+
+/* ═══════════ HELPERS ═══════════ */
+const K   = (y, w, id) => `${y}-${w}-${id}`;
+const esc = s => String(s)
+  .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+  .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const pct = (n, t) => t ? Math.round(n / t * 100) : 0;
+const fmtDate = d => {
+  try { return new Date(d).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}); }
+  catch { return d || ''; }
+};
+const getWeek = (y, wn) => (S.data[y]?.weeks || []).find(w => w.week === wn) || null;
+const allWeeks = y => S.data[y]?.weeks || [];
+const totalQs  = y => allWeeks(y).reduce((a, w) => a + w.questions.length, 0);
+
+function weekScore(y, wk) {
+  const c = wk.questions.filter(q => S.answers[K(y, wk.week, q.id)] === q.acceptedAnswer).length;
+  return { c, t: wk.questions.length };
+}
+function weekAnswered(y, wk) {
+  return wk.questions.filter(q => !!S.answers[K(y, wk.week, q.id)]).length;
+}
+function yearScore(y) {
+  let c = 0, t = 0;
+  allWeeks(y).forEach(wk => { const s = weekScore(y, wk); c += s.c; t += s.t; });
+  return { c, t };
+}
+function yearAnswered(y) {
+  return allWeeks(y).reduce((n, wk) => n + weekAnswered(y, wk), 0);
+}
+
+/* ═══════════ THEME ═══════════ */
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('nptel-theme', t);
+}
+function initTheme() {
+  const t = localStorage.getItem('nptel-theme') || 'dim';
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('themeSelector').value = t;
+}
+
+/* ═══════════ SIDEBAR ═══════════ */
+function renderSidebar() {
+  /* Year pills */
+  const pillsEl = document.getElementById('yearPills');
+  pillsEl.innerHTML = [...YEARS, 'all'].map(y => `
+    <button onclick="selectYear('${y}')"
+            class="btn btn-xs ${S.year === y ? 'btn-primary' : 'btn-outline'}">
+      ${y === 'all' ? 'All' : y}
+    </button>`).join('');
+
+  /* Week list */
+  const wlEl = document.getElementById('weekList');
+  if (!S.year || S.year === 'all' || S.status[S.year] !== 'ok') {
+    wlEl.innerHTML = '';
+    return;
+  }
+  const weeks = allWeeks(S.year);
+  wlEl.innerHTML = `
+    <ul class="menu menu-sm p-0 gap-px">
+      ${weeks.map(wk => {
+        const on  = S.week === wk.week;
+        const ans = weekAnswered(S.year, wk);
+        return `
+        <li>
+          <a onclick="selectWeek(${wk.week})"
+             class="${on ? 'active font-semibold' : ''}
+                    flex items-center justify-between">
+            <span>Week ${wk.week}</span>
+            ${ans > 0 && !S.submitted
+              ? `<span class="badge badge-ghost badge-xs">${ans}/${wk.questions.length}</span>`
+              : ''}
+          </a>
+        </li>`;
+      }).join('')}
+      <div class="divider my-1"></div>
+      <li>
+        <a onclick="selectWeek('all')"
+           class="${S.week === 'all' ? 'active font-semibold' : ''}">
+          ★ All Weeks
+        </a>
+      </li>
+    </ul>`;
+}
+
+/* ═══════════ NAVIGATION ═══════════ */
+async function selectYear(y) {
+  S.submitted = false;
+  if (y === 'all') {
+    S.year = 'all'; S.week = null;
+    renderSidebar(); renderYearOverview(); return;
+  }
+  S.year = y; S.week = null;
+  renderSidebar(); showLoader();
+
+  const ok = await loadYear(y);
+  renderSidebar();
+  if (!ok) { renderFetchError(y); return; }
+
+  const weeks = allWeeks(y);
+  S.week = weeks.length ? weeks[0].week : null;
+  renderSidebar(); renderContent();
+}
+
+function selectWeek(w) {
+  S.submitted = false;
+  S.week = w;
+  renderSidebar(); renderContent();
+  document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderContent() {
+  const y = S.year;
+  if (!y || y === 'all') { renderYearOverview(); return; }
+  if (S.week === 'all') { renderAllWeeks(); return; }
+  if (S.week) {
+    const wk = getWeek(y, S.week);
+    if (wk) { renderWeekQuiz(wk); return; }
+  }
+  renderWeekGrid();
+}
+
+/* ═══════════ LANDING ═══════════ */
+function renderLanding() {
+  const totalQ = YEARS.reduce((a, y) => {
+    return a + (S.data[y]?.weeks||[]).reduce((b, w) => b + w.questions.length, 0);
+  }, 0);
+
+  document.getElementById('main').innerHTML = `
+  <div class="p-6 lg:p-10 max-w-2xl mx-auto">
+    <div class="mb-8">
+      <div class="badge badge-primary badge-outline mb-4">NPTEL · IIT Madras</div>
+      <h1 class="text-4xl font-extrabold leading-tight mb-3">
+        Affective<br><span class="text-primary">Computing</span> Quiz
+      </h1>
+      <p class="text-sm text-base-content/60 leading-relaxed max-w-sm">
+        Practice all weekly assignments across four years. Select a year from the sidebar or below.
+      </p>
+    </div>
+
+    <div class="stats stats-horizontal shadow bg-base-200 border border-base-300 mb-8 w-full">
+      <div class="stat">
+        <div class="stat-title text-xs">Years</div>
+        <div class="stat-value text-primary">4</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title text-xs">Weeks</div>
+        <div class="stat-value text-primary">48</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title text-xs">Questions</div>
+        <div class="stat-value text-primary">${totalQ || '470+'}</div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      ${YEARS.map(y => {
+        const ok = S.status[y] === 'ok';
+        const d  = S.data[y];
+        const wks = ok && d ? d.weeks.length : null;
+        const qs  = ok && d ? d.weeks.reduce((a,w)=>a+w.questions.length,0) : null;
+        return `
+        <div class="card bg-base-200 border border-base-300 hover:border-primary
+                    hover:shadow-lg cursor-pointer transition-all"
+             onclick="selectYear('${y}')">
+          <div class="card-body p-5">
+            <div class="text-5xl font-extrabold text-primary leading-none mb-2">${y}</div>
+            <p class="text-xs text-base-content/50">
+              ${ok
+                ? `${wks} weeks · ${qs} questions`
+                : S.status[y] === 'loading'
+                  ? '<span class="loading loading-dots loading-xs"></span>'
+                  : '<span class="text-error">Load failed</span>'}
+            </p>
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+  </div>`;
+}
+
+/* ═══════════ ALL YEARS OVERVIEW ═══════════ */
+function renderYearOverview() {
+  document.getElementById('main').innerHTML = `
+  <div class="p-6 lg:p-10 max-w-xl mx-auto">
+    <div class="flex flex-wrap gap-2 mb-2">
+      <div class="badge badge-ghost">Overview</div>
+    </div>
+    <h2 class="text-3xl font-extrabold mb-6">All <span class="text-primary">Years</span></h2>
+    <div class="grid grid-cols-2 gap-4">
+      ${YEARS.map(y => {
+        const ok = S.status[y] === 'ok';
+        const d  = S.data[y];
+        return `
+        <div class="card bg-base-200 border border-base-300 hover:border-primary
+                    hover:shadow-lg cursor-pointer transition-all"
+             onclick="selectYear('${y}')">
+          <div class="card-body p-5">
+            <div class="text-4xl font-extrabold text-primary leading-none mb-2">${y}</div>
+            <p class="text-xs text-base-content/50">
+              ${ok && d
+                ? `${d.weeks.length} weeks · ${d.weeks.reduce((a,w)=>a+w.questions.length,0)} Q`
+                : S.status[y] === 'loading'
+                  ? '<span class="loading loading-dots loading-xs"></span>'
+                  : '<span class="text-error">Failed</span>'}
+            </p>
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+  </div>`;
+}
+
+/* ═══════════ WEEK GRID ═══════════ */
+function renderWeekGrid() {
+  const y = S.year;
+  const weeks = allWeeks(y);
+  document.getElementById('main').innerHTML = `
+  <div class="p-6 lg:p-10">
+    <div class="flex flex-wrap gap-2 mb-2">
+      <div class="badge badge-ghost">${y}</div>
+      <div class="badge badge-ghost">All Weeks</div>
+    </div>
+    <h2 class="text-3xl font-extrabold mb-1">Year <span class="text-primary">${y}</span></h2>
+    <p class="text-xs text-base-content/50 mb-6">${weeks.length} assignments</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+      ${weeks.map(wk => `
+        <div class="card bg-base-200 border border-base-300 hover:border-primary
+                    cursor-pointer transition-all"
+             onclick="selectWeek(${wk.week})">
+          <div class="card-body p-4 gap-1">
+            <div class="text-3xl font-extrabold text-base-content/25">W${wk.week}</div>
+            <p class="text-xs text-base-content/50">
+              ${wk.questions.length} questions<br>
+              Due ${fmtDate(wk.dueDate)}
+            </p>
+          </div>
+        </div>`).join('')}
+    </div>
+  </div>`;
+}
+
+/* ═══════════ SINGLE WEEK QUIZ ═══════════ */
+function renderWeekQuiz(wk) {
+  const y  = S.year;
+  const { c, t } = S.submitted ? weekScore(y, wk) : { c: 0, t: wk.questions.length };
+  const p   = pct(c, t);
+  const ans = weekAnswered(y, wk);
+
+  let html = buildPageHeader(
+    [y, `Week ${wk.week}`, `Assignment ${wk.assignment}`],
+    `Week <span class="text-primary">${wk.week}</span>`,
+    `Due ${fmtDate(wk.dueDate)} · ${wk.questions.length} questions`
+  );
+
+  html += buildScoreOrProgress(S.submitted, c, t, p, ans, wk.questions.length);
+
+  html += '<div id="qlist" class="flex flex-col gap-4">';
+  wk.questions.forEach((q, i) => {
+    html += buildQuestionCard(y, wk.week, q, i + 1);
+  });
+  html += '</div>';
+
+  html += buildActionBar(
+    S.submitted,
+    'submitQuiz()', 'Submit Quiz',
+    'clearWeek()', 'Clear Answers',
+    'retakeQuiz()', 'Retake',
+    "selectWeek('all')", 'All Weeks'
+  );
+  html += '</div>';
+
+  document.getElementById('main').innerHTML = html;
+}
+
+/* ═══════════ ALL WEEKS (ALL QUESTIONS IN YEAR) ═══════════ */
+function renderAllWeeks() {
+  const y     = S.year;
+  const weeks = allWeeks(y);
+  const tq    = totalQs(y);
+  const { c, t } = S.submitted ? yearScore(y) : { c: 0, t: tq };
+  const p     = pct(c, t);
+  const ans   = yearAnswered(y);
+
+  let html = buildPageHeader(
+    [y, 'All Weeks'],
+    `Year <span class="text-primary">${y}</span> — All Questions`,
+    `${weeks.length} weeks · ${tq} questions total`
+  );
+
+  html += buildScoreOrProgress(S.submitted, c, t, p, ans, tq);
+
+  html += '<div id="qlist" class="flex flex-col gap-6">';
+
+  let globalNum = 1;
+  weeks.forEach(wk => {
+    const { c: wc, t: wt } = S.submitted ? weekScore(y, wk) : { c: 0, t: wk.questions.length };
+    html += `
+    <div>
+      <div class="flex items-center flex-wrap gap-2 mb-3">
+        <div class="badge badge-primary">Week ${wk.week}</div>
+        <span class="text-xs text-base-content/40">Assignment ${wk.assignment} · Due ${fmtDate(wk.dueDate)}</span>
+        ${S.submitted
+          ? `<div class="badge badge-ghost ml-auto">${wc}/${wt}</div>`
+          : ''}
+      </div>
+      <div class="flex flex-col gap-4">
+        ${wk.questions.map(q => buildQuestionCard(y, wk.week, q, globalNum++)).join('')}
+      </div>
+    </div>`;
+  });
+  html += '</div>';
+
+  html += buildActionBar(
+    S.submitted,
+    'submitQuiz()', 'Submit All',
+    'clearAll()', 'Clear All Answers',
+    'retakeAll()', 'Retake All',
+    null, null
+  );
+  html += '</div>';
+
+  document.getElementById('main').innerHTML = html;
+}
+
+/* ═══════════ SHARED BUILDERS ═══════════ */
+function buildPageHeader(badges, title, meta) {
+  return `
+  <div class="p-6 lg:p-8 max-w-3xl mx-auto">
+    <div class="mb-5">
+      <div class="flex flex-wrap gap-2 mb-2">
+        ${badges.map(b => `<div class="badge badge-ghost">${esc(b)}</div>`).join('')}
+      </div>
+      <h2 class="text-2xl font-extrabold">${title}</h2>
+      <p class="text-xs text-base-content/50 mt-1">${esc(meta)}</p>
+    </div>`;
+}
+
+function buildScoreOrProgress(submitted, c, t, p, ans, total) {
+  if (submitted) {
+    const alertCls = p >= 70 ? 'alert-success' : p >= 40 ? 'alert-warning' : 'alert-error';
+    const msg      = p >= 70 ? 'Great work!' : p >= 40 ? 'Keep practising' : 'Review the material';
+    return `
+    <div class="alert ${alertCls} mb-5">
+      <div class="flex-1">
+        <div class="text-2xl font-extrabold">${c} / ${t}</div>
+        <div class="text-xs opacity-75 mt-0.5">${p}% — ${msg}</div>
+      </div>
+      <progress class="progress w-28" value="${p}" max="100"></progress>
+    </div>`;
+  }
+  return `
+  <div class="flex items-center gap-3 mb-5">
+    <span class="text-xs text-base-content/50 whitespace-nowrap">${ans}/${total} answered</span>
+    <progress class="progress progress-primary flex-1" value="${ans}" max="${total}"></progress>
+  </div>`;
+}
+
+function buildActionBar(submitted, submitFn, submitLabel,
+                        clearFn, clearLabel,
+                        retakeFn, retakeLabel,
+                        extraFn, extraLabel) {
+  if (!submitted) {
+    return `
+    <div class="flex flex-wrap gap-3 mt-8 pt-5 border-t border-base-300">
+      <button class="btn btn-primary" onclick="${submitFn}">${submitLabel}</button>
+      <button class="btn btn-ghost" onclick="${clearFn}">${clearLabel}</button>
+    </div>`;
+  }
+  return `
+  <div class="flex flex-wrap gap-3 mt-8 pt-5 border-t border-base-300">
+    <button class="btn btn-primary" onclick="${retakeFn}">${retakeLabel}</button>
+    ${extraFn ? `<button class="btn btn-ghost" onclick="${extraFn}">${extraLabel}</button>` : ''}
+  </div>`;
+}
+
+/* ═══════════ QUESTION CARD ═══════════ */
+function buildQuestionCard(y, weekNum, q, num) {
+  const key     = K(y, weekNum, q.id);
+  const userAns = S.answers[key];
+  const correct = userAns === q.acceptedAnswer;
+
+  let cardBorder = '';
+  if (S.submitted && userAns) {
+    cardBorder = correct ? 'border-success' : 'border-error';
+  }
+
+  const opts = q.options.map(opt => {
+    let cls = '';
+    if (userAns === opt.label) {
+      cls = S.submitted
+        ? (opt.label === q.acceptedAnswer ? 'is-correct' : 'is-wrong')
+        : 'selected';
+    } else if (S.submitted && opt.label === q.acceptedAnswer) {
+      cls = 'is-correct';
+    }
+
+    const badge = S.submitted
+      ? opt.label === q.acceptedAnswer
+        ? `<span class="badge badge-success badge-sm ml-auto shrink-0">✓</span>`
+        : userAns === opt.label
+          ? `<span class="badge badge-error badge-sm ml-auto shrink-0">✗</span>`
+          : ''
+      : '';
+
+    const click = S.submitted
+      ? ''
+      : `onclick="pick('${esc(y)}',${weekNum},${q.id},'${opt.label}')"`;
+
+    return `
+      <div class="opt-row ${cls}" ${click}>
+        <span class="text-xs font-bold text-base-content/40 shrink-0 w-4 mt-0.5">${esc(opt.label)})</span>
+        <span class="opt-text text-sm flex-1 leading-relaxed">${esc(opt.text)}</span>
+        ${badge}
+      </div>`;
+  }).join('');
+
+  let feedback = '';
+  if (S.submitted && userAns && !correct) {
+    const cOpt = q.options.find(o => o.label === q.acceptedAnswer);
+    feedback = `
+      <div class="alert alert-error py-2 px-3 mt-3 text-xs leading-relaxed">
+        Your answer: <strong>${esc(userAns)})</strong> &nbsp;·&nbsp;
+        Correct: <strong>${esc(q.acceptedAnswer)}) ${esc(cOpt?.text || '')}</strong>
+      </div>`;
+  }
+
+  return `
+  <div class="card bg-base-200 border ${cardBorder || 'border-base-300'} transition-colors duration-200">
+    <div class="card-body p-5 gap-4">
+      <div class="flex gap-3 items-start">
+        <div class="badge badge-ghost shrink-0 mt-0.5">Q${num}</div>
+        <p class="text-sm font-semibold leading-relaxed">${esc(q.text)}</p>
+      </div>
+      <div>
+        ${opts}
+        ${feedback}
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════ PICK ANSWER (in-place update) ═══════════ */
+function pick(y, weekNum, qid, label) {
+  if (S.submitted) return;
+  S.answers[K(y, weekNum, qid)] = label;
+
+  // Find the question and its display number
+  const wk = getWeek(y, weekNum);
+  if (!wk) return;
+  const q = wk.questions.find(x => x.id === qid);
+  if (!q) return;
+
+  // Find display number: if all-weeks, count from beginning
+  let num = 0;
+  if (S.week === 'all') {
+    let g = 1;
+    for (const w of allWeeks(y)) {
+      for (const qq of w.questions) {
+        if (w.week === weekNum && qq.id === qid) { num = g; break; }
+        g++;
+      }
+      if (num) break;
+    }
+  } else {
+    num = wk.questions.indexOf(q) + 1;
+  }
+
+  // Replace just the matching card DOM node
+  const allCards = document.querySelectorAll('#qlist .card');
+  for (const card of allCards) {
+    const badge = card.querySelector('.badge-ghost');
+    if (badge && badge.textContent.trim() === `Q${num}`) {
+      const tmp = document.createElement('div');
+      tmp.innerHTML = buildQuestionCard(y, weekNum, q, num);
+      card.replaceWith(tmp.firstElementChild);
+      break;
+    }
+  }
+
+  // Update progress indicator
+  const isAll   = S.week === 'all';
+  const answered = isAll ? yearAnswered(y) : weekAnswered(y, wk);
+  const total    = isAll ? totalQs(y) : wk.questions.length;
+  const prog = document.querySelector('progress.progress-primary');
+  if (prog) prog.value = answered;
+  const lbl = document.querySelector('.flex.items-center.gap-3 span.text-xs');
+  if (lbl && lbl.textContent.includes('answered')) {
+    lbl.textContent = `${answered}/${total} answered`;
+  }
+}
+
+/* ═══════════ SUBMIT / RETAKE / CLEAR ═══════════ */
+function submitQuiz() {
+  S.submitted = true;
+  renderContent();
+  document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+}
+function retakeQuiz() {
+  const wk = getWeek(S.year, S.week);
+  if (wk) wk.questions.forEach(q => delete S.answers[K(S.year, wk.week, q.id)]);
+  S.submitted = false;
+  renderContent();
+  document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+}
+function retakeAll() {
+  allWeeks(S.year).forEach(wk => wk.questions.forEach(q => delete S.answers[K(S.year, wk.week, q.id)]));
+  S.submitted = false;
+  renderContent();
+  document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+}
+function clearWeek() {
+  if (!confirm('Clear all answers for this week?')) return;
+  const wk = getWeek(S.year, S.week);
+  if (wk) wk.questions.forEach(q => delete S.answers[K(S.year, wk.week, q.id)]);
+  S.submitted = false;
+  renderSidebar(); renderContent();
+}
+function clearAll() {
+  if (!confirm('Clear all answers for all weeks?')) return;
+  allWeeks(S.year).forEach(wk => wk.questions.forEach(q => delete S.answers[K(S.year, wk.week, q.id)]));
+  S.submitted = false;
+  renderSidebar(); renderContent();
+}
+
+/* ═══════════ UTILITY ═══════════ */
+function showLoader() {
+  document.getElementById('main').innerHTML = `
+    <div class="flex flex-col items-center justify-center h-full gap-3">
+      <span class="loading loading-spinner loading-lg text-primary"></span>
+      <p class="text-xs text-base-content/40">Loading…</p>
+    </div>`;
+}
+function renderFetchError(y) {
+  document.getElementById('main').innerHTML = `
+    <div class="p-8 max-w-md mx-auto">
+      <div class="alert alert-error">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <div>
+          <h3 class="font-bold">Failed to load ${esc(y)}</h3>
+          <p class="text-xs mt-1">
+            Could not fetch <code>${esc(DATA_URLS[y])}</code>.
+            Make sure the file is served and contains valid JSON.
+          </p>
+        </div>
+      </div>
+    </div>`;
+}
+
+/* ═══════════ INIT ═══════════ */
+async function init() {
+  initTheme();
+  YEARS.forEach(y => { S.status[y] = 'loading'; });
+  renderLanding();
+  renderSidebar();
+
+  // Fire all fetches concurrently; refresh landing as each resolves
+  await Promise.all(YEARS.map(async y => {
+    await loadYear(y);
+    if (!S.year) renderLanding();
+  }));
+
+  if (!S.year) renderLanding();
+  renderSidebar();
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

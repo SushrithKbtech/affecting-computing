@@ -1,0 +1,1301 @@
+{
+  "course": {
+    "name": "NPTEL - AFFECTIVE COMPUTING",
+    "year": 2024,
+    "description": "All assignments - questions, options, and accepted answers"
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "assignment": 1,
+      "dueDate": "2024-02-07",
+      "questions": [
+        {
+          "id": 1,
+          "text": "Which of the following methods can be used for Affect Sensing?",
+          "options": [
+            {"label": "a", "text": "Electroencephalography (EEG)"},
+            {"label": "b", "text": "QR code scanning"},
+            {"label": "c", "text": "Adhaar card scanning"},
+            {"label": "d", "text": "Geospatial mapping"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 2,
+          "text": "Affective computing integrates concepts from computer science, signal processing, machine learning, and psychology to study emotional representation.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 3,
+          "text": "Affective computing involves enabling the machine to understand the user's emotional state but does not involve determining the appropriate machine response based on this information.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 4,
+          "text": "Which of the following camera types is better for privacy preservation?",
+          "options": [
+            {"label": "a", "text": "PTZ cameras"},
+            {"label": "b", "text": "Panoramic cameras"},
+            {"label": "c", "text": "RGB cameras"},
+            {"label": "d", "text": "Thermal cameras"}
+          ],
+          "acceptedAnswer": "d"
+        },
+        {
+          "id": 5,
+          "text": "Which of the following is not a valid facial feature for affect sensing?",
+          "options": [
+            {"label": "a", "text": "Eye Movement and Gaze"},
+            {"label": "b", "text": "Mouth and Lip Movements"},
+            {"label": "c", "text": "Skin Color Changes"},
+            {"label": "d", "text": "Ear Shape or Structure"}
+          ],
+          "acceptedAnswer": "d"
+        },
+        {
+          "id": 6,
+          "text": "Analyzing through a large number of attributes increases confidence in the affect sensing?",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 7,
+          "text": "Audio signals capture a wide range of emotional cues, such as tone of voice, pitch, and intonation, providing valuable information about a person's emotional state.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 8,
+          "text": "Changes in one's emotional state, such as stress, relaxation, anger, fear, or happiness, are not associated with observable changes on the skin.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 9,
+          "text": "Which of the following statements best describes emotionally intelligent interfaces?",
+          "options": [
+            {"label": "a", "text": "Interfaces that prioritize aesthetics over functionality"},
+            {"label": "b", "text": "Interfaces capable of recognizing and responding to users' emotions"},
+            {"label": "c", "text": "Interfaces solely focused on text-based communication"},
+            {"label": "d", "text": "Interfaces designed exclusively for intelligent users"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 10,
+          "text": "Confirmation bias is the tendency to favor information that aligns with existing beliefs, ignoring contradictory evidence. It influences decision-making and can contribute to distorted perceptions.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "assignment": 2,
+      "dueDate": "2024-02-07",
+      "questions": [
+        {
+          "id": 1,
+          "text": "When we experience emotions, there are often associated physiological responses in the body. These responses are part of the intricate relationship between the brain, nervous system, and various bodily functions.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 2,
+          "text": "Emotions are complex phenomena influenced by only subjective and not objective factors.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 3,
+          "text": "How is the mind-body connection characterized in the context of emotions and physiological responses?",
+          "options": [
+            {"label": "a", "text": "Unidirectional communication"},
+            {"label": "b", "text": "Bidirectional communication"},
+            {"label": "c", "text": "Exclusively brain-driven"},
+            {"label": "d", "text": "Independent processes"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 4,
+          "text": "When the brain perceives a threat and experiences stress, it can trigger physiological changes in the body, such as increased heart rate and the release of stress hormones.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 5,
+          "text": "What is a significant factor contributing to individual variability in emotional responses?",
+          "options": [
+            {"label": "a", "text": "Cognitive appraisal"},
+            {"label": "b", "text": "Cultural influences"},
+            {"label": "c", "text": "Personal experiences"},
+            {"label": "d", "text": "All of the above"}
+          ],
+          "acceptedAnswer": "d"
+        },
+        {
+          "id": 6,
+          "text": "What is the primary distinction between perceived emotions and induced emotions?",
+          "options": [
+            {"label": "a", "text": "Perceived emotions are universal, while induced emotions are culturally influenced."},
+            {"label": "b", "text": "Perceived emotions are consciously experienced, while induced emotions are subconscious reactions."},
+            {"label": "c", "text": "Perceived emotions are the emotions others observe in an individual, while induced emotions are intentionally expressed."},
+            {"label": "d", "text": "Perceived emotions are the emotions an individual believes they are experiencing, while induced emotions are emotions intentionally triggered by external stimuli."}
+          ],
+          "acceptedAnswer": "d"
+        },
+        {
+          "id": 7,
+          "text": "In the context of emotion recognition models, which model categorizes emotions into discrete, distinct categories or labels?",
+          "options": [
+            {"label": "a", "text": "Categorical model"},
+            {"label": "b", "text": "VAD/PAD model"},
+            {"label": "c", "text": "Universal model"},
+            {"label": "d", "text": "Dynamic model"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 8,
+          "text": "How does the categorical model differ from the dimensional model in representing emotions?",
+          "options": [
+            {"label": "a", "text": "The categorical model focuses on intensity, while the dimensional model focuses on discrete categories."},
+            {"label": "b", "text": "The categorical model organizes emotions into distinct categories, while the dimensional model represents emotions along continuous dimensions."},
+            {"label": "c", "text": "The categorical model only considers universal emotions, while the dimensional model considers culturally specific emotions."},
+            {"label": "d", "text": "The categorical model and the dimensional model are synonymous."}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 9,
+          "text": "Higher skin conductance levels are commonly found in individuals experiencing fear.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 10,
+          "text": "In the circumplex model, a state of relaxation is characterized by High Arousal and Positive Valence.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "assignment": 3,
+      "dueDate": "2024-02-14",
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is the process through which emotions are induced among human subjects?",
+          "options": [
+            {"label": "a", "text": "Emotional transference"},
+            {"label": "b", "text": "Psychological projection"},
+            {"label": "c", "text": "Emotional elicitation"},
+            {"label": "d", "text": "Cognitive dissonance"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 2,
+          "text": "The ecological validity of data becomes a significant concern when dealing with Acted or Posed Expressions.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 3,
+          "text": "The recall method is a form of passive technique for eliciting emotions",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 4,
+          "text": "In Human-Centered research, what should be the primary consideration when conducting studies involving individuals?",
+          "options": [
+            {"label": "a", "text": "Funding availability"},
+            {"label": "b", "text": "Data analysis"},
+            {"label": "c", "text": "Rights and welfare of human subjects"},
+            {"label": "d", "text": "Publication of results"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 5,
+          "text": "Which experimental design involves testing the same group of participants under different conditions to examine the effects of an independent variable?",
+          "options": [
+            {"label": "a", "text": "Between-subject design"},
+            {"label": "b", "text": "Within-subject design"},
+            {"label": "c", "text": "Both A and B"},
+            {"label": "d", "text": "Correlational design"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 6,
+          "text": "What is the purpose of data annotation in the context of collected data?",
+          "options": [
+            {"label": "a", "text": "To enhance data collection methods"},
+            {"label": "b", "text": "To create ground truth for the data"},
+            {"label": "c", "text": "To summarize collected information"},
+            {"label": "d", "text": "To validate the accuracy of data"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 7,
+          "text": "What does valence refer to in affect classification?",
+          "options": [
+            {"label": "a", "text": "Positivity or negativity of emotion"},
+            {"label": "b", "text": "Intensity of emotion"},
+            {"label": "c", "text": "Duration of emotion"},
+            {"label": "d", "text": "Frequency of emotion"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 8,
+          "text": "What is the key benefit of incorporating naturalistic expressions in studies on emotion recognition?",
+          "options": [
+            {"label": "a", "text": "Consistency across cultures"},
+            {"label": "b", "text": "Easier annotation and labeling"},
+            {"label": "c", "text": "Enhanced ecological validity"},
+            {"label": "d", "text": "Higher number of citations over research papers"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 9,
+          "text": "Which statement accurately reflects the ethical considerations in research involving human subjects?",
+          "options": [
+            {"label": "a", "text": "Data collection can commence immediately without any IRB approval."},
+            {"label": "b", "text": "IRB approval is optional for data collection."},
+            {"label": "c", "text": "Data collection should wait until obtaining IRB approval."},
+            {"label": "d", "text": "IRB approval is only necessary after the completion of data collection."}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 10,
+          "text": "The Control Group serves as a baseline for comparison in assessing emotion recognition accuracy.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "assignment": 4,
+      "dueDate": "2024-02-21",
+      "questions": [
+        {
+          "id": 1,
+          "text": "In the context of facial expression recognition, which statement accurately distinguishes between static and spatio-temporal facial expressions?",
+          "options": [
+            {"label": "a", "text": "Static expressions involve the movement of facial muscles, while spatio-temporal expressions focus on still images."},
+            {"label": "b", "text": "Static expressions capture emotions over a period of time, while spatio-temporal expressions analyze emotions in a single moment."},
+            {"label": "c", "text": "Static expressions emphasize the spatial configuration of facial features, while spatiotemporal expressions consider both spatial and temporal dynamics of facial movements."},
+            {"label": "d", "text": "Static facial expressions require the use of sensors for detection, while spatio-temporal expressions rely on manual observation by human experts"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 2,
+          "text": "In the context of affective computing, why is it important for a system to be agnostic to different durations of emotional events?",
+          "options": [
+            {"label": "a", "text": "Because emotional events durations do not vary between individuals."},
+            {"label": "b", "text": "Because shorter emotional events are less significant for analysis."},
+            {"label": "c", "text": "Because longer emotional events indicate a stronger emotional response."},
+            {"label": "d", "text": "Because individuals may have varying durations of emotional expressions, requiring the system to accommodate differences."}
+          ],
+          "acceptedAnswer": "d"
+        },
+        {
+          "id": 3,
+          "text": "Which of the following is NOT a commonly detected facial landmark?",
+          "options": [
+            {"label": "a", "text": "Nose tip"},
+            {"label": "b", "text": "Ear lobe"},
+            {"label": "c", "text": "Chin"},
+            {"label": "d", "text": "Outer corner of the eye"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 4,
+          "text": "Micro expressions are often detected using:",
+          "options": [
+            {"label": "a", "text": "High-speed cameras"},
+            {"label": "b", "text": "Thermal imaging"},
+            {"label": "c", "text": "Electroencephalography (EEG)"},
+            {"label": "d", "text": "Magnetic Resonance Imaging (MRI)"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 5,
+          "text": "Detecting macro emotions with the naked eye is challenging due to their duration being less than 500 milliseconds.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 6,
+          "text": "In the context of social dynamics, what does distance from the centroid indicate?",
+          "options": [
+            {"label": "a", "text": "The level of physical activity within the group"},
+            {"label": "b", "text": "The degree of space organization within the social setting"},
+            {"label": "c", "text": "The distribution of resources among group members"},
+            {"label": "d", "text": "The relative importance of individuals in the social setting"}
+          ],
+          "acceptedAnswer": "d"
+        },
+        {
+          "id": 7,
+          "text": "Why is ensuring fairness important when using a facial expression recognition system for applications related to health and well-being?",
+          "options": [
+            {"label": "a", "text": "Fairness adds an essential element of beauty to the system."},
+            {"label": "b", "text": "Fairness prevents bias and discrimination in the system's outputs."},
+            {"label": "c", "text": "Fairness increases the complexity of the system's algorithms."},
+            {"label": "d", "text": "Fairness is not relevant in health and well-being applications."}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 8,
+          "text": "Which of the following is not a potential application of Automatic Facial Expression Recognition?",
+          "options": [
+            {"label": "a", "text": "Human-Computer Interaction"},
+            {"label": "b", "text": "Emotionally intelligent virtual assistants"},
+            {"label": "c", "text": "Weather Forecasting"},
+            {"label": "d", "text": "Mental health diagnosis and treatment monitoring"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 9,
+          "text": "In the context of collecting datasets for automatic facial expression recognition, what is a critical consideration regarding the consistency of labelers?",
+          "options": [
+            {"label": "a", "text": "Providing equal weightage to all labelers regardless of their consistency"},
+            {"label": "b", "text": "Giving more weightage to labelers with inconsistent labeling"},
+            {"label": "c", "text": "Giving more weightage to labelers with consistent labeling"},
+            {"label": "d", "text": "Ignoring labeler consistency as it does not impact the dataset"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 10,
+          "text": "It is not important to ensure proper copyright clearance when collecting datasets for automatic facial expression recognition",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "assignment": 5,
+      "dueDate": "2024-02-28",
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is one of the primary challenges in voice-based affect analysis across different languages?",
+          "options": [
+            {"label": "a", "text": "Limited availability of recording devices"},
+            {"label": "b", "text": "Difficulty in understanding speech patterns"},
+            {"label": "c", "text": "Cross-dataset performance variations"},
+            {"label": "d", "text": "Lack of computational resources"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 2,
+          "text": "What does MFCC stand for in the context of audio signal processing?",
+          "options": [
+            {"label": "a", "text": "Multifunctional Frequency Cepstral Coefficients"},
+            {"label": "b", "text": "Mel-Frequency Cepstral Coefficients"},
+            {"label": "c", "text": "Modulated Frequency Cepstral Coefficients"},
+            {"label": "d", "text": "Multi-Feature Cepstral Coefficients"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 3,
+          "text": "What is a spectrogram?",
+          "options": [
+            {"label": "a", "text": "A plot of amplitude against time"},
+            {"label": "b", "text": "A visual representation of frequency content over time"},
+            {"label": "c", "text": "A measure of signal power over time"},
+            {"label": "d", "text": "A representation of phase information in the frequency domain"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 4,
+          "text": "In the context of operator safety in complex heavy machinery operation, how can voice analysis be utilized?",
+          "options": [
+            {"label": "a", "text": "To control the speed of the machinery"},
+            {"label": "b", "text": "To monitor the environmental conditions"},
+            {"label": "c", "text": "To assess the state of the driver/operator"},
+            {"label": "d", "text": "To detect physical defects in the machinery"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 5,
+          "text": "Voice analysis is not as effective as facial expressions in determining emotional states in affective computing.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 6,
+          "text": "Considering meta-information about a user's background and culture is unnecessary for understanding emotions through voice in affective computing.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 7,
+          "text": "What is the concern regarding simulated or acted data in emotion analysis datasets?",
+          "options": [
+            {"label": "a", "text": "It provides the most accurate representation of real-world user behavior"},
+            {"label": "b", "text": "Not all examples captured may reflect genuine user behavior"},
+            {"label": "c", "text": "It is easier to collect compared to other types of data"},
+            {"label": "d", "text": "Simulated data is less prone to biases"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 8,
+          "text": "Confirmation bias is the tendency to interpret information in a way that confirms one's preexisting beliefs.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 9,
+          "text": "What is the purpose of conducting statistical analysis on labels generated by multiple labelers for the same samples in a database?",
+          "options": [
+            {"label": "a", "text": "To simplify the labeling process for future samples"},
+            {"label": "b", "text": "To identify inconsistencies and discrepancies in the labels"},
+            {"label": "c", "text": "To increase the complexity of the dataset"},
+            {"label": "d", "text": "To exhaust the research grant funds"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 10,
+          "text": "In the context of feature selection for emotion analysis, what is the suggested approach to achieve balance between different attributes of the signal?",
+          "options": [
+            {"label": "a", "text": "Using a single feature for both arousal and valence"},
+            {"label": "b", "text": "Selecting features randomly for analysis"},
+            {"label": "c", "text": "Applying fusion techniques to combine multiple features"},
+            {"label": "d", "text": "Ignoring feature selection and relying solely on raw data"}
+          ],
+          "acceptedAnswer": "c"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "assignment": 6,
+      "dueDate": "2024-03-06",
+      "questions": [
+        {
+          "id": 1,
+          "text": "Emotion representation in text is always straightforward and easily detectable without considering the surrounding context.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 2,
+          "text": "Emotion recognition in text conversations remains static and consistent throughout the flow of the conversation.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 3,
+          "text": "Which of the following best describes the Bag of Words (BoW) model in natural language processing?",
+          "options": [
+            {"label": "a", "text": "It considers the order of words in a text document."},
+            {"label": "b", "text": "It ignores the frequency of words in a text document."},
+            {"label": "c", "text": "It represents a text document as a collection of words, disregarding grammar and word order."},
+            {"label": "d", "text": "It focuses solely on the grammatical structure of a text document."}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 4,
+          "text": "What does the IDF component in TF-IDF represent?",
+          "options": [
+            {"label": "a", "text": "The frequency of a term within a document."},
+            {"label": "b", "text": "The total number of documents in the corpus."},
+            {"label": "c", "text": "The importance of a term relative to the entire corpus."},
+            {"label": "d", "text": "The number of times a term appears in a document multiplied by the total number of terms in the document."}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 5,
+          "text": "What is the primary objective of Word2Vec?",
+          "options": [
+            {"label": "a", "text": "To identify the most frequent words in a text corpus."},
+            {"label": "b", "text": "To generate word embeddings representing semantic meaning."},
+            {"label": "c", "text": "To perform sentiment analysis on text data."},
+            {"label": "d", "text": "To identify common stopwords in a text corpus."}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 6,
+          "text": "Glove is an unsupervised learning algorithm for obtaining vector representations for words.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 7,
+          "text": "Attention mechanism involves determining the importance of different parts within a sequence of textual elements.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 8,
+          "text": "When conducting emotion recognition, examining both the text and its associated audio file produced by a text-to-speech system consistently results in the same emotion classification.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 9,
+          "text": "Given the corpus: Document 1: \"The cat sat on the mat.\" Document 2: \"The dog played with the ball.\" and Document 3: \"The cat and the dog are friends.\" Calculate TF-IDF for the term \"cat\" in Document 1.",
+          "options": [
+            {"label": "a", "text": "TF-IDF = 0.176"},
+            {"label": "b", "text": "TF-IDF = 0.001"},
+            {"label": "c", "text": "TF-IDF = 3.160"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "d"
+        },
+        {
+          "id": 10,
+          "text": "Basic statistics are computed around the labels assigned by different labelers in text-based emotion detection to arrive at a final emotional classification for a statement",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "assignment": 7,
+      "dueDate": "2024-03-13",
+      "questions": [
+        {
+          "id": 1,
+          "text": "Physiological signals originate from the activity of the autonomic nervous system, which means they cannot be consciously or intentionally controlled.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 2,
+          "text": "What does Heart Rate Variability (HRV) measure?",
+          "options": [
+            {"label": "a", "text": "The average heart rate over a specified period"},
+            {"label": "b", "text": "The variation in time intervals between consecutive heartbeats"},
+            {"label": "c", "text": "The strength of the heart's contractions"},
+            {"label": "d", "text": "The number of heartbeats per minute"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 3,
+          "text": "Increased heart rate variability has been demonstrated to correlate with a relaxed state.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 4,
+          "text": "Which of the following methods is generally considered a more accurate measurement of heart rate?",
+          "options": [
+            {"label": "a", "text": "Electrocardiogram (ECG)"},
+            {"label": "b", "text": "Photoplethysmography (PPG)"},
+            {"label": "c", "text": "Both ECG and PPG provide equally accurate measurements"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 5,
+          "text": "What is the typical sampling frequency for Galvanic Skin Response (GSR) signals?",
+          "options": [
+            {"label": "a", "text": "100-1000 Hz"},
+            {"label": "b", "text": "50-60 Hz"},
+            {"label": "c", "text": "1-10 Hz"},
+            {"label": "d", "text": "1-30 KHz"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 6,
+          "text": "Why is it important to introduce a gap between stimuli during experimental presentations?",
+          "options": [
+            {"label": "a", "text": "To increase the overall duration of the experiment"},
+            {"label": "b", "text": "To minimize overlap of responses between stimuli"},
+            {"label": "c", "text": "To reduce participant fatigue"},
+            {"label": "d", "text": "To maintain a consistent rhythm in the presentation"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 7,
+          "text": "EEG can measure changes in brain activity over very short time intervals, often in milliseconds.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 8,
+          "text": "Which frequency band of the EEG signal is associated with a state of relaxation and often observed when individuals have their eyes closed?",
+          "options": [
+            {"label": "a", "text": "Delta (1-3 Hz)"},
+            {"label": "b", "text": "Theta (4-7 Hz)"},
+            {"label": "c", "text": "Alpha (8-12 Hz)"},
+            {"label": "d", "text": "Beta (13-30 Hz)"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 9,
+          "text": "There is an inverse relationship between alpha band power and cortical activity.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 10,
+          "text": "What is a common limitation associated with EEG signals?",
+          "options": [
+            {"label": "a", "text": "Poor temporal resolution"},
+            {"label": "b", "text": "Limited frequency range"},
+            {"label": "c", "text": "Poor spatial resolution"},
+            {"label": "d", "text": "Limited signal-to-noise ratio"}
+          ],
+          "acceptedAnswer": "c"
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "assignment": 8,
+      "dueDate": "2024-03-20",
+      "questions": [
+        {
+          "id": 1,
+          "text": "Which statement best describes the expectation of a multimodal emotion recognition system?",
+          "options": [
+            {"label": "a", "text": "Each modality is anticipated to offer redundant information."},
+            {"label": "b", "text": "Each modality is expected to provide unique information."},
+            {"label": "c", "text": "Combining modalities is unnecessary for accurate emotion recognition."},
+            {"label": "d", "text": "Modality combination diminishes the effectiveness of emotion recognition systems."}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 2,
+          "text": "If any two modalities convey identical emotional information, combining them may increase computational load without improving system performance.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 3,
+          "text": "What is the primary challenge in early feature fusion of different modalities?",
+          "options": [
+            {"label": "a", "text": "Synchronization issues due to differences in feature dimensions."},
+            {"label": "b", "text": "Difficulties in selecting the appropriate machine learning algorithm."},
+            {"label": "c", "text": "Leads to an increase in computational complexity"},
+            {"label": "d", "text": "Lack of available datasets for feature combination experimentation."}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 4,
+          "text": "Which of the following is NOT a technique used for combining outputs in late fusion?",
+          "options": [
+            {"label": "a", "text": "Averaging"},
+            {"label": "b", "text": "Early fusion"},
+            {"label": "c", "text": "Voting"},
+            {"label": "d", "text": "All of the above"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 5,
+          "text": "Soft late fusion involves incorporating a measure of confidence which is linked to the decisions being made.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 6,
+          "text": "Having overlapping information can lead to the curse of dimensionality, particularly in scenarios like feature fusion where overlap is common.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 7,
+          "text": "What assumption is made in decision-level fusion?",
+          "options": [
+            {"label": "a", "text": "Conditional dependence between modalities"},
+            {"label": "b", "text": "Conditional independence between modalities"},
+            {"label": "c", "text": "Complete independence between modalities"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 8,
+          "text": "Slow fusion provides us with the correlation between modalities while relaxing the requirement of synchronization.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 9,
+          "text": "When performing decision-level fusion (late fusion), what potential loss of information could occur?",
+          "options": [
+            {"label": "a", "text": "Loss of computational efficiency"},
+            {"label": "b", "text": "Loss of model interpretability"},
+            {"label": "c", "text": "Loss of correlation between individual features"},
+            {"label": "d", "text": "Loss of feature diversity"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 10,
+          "text": "Support Vector Machine (SVM) is an example of which fusion technique?",
+          "options": [
+            {"label": "a", "text": "Early fusion"},
+            {"label": "b", "text": "Late fusion"},
+            {"label": "c", "text": "Feature fusion"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "d"
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "assignment": 9,
+      "dueDate": "2024-03-27",
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is empathy primarily about?",
+          "options": [
+            {"label": "a", "text": "Understanding and experiencing what others are going through"},
+            {"label": "b", "text": "Providing sympathy to others in their times of need"},
+            {"label": "c", "text": "Avoiding interaction with those who lack empathy"},
+            {"label": "d", "text": "Building relationships based on mutual understanding and support"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 2,
+          "text": "Providing emotionally intelligent components, such as empathetic responses from virtual agents, can lead to better, more positive, and appropriate interactions with humans.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 3,
+          "text": "What is anthropomorphic design primarily based on?",
+          "options": [
+            {"label": "a", "text": "Humans prefer machines with human-like properties"},
+            {"label": "b", "text": "The belief that machines should mimic human behavior entirely"},
+            {"label": "c", "text": "Both A and B"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 4,
+          "text": "What is the Uncanny Valley effect primarily associated with?",
+          "options": [
+            {"label": "a", "text": "Increased acceptance of robots in society"},
+            {"label": "b", "text": "A feeling of discomfort towards almost human-like robots"},
+            {"label": "c", "text": "Both A and B"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 5,
+          "text": "What are the three major subprocesses involved in empathy?",
+          "options": [
+            {"label": "a", "text": "Emotional simulation, personalization, and emotional regulation"},
+            {"label": "b", "text": "Emotional simulation, perspective taking, and emotion regulation"},
+            {"label": "c", "text": "Sympathy, perspective taking, and cognitive processing"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 6,
+          "text": "Physiological and behavioral cues can be applied to understand emotional state but not empathy.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 7,
+          "text": "Vocal cues and voice modalities of humans are reliable indicators of empathetic states.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 8,
+          "text": "Empathetic responses displayed by virtual and robotic agents are truly empathetic.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 9,
+          "text": "What are the primary limitations of the data-driven approach in computational modeling of empathy?",
+          "options": [
+            {"label": "a", "text": "Lack of computational power"},
+            {"label": "b", "text": "Insufficient quantity and variety/quality of data"},
+            {"label": "c", "text": "Ethical issues surrounding data collection"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 10,
+          "text": "Kismet is not an anthropomorphic robotic head specialized for face-to-face interaction with humans.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "assignment": 10,
+      "dueDate": "2024-04-03",
+      "questions": [
+        {
+          "id": 1,
+          "text": "Learners' experiences with affective learning technologies involve both the emotions they experience and the improvements in learning gained from their interaction.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 2,
+          "text": "Sensors affective learning technologies are typically non-intrusive and cost-effective, but they can be noisy and lack scalability.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 3,
+          "text": "Which level of adaptation in affective computing involves no alteration of the system's behavior in response to the user's emotional state?",
+          "options": [
+            {"label": "a", "text": "Level 0 adaptation"},
+            {"label": "b", "text": "Level 1 adaptation"},
+            {"label": "c", "text": "Level 2 adaptation"},
+            {"label": "d", "text": "Level 3 adaptation"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 4,
+          "text": "At Level 2 adaptation, no actual adaptation takes place, but the system can recognize the necessity for adaptation.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 5,
+          "text": "Camera can be applied to monitor the heart rate of the user?",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 6,
+          "text": "Cognitive empathy involves perceiving the emotions of the target in a logical manner.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 7,
+          "text": "Failing to distinguish between categorical and continuous models of emotions leads to challenges in generalizing machine learning algorithms.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 8,
+          "text": "Which of the following are the ways individuals may respond empathetically.",
+          "options": [
+            {"label": "a", "text": "Reactive empathy"},
+            {"label": "b", "text": "Parallel empathy"},
+            {"label": "c", "text": "Both a and B"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 9,
+          "text": "Which of the following best describes a process that involves considering or perceiving the emotions of the target more emotionally or in a natural way?",
+          "options": [
+            {"label": "a", "text": "Cognitive empathy"},
+            {"label": "b", "text": "Affective empathy"},
+            {"label": "c", "text": "Both a and B"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 10,
+          "text": "Which of the following best describes the factors influencing emotional responses in empathizers?",
+          "options": [
+            {"label": "a", "text": "The empathizer's astrological sign"},
+            {"label": "b", "text": "The empathizer's political affiliation"},
+            {"label": "c", "text": "The empathizer's personality type, gender, age, and mood"},
+            {"label": "d", "text": "The empathizer's favorite color"}
+          ],
+          "acceptedAnswer": "c"
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "assignment": 11,
+      "dueDate": "2024-04-10",
+      "questions": [
+        {
+          "id": 1,
+          "text": "One potential application of using an agent in customer service is to provide a more personalized and empathetic experience to customers by recognizing their emotions during interactions.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 2,
+          "text": "Which of the following are the challenges faced by emotional virtual personnel assistance?",
+          "options": [
+            {"label": "a", "text": "Ensuring the accuracy of emotion prediction."},
+            {"label": "b", "text": "Facilitating real-time emotion prediction."},
+            {"label": "c", "text": "Both a and b"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 3,
+          "text": "Virtual assistants may be biased towards the training data, which may potentially lead to the unfair treatment of certain groups.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 4,
+          "text": "Which of the following is an ethical concern that is not associated with virtual assistants?",
+          "options": [
+            {"label": "a", "text": "Privacy concerns"},
+            {"label": "b", "text": "Emotional Manipulation"},
+            {"label": "c", "text": "Bias and Discrimination"},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "d"
+        },
+        {
+          "id": 5,
+          "text": "Emotional virtual agents may be designed to appear as if they have emotions but in reality they are just algorithms.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 6,
+          "text": "The process of transferring emotions to robots is non-trivial because robots do not express emotions in the same manner as humans.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 7,
+          "text": "Copy-pasting human expressions onto robots guarantees seamless translation of emotions.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 8,
+          "text": "Emotional virtual agents might lead to social isolation.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 9,
+          "text": "Linear discriminative analysis is a generative algorithm which can be applied to recognize emotions?",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 10,
+          "text": "During the preprocessing of emotional data, Normalizing data from different users enables fair comparison across them.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "assignment": 12,
+      "dueDate": "2024-04-17",
+      "questions": [
+        {
+          "id": 1,
+          "text": "When sending emotional state data to a cloud-based system, what safety mechanism is typically employed to maintain user privacy?",
+          "options": [
+            {"label": "a", "text": "Two-factor authentication"},
+            {"label": "b", "text": "End-to-end encryption"},
+            {"label": "c", "text": "IP whitelisting"},
+            {"label": "d", "text": "Data obfuscation"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 2,
+          "text": "From an ethics perspective, what is a significant concern regarding affect-sensing apps in relation to emotional dependency?",
+          "options": [
+            {"label": "a", "text": "User engagement"},
+            {"label": "b", "text": "Privacy intrusion"},
+            {"label": "c", "text": "Emotional manipulation"},
+            {"label": "d", "text": "User addiction"}
+          ],
+          "acceptedAnswer": "d"
+        },
+        {
+          "id": 3,
+          "text": "Accelerometer signals have higher privacy invasiveness intensity as compared to GPS signals.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "b"
+        },
+        {
+          "id": 4,
+          "text": "Achieving foolproof anonymization is impossible because all information can be classified as personal when correlated with sufficient other relevant data.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 5,
+          "text": "In a labeling process, which of the following scenarios minimizes bias and ensures consensus among labellers?",
+          "options": [
+            {"label": "a", "text": "Labellers are unaware of what they are supposed to label."},
+            {"label": "b", "text": "Labellers work independently without any guidance."},
+            {"label": "c", "text": "Labellers are aware of what they are supposed to label, and there is consensus among them, with efforts to avoid bias."},
+            {"label": "d", "text": "None of the above"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 6,
+          "text": "When designing the test case; Testers' prior training and experiences can affect their feedback and introduce biases into the system.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 7,
+          "text": "Why is it important for designers to provide clear documentation and contracts regarding app functionalities and data handling?",
+          "options": [
+            {"label": "a", "text": "To maximize user interaction with the app"},
+            {"label": "b", "text": "To increase user dependence on the app"},
+            {"label": "c", "text": "To ensure users understand data recording methods and access rights."},
+            {"label": "d", "text": "To limit user access to app features"}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 8,
+          "text": "Which of the following are open issues in the affective computing?",
+          "options": [
+            {"label": "a", "text": "Inheritance of deception in Affective Computing."},
+            {"label": "b", "text": "Should destructive machines be given emotional capabilities?"},
+            {"label": "c", "text": "Both a and b."},
+            {"label": "d", "text": "None of the above."}
+          ],
+          "acceptedAnswer": "c"
+        },
+        {
+          "id": 9,
+          "text": "Before deploying emotion-enabled targeting advertisements, it is essential to study the effects from both the user's perspective and the advertiser's perspective.",
+          "options": [
+            {"label": "a", "text": "True"},
+            {"label": "b", "text": "False"}
+          ],
+          "acceptedAnswer": "a"
+        },
+        {
+          "id": 10,
+          "text": "Which of the following is in the correct order of their privacy invasiveness.",
+          "options": [
+            {"label": "a", "text": "Accelerometer > Wifi > Microphone"},
+            {"label": "b", "text": "Accelerometer > Microphone > Wifi"},
+            {"label": "c", "text": "Microphone > Wife > Accelerometer"},
+            {"label": "d", "text": "Microphone > Wifi > Accelerometer"}
+          ],
+          "acceptedAnswer": "d"
+        }
+      ]
+    }
+  ]
+}

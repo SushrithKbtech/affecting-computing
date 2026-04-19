@@ -1,0 +1,885 @@
+NPTEL - AFFECTIVE COMPUTING 2026
+ALL ASSIGNMENTS - QUESTIONS, OPTIONS, AND ACCEPTED ANSWERS
+========================================================================
+
+WEEK 1 : ASSIGNMENT 1
+Due on 2026-02-04, 23:59 IST
+------------------------------------------------------------------------
+
+1) What does affective computing primarily involve?
+   a) Systems that improve computer graphics
+   b) Systems that sense, recognize, respond to, and influence emotions
+   c) Systems that optimize data storage
+   d) Systems that improve processor speed
+   Accepted Answer: Systems that sense, recognize, respond to, and influence emotions
+
+2) Which of the following is not a modality for affect sensing?
+   a) Facial activity
+   b) Textual analysis
+   c) Temperature of the environment
+   d) Physiological signals
+   Accepted Answer: Temperature of the environment
+
+3) According to Picard (1997), which of the following is not one of the three applications of affective computing?
+   a) Detection
+   b) Expression
+   c) Prediction
+   d) Perception
+   Accepted Answer: Prediction
+
+4) The EngageMe system uses which data source to help teachers reflect on their classes?
+   a) EEG readings from helmets
+   b) Skin conductance and classroom video feeds
+   c) Social media activity
+   d) Voice recordings
+   Accepted Answer: Skin conductance and classroom video feeds
+
+5) Which application is designed to help individuals with Asperger syndrome or high-functioning autism?
+   a) StartleMart
+   b) Subtle Stone
+   c) SymTrend and Autism Track
+   d) MACH
+   Accepted Answer: SymTrend and Autism Track
+
+6) What is the purpose of the MACH system?
+   a) Neuromarketing research
+   b) Automated conversation coaching for interviews
+   c) Stress detection in PTSD
+   d) Classroom emotion tracking
+   Accepted Answer: Automated conversation coaching for interviews
+
+7) In UX design, what does usability mainly concern?
+   a) How attractive the interface looks
+   b) How easy the product is to use
+   c) How emotional the user feels
+   d) How fast the product can be developed
+   Accepted Answer: How easy the product is to use
+
+8) What is a major problem with self-reported user testing (focus groups/surveys)?
+   a) Requires expensive hardware
+   b) Participant bias and recall bias
+   c) Requires EEG equipment
+   d) Long training time for participants
+   Accepted Answer: Participant bias and recall bias
+
+9) Which physiological signal is explicitly mentioned as part of affect sensing?
+   a) Heart rate variability
+   b) Electrodermal activity (EDA)
+   c) Sleep cycles
+   d) Blood pressure
+   Accepted Answer: Electrodermal activity (EDA)
+
+10) Emotion recognition systems always rely on facial expressions and cannot use any other type of data.
+    a) True
+    b) False
+    Accepted Answer: False
+
+========================================================================
+
+WEEK 2 : ASSIGNMENT 2
+Due on 2026-02-04, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which brain region is primarily involved in regulating emotional experience and motivation?
+   a) Prefrontal cortex
+   b) Occipital lobe
+   c) Cerebellum
+   d) Pituitary gland
+   Accepted Answer: Prefrontal cortex
+
+2) The amygdala is most strongly associated with which function?
+   a) Decision making and planning
+   b) Regulation of voluntary movement
+   c) Processing stimulus salience and arousal
+   d) Language comprehension
+   Accepted Answer: Processing stimulus salience and arousal
+
+3) According to embodied cognition theories, voluntary facial muscle contraction can influence emotional experience. This idea supports which concept?
+   a) Emotions exist independently of bodily states
+   b) Emotion cannot occur without a conscious appraisal
+   c) Emotion is generated only through cognitive evaluation
+   d) Bodily feedback contributes to how emotions are felt
+   Accepted Answer: Bodily feedback contributes to how emotions are felt
+
+4) Higher activation in the left frontal hemisphere is generally linked to which motivational tendency?
+   a) Withdrawal motivation
+   b) Approach motivation
+   c) Reduced emotional awareness
+   d) Neutral affect
+   Accepted Answer: Approach motivation
+
+5) Which emotion is commonly associated with activation of the left frontal PFC, despite being negatively valenced?
+   a) Fear
+   b) Sadness
+   c) Anger
+   d) Disgust
+   Accepted Answer: Anger
+
+6) In the dimensional VAD/PAD model, dominance refers to:
+   a) The sense of control or submission associated with an emotion
+   b) The pleasantness of an emotional state
+   c) The intensity or energy of an emotion
+   d) The clarity with which an emotion is recognized
+   Accepted Answer: The sense of control or submission associated with an emotion
+
+7) One limitation of traditional categorical emotion models is that:
+   a) They cannot be implemented computationally
+   b) They struggle to represent relationships between emotions
+   c) They include too many dimensions to be practical
+   d) They ignore facial expressions entirely
+   Accepted Answer: They struggle to represent relationships between emotions
+
+8) Which emotion is typically characterized by lowered eyebrows, tense eyelids, and pressed lips?
+   a) Happiness
+   b) Fear
+   c) Disgust
+   d) Anger
+   Accepted Answer: Anger
+
+9) Increased skin conductance is most reliably associated with which type of disgust-related stimulus?
+   a) Pictures of dirty toilets
+   b) Pleasant odors
+   c) Mutilation or body-boundary violation images
+   d) Neutral facial expressions
+   Accepted Answer: Mutilation or body-boundary violation images
+
+10) Crying-related sadness is associated with which physiological pattern?
+    a) Reduced respiration and lower HRV
+    b) Increased heart rate and increased skin conductance
+    c) Decreased skin conductance and reduced heart rate
+    d) No change in respiration but reduced HRV
+    Accepted Answer: Increased heart rate and increased skin conductance
+
+========================================================================
+
+WEEK 3 : ASSIGNMENT 3
+Due on 2026-02-11, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which type of emotional expression dataset is easiest to collect but suffers from low ecological validity?
+   a) Acted or posed expressions
+   b) Naturalistic expressions
+   c) Induced expressions
+   d) Behavioral manipulation datasets
+   Accepted Answer: Acted or posed expressions
+
+2) In emotion elicitation, which method involves observing film clips or images designed to evoke emotions?
+   a) Social interaction
+   b) Passive/perception-based methods
+   c) Directed facial action tasks
+   d) Productive modality elicitation
+   Accepted Answer: Passive/perception-based methods
+
+3) A key disadvantage of using images for passive elicitation is:
+   a) Setup is too complex
+   b) Emotional reactions are short and transient
+   c) Images cannot be standardized
+   d) Images elicit too intense emotions
+   Accepted Answer: Emotional reactions are short and transient
+
+4) Which passive method generally includes a neutral baseline clip before emotional clips?
+   a) Facial action tasks
+   b) Social interaction
+   c) Film clip–based elicitation
+   d) Gesture-based elicitation
+   Accepted Answer: Film clip–based elicitation
+
+5) Directed Facial Action Tasks are primarily used in:
+   a) Behavioral manipulation methods
+   b) Passive emotion elicitation
+   c) Baseline emotional calibration
+   d) IRB risk assessment
+   Accepted Answer: Behavioral manipulation methods
+
+6) One major advantage of social interaction–based elicitation is:
+   a) The emotions elicited are highly controllable
+   b) It is effective for collecting productive modalities
+   c) Emotions produced are realistic and natural
+   d) Participants do not require instruction
+   Accepted Answer: Emotions produced are realistic and natural
+
+7) Which document is required when submitting a study for IRB review?
+   a) A participant payment receipt
+   b) A full literature review
+   c) A published version of the experiment
+   d) A copy of the informed consent form
+   Accepted Answer: A copy of the informed consent form
+
+8) Which of the following is not a criterion for IRB approval?
+   a) Risks to subjects must be minimized
+   b) Adequate privacy and confidentiality protection
+   c) Ensuring participants enjoy the experiment
+   d) Selection of subjects must be equitable
+   Accepted Answer: Ensuring participants enjoy the experiment
+
+9) Tools such as PsychoPy, OpenSesame, and SuperLab fall under which category?
+   a) Affect expression tools
+   b) Data collection tools
+   c) Data mining tools
+   d) Annotation tools
+   Accepted Answer: Data collection tools
+
+10) SAM (Self-Assessment Manikin) is primarily used for:
+    a) Image labeling
+    b) Physiological signal cleaning
+    c) Facial expression synthesis
+    d) Measuring emotional responses along dimensions like valence and arousal
+    Accepted Answer: Measuring emotional responses along dimensions like valence and arousal
+
+========================================================================
+
+WEEK 4 : ASSIGNMENT 4
+Due on 2026-02-18, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which input modality is considered the most informative and non-intrusive for Facial Emotion Recognition (FER)?
+   a) EMG
+   b) Camera
+   c) EEG
+   d) Earables
+   Accepted Answer: Camera
+
+2) Dynamic FER generally outperforms static FER because it:
+   a) Uses more sensors
+   b) Ignores temporal variations
+   c) Captures expression transitions over time
+   d) Removes noise from peak frames
+   Accepted Answer: Captures expression transitions over time
+
+3) The first step in conventional FER pipelines typically involves:
+   a) Expression classification
+   b) Texture smoothing
+   c) Face and facial component detection
+   d) Motion estimation
+   Accepted Answer: Face and facial component detection
+
+4) Deep-learning-based FER systems reduce reliance on:
+   a) Face-physics-based models and preprocessing
+   b) Landmark detectors
+   c) Data augmentation
+   d) GPU resources
+   Accepted Answer: Face-physics-based models and preprocessing
+
+5) Macro expressions typically last:
+   a) Less than 1/2 second
+   b) 5–10 seconds
+   c) Longer than 10 seconds
+   d) Between 1/2 and 4 seconds
+   Accepted Answer: Between 1/2 and 4 seconds
+
+6) Micro expressions are difficult to detect because they:
+   a) Last longer than macro expressions
+   b) Are consciously controlled
+   c) Are brief and often involuntary
+   d) Do not involve facial muscles
+   Accepted Answer: Are brief and often involuntary
+
+7) Facial Action Coding System (FACS) is based on:
+   a) Facial muscle movements
+   b) Wrinkle depth measurements
+   c) Tracking head pose only
+   d) Eye aperture changes exclusively
+   Accepted Answer: Facial muscle movements
+
+8) Which appearance-based feature descriptor is sensitive to lighting variations?
+   a) SIFT
+   b) Raw pixel intensity values
+   c) Gabor filters
+   d) HOG
+   Accepted Answer: Raw pixel intensity values
+
+9) Optical flow is primarily used to extract:
+   a) Static shape features
+   b) Texture gradients
+   c) Motion-based features
+   d) High-resolution appearance cues
+   Accepted Answer: Motion-based features
+
+10) Geometric features alone are sometimes insufficient because different AUs can produce similar landmark changes.
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 5 : ASSIGNMENT 5
+Due on 2026-02-25, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which of the following is not an application of speech in affective computing?
+   a) Driver safety monitoring
+   b) Mobile communications
+   c) Diagnostic tools for therapists
+   d) Face recognition unlocking
+   Accepted Answer: Face recognition unlocking
+
+2) According to Borden et al. (1994), "how it is said" refers to:
+   a) The linguistic meaning of the words
+   b) Paralinguistic information reflecting emotional state
+   c) Speaker identity characteristics
+   d) Speech segmentation rules
+   Accepted Answer: Paralinguistic information reflecting emotional state
+
+3) Natural emotional speech databases primarily include:
+   a) Speech from trained actors
+   b) Emotionally synthesized speech
+   c) Spontaneous speech from real-world scenarios
+   d) Scripted dialogues recorded in studios
+   Accepted Answer: Spontaneous speech from real-world scenarios
+
+4) Positive emotions always produce lower variability in pitch.
+   a) True
+   b) False
+   Accepted Answer: False
+
+5) The Berlin Emotional Speech Database contains recordings of:
+   a) Children interacting with robots
+   b) Professional actors producing emotional German sentences
+   c) North American speakers producing neutral statements
+   d) Patients and doctors in clinical settings
+   Accepted Answer: Professional actors producing emotional German sentences
+
+6) Prosody features include:
+   a) MFCCs
+   b) SIFT descriptors
+   c) Fundamental frequency and short-term energy
+   d) Visual intensity curves
+   Accepted Answer: Fundamental frequency and short-term energy
+
+7) MFCCs are primarily used to represent:
+   a) Resonant spectral characteristics
+   b) Rhythm and intonation patterns
+   c) Speaker identity features
+   d) Amplitude variations across time
+   Accepted Answer: Resonant spectral characteristics
+
+8) Positive voices typically show which characteristic?
+   a) Low pitch and low formant frequencies
+   b) Low speech rate
+   c) Flat and monotone amplitude
+   d) High loudness variability and high formant frequencies
+   Accepted Answer: High loudness variability and high formant frequencies
+
+9) A key problem with global normalization of f0 across all speakers is that it:
+   a) May blur emotional differences due to speaker-specific traits
+   b) Reduces background noise
+   c) Is too computationally expensive
+   d) Requires manual annotation
+   Accepted Answer: May blur emotional differences due to speaker-specific traits
+
+10) One major open challenge in speech-based affect recognition is:
+    a) Oversupply of natural databases
+    b) Inter- and intra-speaker variability
+    c) Perfect cross-lingual generalization
+    d) Excessive real-time deployment success
+    Accepted Answer: Inter- and intra-speaker variability
+
+========================================================================
+
+WEEK 6 : ASSIGNMENT 6
+Due on 2026-03-04, 23:59 IST
+------------------------------------------------------------------------
+
+1) ANEW is a categorical lexicon used to label text with Ekman's six universal emotions.
+   a) True
+   b) False
+   Accepted Answer: False
+
+2) According to Poffenberger & Barrows (1924), upward-moving lines tend to evoke which feeling?
+   a) Calmness
+   b) Joy
+   c) Fear
+   d) Anger
+   Accepted Answer: Joy
+
+3) Juni & Gross (2008) found that articles were perceived as more satirical when written in:
+   a) Arial
+   b) Georgia
+   c) Times New Roman
+   d) Verdana
+   Accepted Answer: Times New Roman
+
+4) Relative Subjective Duration (RSD) experiments showed that good typography led participants to:
+   a) Underestimate reading time less
+   b) Overestimate reading time greatly
+   c) Underestimate reading time more
+   d) Read significantly slower
+   Accepted Answer: Underestimate reading time more
+
+5) Why is positive/negative sentiment analysis often insufficient?
+   a) Emotions with similar polarity (e.g., fear vs. anger) differ in relevance and meaning
+   b) Most texts contain no sentiment
+   c) It cannot detect sarcasm
+   d) It is computationally expensive
+   Accepted Answer: Emotions with similar polarity (e.g., fear vs. anger) differ in relevance and meaning
+
+6) Implicit expressions of emotions (Lee, 2015) refer to:
+   a) Emotions directly stated via adjectives
+   b) Physiological signals embedded in text
+   c) Metaphors expressing emotional states
+   d) Emotion conveyed without explicit emotional words
+   Accepted Answer: Emotion conveyed without explicit emotional words
+
+7) Metaphorical emotional expressions create challenges because:
+   a) Their meaning cannot be inferred from literal text alone
+   b) They are too rare to train on
+   c) They cannot be represented in WordNet
+   d) They always express anger
+   Accepted Answer: Their meaning cannot be inferred from literal text alone
+
+8) The ISEAR database consists of reports from participants describing:
+   a) Metaphorical uses of emotional expressions
+   b) Situations where they experienced one of seven major emotions
+   c) Annotated news headlines
+   d) Product reviews labeled for polarity
+   Accepted Answer: Situations where they experienced one of seven major emotions
+
+9) SentiWordNet focuses primarily on:
+   a) Dimensional emotion modeling
+   b) Detecting metaphors in textual data
+   c) Context-sensitive emotional sequences
+   d) Polarity (positive, negative, objective) of terms
+   Accepted Answer: Polarity (positive, negative, objective) of terms
+
+10) For unsupervised emotion recognition using lexicons, the text emotion is assigned by:
+    a) Counting how many emotional words appear
+    b) Finding the class with highest cosine similarity to the text vector
+    c) Selecting the emotion with the highest frequency in ANEW
+    d) Applying rule-based keyword matching only
+    Accepted Answer: Finding the class with highest cosine similarity to the text vector
+
+========================================================================
+
+WEEK 7 : ASSIGNMENT 7
+Due on 2026-03-11, 23:59 IST
+------------------------------------------------------------------------
+
+1) Physiological signals are especially valuable in affect detection because they:
+   a) Cannot be voluntarily controlled and reflect pure emotional states
+   b) Require full attention from the participant
+   c) Are easier to fake than facial expressions
+   d) Are unaffected by wearable technologies
+   Accepted Answer: Cannot be voluntarily controlled and reflect pure emotional states
+
+2) Which of the following is not a physiological measure?
+   a) Respiration
+   b) Electrocardiogram
+   c) Heart Rate
+   d) Eye-blink frequency
+   Accepted Answer: Eye-blink frequency
+
+3) Heart rate is strongly associated with which dimension of emotion?
+   a) Valence
+   b) Arousal
+   c) Dominance
+   d) Surprise
+   Accepted Answer: Arousal
+
+4) A key advantage of PPG (Photo-Plethysmography) over ECG is that PPG:
+   a) Provides greater spatial resolution
+   b) Is quicker to attach and less intrusive
+   c) Measures electrical pulses directly
+   d) Requires medical-grade gel electrodes
+   Accepted Answer: Is quicker to attach and less intrusive
+
+5) Heart Rate Variability (HRV) measures:
+   a) The average heart rate over the day
+   b) The electrical intensity of heart contractions
+   c) The variation in RR intervals between beats
+   d) The number of peaks in each heartbeat waveform
+   Accepted Answer: The variation in RR intervals between beats
+
+6) A major limitation of ECG/PPG for affect recognition is that they:
+   a) Only measure emotional valence, not arousal
+   b) Cannot measure changes over short intervals
+   c) Are too invasive for most participants
+   d) Cannot distinguish positive from negative arousal
+   Accepted Answer: Cannot distinguish positive from negative arousal
+
+7) Physiological signals like HR and GSR are less likely to be consciously manipulated compared to facial expressions.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) ECG-based heart rate measurements are more accurate than PPG because:
+   a) They measure electrical activity directly
+   b) They require fewer sensors
+   c) They work better at long distances
+   d) They are less sensitive to motion artifacts
+   Accepted Answer: They measure electrical activity directly
+
+9) GSR can reveal whether the emotional state is positive or negative.
+   a) True
+   b) False
+   Accepted Answer: False
+
+10) Low HRV is typically associated with:
+    a) Relaxation
+    b) Strong stress or arousal
+    c) Enhanced emotional control
+    d) Deep sleep
+    Accepted Answer: Strong stress or arousal
+
+========================================================================
+
+WEEK 8 : ASSIGNMENT 8
+Due on 2026-03-18, 23:59 IST
+------------------------------------------------------------------------
+
+1) Skin Conductance (GSR/EDA) measures changes primarily due to:
+   a) Sweat gland activity
+   b) Body temperature
+   c) Blood pressure
+   d) Respiration depth
+   Accepted Answer: Sweat gland activity
+
+2) In GSR signals, the fast, event-related component is called:
+   a) SCL (Skin Conductance Level)
+   b) EDL (Electrodermal Level)
+   c) SCR (Skin Conductance Response)
+   d) ERV (Emotional Response Value)
+   Accepted Answer: SCR (Skin Conductance Response)
+
+3) GSR can reveal whether the emotional state is positive or negative.
+   a) True
+   b) False
+   Accepted Answer: False
+
+4) Skin conductance responses (SCR) correspond to:
+   a) Slow tonic changes in conductivity
+   b) Rapid, event-related changes triggered by stimuli
+   c) Changes due to respiration cycles
+   d) Variations caused only by temperature
+   Accepted Answer: Rapid, event-related changes triggered by stimuli
+
+5) The most emotionally reactive sweat glands are located on:
+   a) Forehead
+   b) Knees
+   c) Palms and soles
+   d) Back
+   Accepted Answer: Palms and soles
+
+6) In EEG signals, alpha-band power has what relationship with cortical activity?
+   a) Direct (more alpha = more activity)
+   b) Inverse (more alpha = less activity)
+   c) No relationship
+   d) Only positive emotions change alpha
+   Accepted Answer: Inverse (more alpha = less activity)
+
+7) In multimodal emotion recognition, early fusion requires:
+   a) Combining classifier decisions
+   b) Using only a single modality
+   c) Late-stage hypothesis selection
+   d) Synchronizing signals before concatenation
+   Accepted Answer: Synchronizing signals before concatenation
+
+8) Slow fusion is beneficial because it:
+   a) Avoids all redundancy across modalities
+   b) Assumes strict independence of cues
+   c) Exploits correlations while relaxing synchronization requirements
+   d) Works only with visual cues
+   Accepted Answer: Exploits correlations while relaxing synchronization requirements
+
+9) The SEMAINE project aims to train a system that:
+   a) Engages in multimodal social interaction as a Sensitive Artificial Listener
+   b) Predicts emotional valence using only speech
+   c) Detects emotions using physiological sensors alone
+   d) Generates emotional facial expressions automatically
+   Accepted Answer: Engages in multimodal social interaction as a Sensitive Artificial Listener
+
+10) A challenge in multimodal affect data collection is:
+    a) Too many synchronized datasets exist
+    b) Overabundance of annotated corpora
+    c) Lack of available audio signals
+    d) Getting spontaneous, subtle expressions with aligned modalities
+    Accepted Answer: Getting spontaneous, subtle expressions with aligned modalities
+
+========================================================================
+
+WEEK 9 : ASSIGNMENT 9
+Due on 2026-03-25, 23:59 IST
+------------------------------------------------------------------------
+
+1) Empathy is defined as the capacity to:
+   a) Understand what other humans are experiencing
+   b) Sense physiological signals of another person
+   c) Predict future user behavior
+   d) Generate synthetic emotions
+   Accepted Answer: Understand what other humans are experiencing
+
+2) Anthropomorphism refers to:
+   a) Designing robots without humanlike qualities
+   b) Assigning human characteristics to non-human entities
+   c) Removing emotional expressiveness from agents
+   d) Ensuring robots remain purely mechanical
+   Accepted Answer: Assigning human characteristics to non-human entities
+
+3) A primary risk of highly humanlike robot design is the:
+   a) Social inertia problem
+   b) Mechanical failure effect
+   c) Uncanny Valley effect
+   d) Immersion fatigue
+   Accepted Answer: Uncanny Valley effect
+
+4) In empathy analysis, lexical cues typically involve:
+   a) Physiological features from GSR
+   b) Motion tracking of gestures
+   c) Patterns in language transcripts
+   d) Eye-gaze direction estimation
+   Accepted Answer: Patterns in language transcripts
+
+5) Prosodic cues for empathy detection include:
+   a) Pitch, jitter, shimmer and energy
+   b) Facial landmark velocities
+   c) Background noise estimation
+   d) Lexicon-based word embeddings
+   Accepted Answer: Pitch, jitter, shimmer and energy
+
+6) Empathic agents can lead to more positive and appropriate interactions with users.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) The robot "Shimi" determines valence using:
+   a) Facial EMG signals
+   b) EEG spectral features
+   c) Pulse analysis from PPG
+   d) Semantic analysis of spoken language
+   Accepted Answer: Semantic analysis of spoken language
+
+8) In virtual agent studies, bystander intervention was influenced by:
+   a) Visual realism only
+   b) Social identity of the participant
+   c) Robot motion speed
+   d) Ambient sound levels
+   Accepted Answer: Social identity of the participant
+
+9) A major limitation of data-driven empathy modeling is:
+   a) Lack of high-quality, finely annotated empathy datasets
+   b) Too much multimodal data available
+   c) Overabundance of therapist training corpora
+   d) Universal agreement on evaluation metrics
+   Accepted Answer: Lack of high-quality, finely annotated empathy datasets
+
+10) Affective AutoTutor adapts its responses using:
+    a) Randomized affect scripts
+    b) Motion-only cues
+    c) Predefined facial, prosodic and verbal empathic behaviors
+    d) Reward-based reinforcement learning
+    Accepted Answer: Predefined facial, prosodic and verbal empathic behaviors
+
+========================================================================
+
+WEEK 10 : ASSIGNMENT 10
+Due on 2026-04-01, 23:59 IST
+------------------------------------------------------------------------
+
+1) Affective AutoTutor combines individual affect diagnoses using:
+   a) Feature-level fusion
+   b) Decision-level fusion
+   c) Early multimodal fusion
+   d) Pure rule-based weighting
+   Accepted Answer: Decision-level fusion
+
+2) GazeTutor primarily focuses on detecting:
+   a) Heart rate fluctuations
+   b) Keyboard typing patterns
+   c) Emotional tone of spoken dialogue
+   d) Eye-gaze shifts indicating waning attention
+   Accepted Answer: Eye-gaze shifts indicating waning attention
+
+3) In affect-aware games, emotion-driven interaction allows:
+   a) Predicting user goals only
+   b) Removing all non-playable characters
+   c) Preventing game difficulty adjustments
+   d) Tailoring game experience to individual players
+   Accepted Answer: Tailoring game experience to individual players
+
+4) Nevermind modifies game play difficulty based on:
+   a) Heart rate and emotional distress indicators
+   b) Player's reaction time
+   c) Completed mission count
+   d) Voice loudness
+   Accepted Answer: Heart rate and emotional distress indicators
+
+5) A key scalability issue with sensors is that they are often:
+   a) Too small to detect affective signals
+   b) Only compatible with gaming systems
+   c) Custom, non-portable, and expensive
+   d) Used exclusively for medical purposes
+   Accepted Answer: Custom, non-portable, and expensive
+
+6) Sensorlite approaches typically rely on:
+   a) EEG headsets only
+   b) Cameras and microphones as scalable proxies
+   c) Pressure-sensitive chairs
+   d) Biological implants
+   Accepted Answer: Cameras and microphones as scalable proxies
+
+7) A major open issue in affect detection is:
+   a) Too much annotated data availability
+   b) Perfect generalization across users and contexts
+   c) Noisy and intrusive sensors that reduces scalability
+   d) Complete agreement on emotion models
+   Accepted Answer: Noisy and intrusive sensors that reduces scalability
+
+8) A Level 0 adaptation system is one that:
+   a) Adapts multiple tasks simultaneously
+   b) Recognizes affect but does not alter behavior
+   c) Communicates adaptation with other agents
+   d) Does not alter its behavior at all
+   Accepted Answer: Does not alter its behavior at all
+
+9) Level 4 adaptation involves:
+   a) Multiple independent agents communicating adaptations
+   b) No adaptation to emotion
+   c) A single optimized task
+   d) Removing emotional monitoring entirely
+   Accepted Answer: Multiple independent agents communicating adaptations
+
+10) Affect detection in real-world environments is extremely challenging and may never reach perfect accuracy.
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 11 : ASSIGNMENT 11
+Due on 2026-04-08, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which of the following is a suitable reason why an Emotional Virtual Agent (EVA) should support multiple languages?
+   a) To enable a wider range of users to access emotional support
+   b) To ensure that the agent never makes translation errors
+   c) To reduce the need for emotional modeling
+   d) To increase the agent's computational speed
+   Accepted Answer: To enable a wider range of users to access emotional support
+
+2) Virtual assistants may be biased towards the training data, which may potentially lead to the unfair treatment of certain groups.
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) Emotional virtual agents might lead to social isolation.
+   a) True
+   b) False
+   Accepted Answer: True
+
+4) Which of the following is the best way to prevent privacy concerns related to emotional virtual agents?
+   a) Collect as much user data as possible to improve accuracy
+   b) Obtaining users' consent before collecting personal data and clearly stating the purpose of the data collection.
+   c) Store all emotional data indefinitely for future analysis
+   d) Disable all emotional recognition features entirely
+   Accepted Answer: Obtaining users' consent before collecting personal data and clearly stating the purpose of the data collection.
+
+5) The speech emotion detection and virtual assistant components should be able to work in real-time or close to real-time.
+   a) True
+   b) False
+   Accepted Answer: True
+
+6) What is the role of the "context" in an emotionally intelligent virtual assistant?
+   a) To understand the user's preferences and history for personalized responses
+   b) It eliminates the need to analyze user input
+   c) It ensures the assistant always responds with positive emotions
+   d) To simply follow the user's spoken instructions without emotion or history
+   Accepted Answer: To understand the user's preferences and history for personalized responses
+
+7) How can emotional virtual agents help avoid bias in their responses to users?
+   a) By using data from only one ethnic group.
+   b) By ensuring the data used for training is diverse and representative.
+   c) By focusing on only one language group.
+   d) By ignoring cultural differences.
+   Accepted Answer: By ensuring the data used for training is diverse and representative.
+
+8) Which of the following is true about a virtual personal assistant system?
+   a) It should protect personal information but not emotional information.
+   b) It should protect emotional information but not personal information.
+   c) It should not protect either personal or emotional information.
+   d) It should protect both personal and emotional information.
+   Accepted Answer: It should protect both personal and emotional information.
+
+9) What should an Emotional Virtual Agent base its appropriate response on?
+   a) Intent and emotion
+   b) Intent and context
+   c) A mix of intent, emotion, and context
+   d) Emotion and context
+   Accepted Answer: A mix of intent, emotion, and context
+
+10) Normalizing emotional data from different users ensures that their responses can be compared fairly.
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 12 : ASSIGNMENT 12
+Due on 2026-04-15, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which security measure is most commonly used to protect emotional state data transmitted to cloud-based systems?
+   a) Two-factor authentication
+   b) IP whitelisting
+   c) End-to-end encryption
+   d) Data obfuscation
+   Accepted Answer: End-to-end encryption
+
+2) Perfect anonymization cannot be guaranteed because any piece of data may become identifiable when combined with enough additional information.
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) Why is it important for designers to provide clear documentation and contracts regarding app functionalities and data handling?
+   a) To maximize user interaction with the app
+   b) To increase user dependence on the app
+   c) To limit user access to app features
+   d) To ensure users understand how their data is recorded and who can access it
+   Accepted Answer: To ensure users understand how their data is recorded and who can access it
+
+4) Which of the following is in the correct order of their privacy invasiveness. Starting with the most invasive first.
+   a) Accelerometer > Wifi > Microphone
+   b) Accelerometer > Microphone > Wifi
+   c) Microphone > Wife > Accelerometer
+   d) Microphone > Wifi > Accelerometer
+   Accepted Answer: Microphone > Wifi > Accelerometer
+
+5) What method from the list below is used in neuromarketing research?
+   a) fMRI
+   b) dMRI
+   c) EGG
+   d) ECB
+   Accepted Answer: fMRI
+
+6) From an ethics perspective, what is a major concern regarding affect-sensing apps and emotional dependency?
+   a) User engagement
+   b) Privacy intrusion
+   c) User addiction
+   d) Emotional manipulation
+   Accepted Answer: User addiction
+
+7) Targeted advertising can improve user experience, but it also increases the user's vulnerability to privacy risks.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) Why should designers provide clear documentation and contracts about app functionalities and data handling?
+   a) To maximize how much users interact with the app
+   b) To increase user dependence on the application
+   c) To restrict user access to features
+   d) To clearly inform users about how their data is recorded and who can access it
+   Accepted Answer: To clearly inform users about how their data is recorded and who can access it
+
+9) Who should participate in forming ethical guidelines for developing affect-aware machines?
+   a) A collaborative group including engineers, ethicists, users, and other relevant stakeholders
+   b) Only engineers and system developers
+   c) Only ethicists and philosophers
+   d) Only end users and direct stakeholders
+   Accepted Answer: A collaborative group including engineers, ethicists, users, and other relevant stakeholders
+
+10) Which of the following sensing strategies is written wrongly in order of their privacy invasiveness?
+    a) Microphone > WiFi> Accelerometer
+    b) GPS > Bluetooth > Screen Touch
+    c) Calls > Apps > Gyroscope
+    d) WiFi > Gyroscope > Calls
+    Accepted Answer: WiFi > Gyroscope > Calls
+
+========================================================================

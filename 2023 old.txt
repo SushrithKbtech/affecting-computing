@@ -1,0 +1,846 @@
+NPTEL - AFFECTIVE COMPUTING 2023
+ALL ASSIGNMENTS - QUESTIONS, OPTIONS, AND ACCEPTED ANSWERS
+========================================================================
+
+WEEK 1 : ASSIGNMENT 1
+Due on 2023-02-08, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which of the following is not a legitimate physiopsychical affect sensing method?
+   a) Electrodermal activity
+   b) Electrocephalography
+   c) Electrocardiography
+   d) Electrostrogram
+   Accepted Answer: Electrostrogram
+
+2) Participatory emotion lends itself to user-centered design innovation.
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) A virtual agent called My Automated Conversation Coach (MAAC) can read facial expressions, speech, and prosody and reply in real time with verbal and nonverbal responses.
+   a) True
+   b) False
+   Accepted Answer: False
+
+4) A robotic head called KISMET is capable of having face-to-face interactions. What modalities can it use to express itself?
+   a) Tone of voice
+   b) Facial expressions
+   c) Body postures
+   d) All of the above
+   Accepted Answer: All of the above
+
+5) Affect sensing refers to a system that can recognize emotion by receiving data through __________.
+   a) Signals
+   b) Systems
+   c) Machines
+   d) Activities
+   Accepted Answer: Signals
+
+6) Systems that can "feel" an emotion are:
+   a) Detection Systems
+   b) Expression Systems
+   c) Perception Systems
+   d) Classification Systems
+   Accepted Answer: Expression Systems
+
+7) Which of the following is true about the "PICIIVE" approach? (A) It increases the direct participation of stakeholders in the design of software. (B) It enables a non-technical person to contribute ideas to the development process.
+   a) Only A
+   b) Only B
+   c) Both A and B
+   d) Neither A nor B
+   Accepted Answer: Both A and B
+
+8) Affective Computing/Neuroscience to marketing enables brand's ability to understand their target demographic's behavior, mood, and pain points.
+   a) True
+   b) False
+   Accepted Answer: True
+
+9) "PICIIVE" aims to make the design process simple enough for non-technical people to be able to engage in it.
+   a) True
+   b) False
+   Accepted Answer: True
+
+10) Constructive emotional experiences are weekly related to affective learning.
+    a) True
+    b) False
+    Accepted Answer: False
+
+========================================================================
+
+WEEK 2 : ASSIGNMENT 1
+Due on 2023-02-08, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which of the following alone are not a valid prototypical emotion type.
+   a) Anxiety
+   b) Despair
+   c) Both A and B
+   d) None of the above
+   Accepted Answer: None of the above
+
+2) Relaxed state of mind can be identified in circumplex model as:
+   a) Low Arousal & Positive Valence
+   b) High Arousal & Positive Valence
+   c) Low Arousal & Negative Valence
+   d) Low Arousal & Positive Valence
+   Accepted Answer: Low Arousal & Positive Valence
+
+3) Which of the following statements is not correct.
+   a) Emotion derives from evolution and neurobiological development.
+   b) Emotion is the key psychological component of consciousness.
+   c) Emotion is more often inherently adaptive than maladaptive.
+   d) None of the above
+   Accepted Answer: None of the above
+
+4) Which of the following statements is/are the representation of James Lange's emotion theory.
+   a) Emotions are caused by the physiological responses to a stressor.
+   b) One Experiences the emotion and physiological response at the same time.
+   c) Both physiological responses and cognitive appraisal of the situation leads to emotion.
+   d) After being exposed to a stressor, one appraises the threat, then feels the emotion followed by the physiological responses.
+   Accepted Answer: Emotions are caused by the physiological responses to a stressor
+
+5) Physiological sensing during an ongoing physical activity may not be an accurate representation of the emotions elicited.
+   a) True
+   b) False
+   c) Maybe
+   d) None of the above
+   Accepted Answer: Maybe
+
+6) Which of the following statements about happiness is/are correct? (A) Happiness is associated with activation in medial prefrontal and temporopolar cortices. (B) Happiness is associated with decreased HTRc annountement and joy are associated with increase.
+   a) A only
+   b) B only
+   c) Both A and B
+   d) None of the above
+   Accepted Answer: Both A and B
+
+7) Assume you are a new car driving down the street and you instantly fall in love with it. Which of the following design levels can explain this type of behavior?
+   a) Reflective
+   b) Visceral
+   c) Behavioral
+   d) None of the above
+   Accepted Answer: Visceral
+
+8) Which of the following emotion(s) best describes the VAD model attributes. Negative Valence, High Arousal, and submissive dominance.
+   a) Fear
+   b) Anger
+   c) Triad
+   d) Delighted
+   Accepted Answer: Fear
+
+9) Two friends are listening to a sad Plagi, one of whom is enjoying the musical composition and the other of whom is growing over his most recent breakup. This situation might be a typical example of?
+   a) Induced emotion
+   b) Percieved emotion
+   c) Both A and B
+   d) None of the above
+   Accepted Answer: Percieved emotion
+
+10) Which of the below mentioned models allow for computationally interpretable relations between emotional states?
+    a) Dimensional model
+    b) Categorical model
+    c) Both A and B
+    d) None of the above
+    Accepted Answer: Dimensional model
+
+========================================================================
+
+WEEK 3 : ASSIGNMENT 3
+Due on 2023-02-15, 23:59 IST
+------------------------------------------------------------------------
+
+1) What of the following is responsible for memory and behavior?
+   a) Amygdala and Hypothalamus
+   b) Cerebellum and Hippocampus
+   c) Thalamus
+   d) None of the above
+   Accepted Answer: Cerebellum and Hippocampus
+
+2) Which of the following statements are correct?
+   (Questions appear to contain multiple statements to evaluate)
+   Accepted Answer: (Multiple correct options based on image)
+
+3) Engagement with the text may create a higher dimensional representation.
+   a) True
+   b) False
+   Accepted Answer: (Based on image assessment)
+
+4) Recognition help to find negative emotional such as fear and anxiety?
+   a) True
+   b) False
+   Accepted Answer: (Based on image assessment)
+
+5) A range of conditions cause extreme different emotional experiences in different contexts?
+   a) True
+   b) False
+   Accepted Answer: (Based on image assessment)
+
+6) Which of the following is associated with fear?
+   a) Emotions expel and tension together
+   b) Knee-jerk activity is part and strong parental notices
+   c) (Additional options in image)
+   Accepted Answer: (Multiple choice answer)
+
+7) Happiness is associated with increased IRT and decreased excitement?
+   a) True
+   b) False
+   Accepted Answer: (Based on image assessment)
+
+8) Emergency emotions are both audit and bio-precision sequences.
+   a) True
+   b) False
+   Accepted Answer: (Based on image assessment)
+
+9) Body imagery can be hear about affect often either when described interpreted research to learners?
+   a) True
+   b) False
+   Accepted Answer: (Based on image assessment)
+
+10) What is the real main of the analysis in in IRS exploration?
+    a) To measure the IRS conversation list the research for sufficient expertise considering the research
+    b) To survey the IRS convention list the research for sufficient expertise considering the research
+    c) (Additional options in image)
+    Accepted Answer: (Based on image assessment)
+
+11) What is the main function of the particular section of the IRS application?
+    a) Should summarize the entire project
+    b) Should explain the entire project
+    c) Should contain the environmental applications of the researchers
+    d) All above
+    Accepted Answer: (Based on image assessment)
+
+12) What is the main function of the particular section of the IRS application?
+    a) Should describe the entire procedure
+    b) Should explain the overall research
+    c) Should state the goals and objectives
+    d) (Additional options in image)
+    Accepted Answer: (Based on image assessment)
+
+13) Which following sentences might are associated with unmanaged facts?
+    a) Imageless
+    b) Fine-mining-related sentences
+    c) Jingle
+    d) (Additional options in image)
+    Accepted Answer: (Based on image assessment)
+
+14) When adjacent words are combined in emotional positions text recognition is desired.
+    a) True
+    b) False
+    Accepted Answer: (Based on image assessment)
+
+15) What is the main state of the analysis is in DFS exploration?
+    a) To list the analysis
+    b) To create the statement
+    c) (Additional options in image)
+    Accepted Answer: (Based on image assessment)
+
+16) What is the main sub-section of the particular section of the IRS application?
+    a) Should summarize the entire project
+    b) Should explain the entire project
+    c) (Additional options in image)
+    Accepted Answer: (Based on image assessment)
+
+17) WEB adjacent assembly will can be hold using
+    a) Drag A
+    b) Drag B
+    c) (Additional options in image)
+    Accepted Answer: (Based on image assessment)
+
+18) WEB adjacent words can be associated with unmanaged form?
+    a) Drag
+    b) Drag B
+    c) (Additional options in image)
+    Accepted Answer: (Based on image assessment)
+
+========================================================================
+
+WEEK 4 : ASSIGNMENT 4
+Due on 2023-02-22, 23:59 IST
+------------------------------------------------------------------------
+
+1) Traditional cameras based Facial Expression Recognition (FER) systems are limited by:
+   a) Obtrusiveness
+   b) Occlusion
+   c) Privacy concerns
+   d) All of the above
+   Accepted Answer: All of the above
+
+2) Which of the following is not a potential application of facial expression recognition?
+   a) Depression Detection
+   b) Drowsy Driver Detection
+   c) Human Activity Recognition
+   d) All of the above
+   Accepted Answer: Human Activity Recognition
+
+3) What are the micro expressions? (A) Subtle facial muscle movements that convey emotions. (B) Facial expressions connected to more fundamental and observable emotions like happiness. (C) Messages that are mildly emotive and spaced in a small font are used for artistic purposes.
+   a) A and B
+   b) Only A
+   c) B and C
+   d) A, B and C
+   Accepted Answer: Only A
+
+4) What does FACS stand for?
+   a) Facial Attributes Coding System
+   b) Facial Affect Coding System
+   c) Facial Affective Coding System
+   d) Functional Action Coding System
+   Accepted Answer: Facial Action Coding System
+
+5) Which of the following statements is False. (A) Micro expressions last between 0.5 to 4 seconds. (B) Dynamic facial features are obtained by extracting handcrafted features from selected peak expression frames of image sequences. (C) Dynamic FER has a higher recognition rate than static FER because it provides additional temporal information.
+   a) Only A
+   b) Only B
+   c) A and C
+   d) A and C
+   Accepted Answer: Only B
+
+6) Deep-learning-based Facial Expression Recognition (FER) approaches, highly reduce the dependence on facial physics-based models along with the pre-processing techniques and enables "end-to-end" learning to occur in the pipeline directly from the input images.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) Deep-learning-based Facial Expression Recognition (FER) approaches are more interpretable and viable than conventional Facial Expression Recognition approaches.
+   a) True
+   b) False
+   Accepted Answer: False
+
+8) Local Binary Patterns are robust to illumination changes.
+   a) True
+   b) False
+   Accepted Answer: False
+
+9) Parkinson's disease is a chronic condition that affects both the neurological system and the bodily components that are under the control of the nervous system. Imagine that you collected Facial Expression Recognition (FER) data from the Parkinson's disease population. For a robust Affect detection system:
+   a) Do we need better features representation and classifiers?
+   b) Do we need more data?
+   c) Only A
+   d) Both A and B
+   Accepted Answer: Both A and B
+
+10) The final stage in conventional facial expression recognition (FER) systems is expression categorization; deep learning-based FER approaches initiate this step using:
+    a) Feature map & pooling operation
+    b) Subsampling operation
+    c) Softmax operation
+    d) Convolution operation
+    Accepted Answer: Softmax operation
+
+========================================================================
+
+WEEK 5 : ASSIGNMENT 1
+Due on 2023-03-01, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which of the following statements is true about fundamental frequency Fo.
+   a) It is the frequency at which vocal cords vibrate in voiced sounds.
+   b) It is the musical pitch of a note that is perceived as the lowest partial present.
+   c) Only A
+   d) Both A and B
+   Accepted Answer: Both A and B
+
+2) Which of the following are the examples of prosody features?
+   a) Fundamental Frequency
+   b) Formant Frequency
+   c) Phoneme Rate
+   d) All of the above
+   Accepted Answer: All of the above
+
+3) Dataset is presented by IITGP-SESC is an example of:
+   a) Natural Dataset
+   b) Induced Dataset
+   c) Simulated Dataset
+   d) All of the above
+   Accepted Answer: Simulated Dataset
+
+4) Speech-rate signifies:
+   a) Loudness
+   b) Pitch
+   c) Voice quality
+   d) Velocity of speech
+   Accepted Answer: Velocity of speech
+
+5) Angry speech has a higher fundamental frequency fo.
+   a) True
+   b) False
+   Accepted Answer: True
+
+6) In iterative feature normalization observations that are labeled as neutral are used to re-estimate the normalization parameters.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) Identical Feature Normalization can adversely affect the emotion discrimination of the feature.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) Which of the following statements are true. (A) Micro-expressions are generally used with considerable variability in loudness, have high and variable pitch, and are high in the first two formant frequencies (B) Variations in pitch show differences between high arousal emotions (joy) and low arousal emotions (sadness) when compared with neutral modulations.
+   a) Only A
+   b) Only B
+   c) A but not B
+   d) Both A and B
+   Accepted Answer: Both A and B
+
+9) To account for variations brought on by the speaker's vocal qualities, speaker normalization is applied.
+   a) True
+   b) False
+   Accepted Answer: True
+
+10) Women's voice have a lower fundamental frequency than men's voice?
+    a) True
+    b) False
+    Accepted Answer: False
+
+========================================================================
+
+WEEK 6 : ASSIGNMENT 1
+Due on 2023-03-08, 23:59 IST
+------------------------------------------------------------------------
+
+1) Typfaces have an impact on the text's emotion?
+   a) True
+   b) False
+   Accepted Answer: True
+
+2) Which model better represents emotions in textual data?
+   a) Categorical
+   b) Dimensional
+   Accepted Answer: Dimensional
+
+3) Relative subjective duration RSD detects:
+   a) Task difficulty
+   b) Aesthetic differences
+   c) Both A and B
+   d) None of the above
+   Accepted Answer: Both A and B
+
+4) The following are possible issues with text-based emotion identification. (A) Frequent use of metaphors. (B) Cross cultural and intra-cultural variations of emotions.
+   a) A only
+   b) B only
+   c) Both A and B
+   d) None of the above
+   Accepted Answer: Both A and B
+
+5) The 2000 words in Affective Norms for English Words (ANEW) have been annotated using a three-dimensional model of emotions that takes into account valence, arousal, and dominance.
+   a) True
+   b) False
+   Accepted Answer: True
+
+6) ANEW and NRC can be utilized as the lexicons for category and dimensional models, respectively.
+   a) True
+   b) False
+   Accepted Answer: False
+
+7) Let X = [3, 2, 0, 4] and Y = [1, 0, 1, 0]. be two vectors that represent two words each. Calculate the cosine similarity score of these two words?
+   a) 0.39
+   b) 0.62
+   c) 0
+   d) 1
+   Accepted Answer: 0.39
+
+8) Which of the following is not an application of affect detection in texts:
+   a) Sentiment Analysis
+   b) Computer Assisted Creativity
+   c) Verbal expressivity in HCI
+   d) Automatic Gesture Recognition
+   Accepted Answer: Automatic Gesture Recognition
+
+9) The literal interpretation of the text is a reliable method for determining emotions.
+   a) True
+   b) False
+   Accepted Answer: False
+
+10) The effectiveness of a statistical learning algorithm can be severely hurt by metaphorical expressions.
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 7 : ASSIGNMENT 7
+Due on 2023-03-15, 23:59 IST
+------------------------------------------------------------------------
+
+1) The user's attention is not required for physiological sensing, which aids in emotion evaluation in people with attention deficit disorder.
+   a) True
+   b) False
+   Accepted Answer: True
+
+2) Arousal and heart rate are tightly related.
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) Which of the following statement is true? (A) High HRV is associated with aroused, stress from exercise, psychological events, or other internal factors of external stimulus. (B) Low HRV is associated with relaxation, the body has a strong ability to tolerate stress or is strongly recovering from prior accumulated stress.
+   a) A only
+   b) B only
+   c) Both A and B
+   d) Neither A nor B
+   Accepted Answer: Neither A nor B
+
+4) Which metric is more appropriate for evaluating the heart rate variability data?
+   a) Average Inter-Beat Interval
+   b) Root Mean Square of Successive Differences
+   Accepted Answer: Root Mean Square of Successive Differences
+
+5) The time-series for heart rate is assumed to be stationary for PPC-based measurements.
+   a) True
+   b) False
+   Accepted Answer: True
+
+6) Emotion is the only factor that affects heart rate and heart rate variability.
+   a) True
+   b) False
+   Accepted Answer: False
+
+7) GSR are excellent methods to monitor emotional arousal, but they cannot reveal emotional valences.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) Pick the most appropriate statement:
+   a) More brain activity means less alpha power and vice-versa
+   b) More brain activity means less alpha power but converse is not true
+   c) Less brain activity means less alpha power and vice-versa
+   d) Less brain activity means less alpha power but converse is not true
+   Accepted Answer: More brain activity means less alpha power and vice-versa
+
+9) The majority of the time, artifacts are present in EEG data.
+   a) True
+   b) False
+   Accepted Answer: True
+
+10) When compared to GSR, will EEG modality better capture the onset of an emotional process?
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 8 : ASSIGNMENT 8
+Due on 2023-03-24, 23:59 IST
+------------------------------------------------------------------------
+
+1) Combining multiple modalities always ensures more accurate inference and expression?
+   a) True
+   b) False
+   Accepted Answer: False
+
+2) Which of the following is not a righteous feature fusion technique?
+   a) Early fusion
+   b) Late fusion
+   c) Decision Fusion
+   d) Nuclear Fusion
+   Accepted Answer: Nuclear Fusion
+
+3) Which of the following statements are true? (A) The assumption behind early fusion is the conditional independence between multiple modalities. (B) Errors are uncorrelated during late fusion because errors from different models are handled independently.
+   a) A only
+   b) B only
+   c) A but not B
+   d) Both A and B
+   Accepted Answer: Both A and B
+
+4) Feature selection tries to eliminate features which are:
+   a) Descriptive
+   b) Redundant
+   c) Relevant
+   d) Interactive
+   Accepted Answer: Redundant
+
+5) The process of identifying and selecting the most helpful features in a dataset is known as feature selection. In the machine learning pipeline, it is an essential step. We should be concerned about feature selection since unnecessary features could lead to (A) Overfitting or Poor Generalization (B) Poor training speed, (C) poor model explainability.
+   a) A only
+   b) C only
+   c) Both A and C
+   d) A, B and C
+   Accepted Answer: A, B and C
+
+6) We begin CFS by calculating all pairwise correlations. The feature with a higher mean absolute correlation with other features would be deleted if a pair of features' correlation exceeds a predetermined threshold.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) As opposed to treating each modality separately, affective stimuli should be classified simultaneously for all available modalities.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) Slow fusion eliminates the synchronization requirement while taking advantage of the correlations between the modalities.
+   a) True
+   b) False
+   Accepted Answer: True
+
+9) Real-time prediction from multimodal data stream requires larger window segments
+   a) True
+   b) False
+   Accepted Answer: False
+
+10) How much information each modality conveys about the expressed affect during multimodal interactions is determined by:
+    a) Modality Selection
+    b) Feature Selection
+    c) Redundancy
+    d) All of the above
+    Accepted Answer: Modality Selection
+
+========================================================================
+
+WEEK 9 : ASSIGNMENT 9
+Due on 2023-03-29, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which of the following statements are not true?
+   a) Humans prefer to interact with machines in the same way that they interact with other people.
+   b) Empathy is the capacity to understand what other humans are experiencing.
+   c) Presence of empathic responses by AI leads to better, more productive and appropriate interactions.
+   d) Appearance and function of a product has no significant impact on how people perceive it, interact with it, and build long-term relationships with it.
+   Accepted Answer: Appearance and function of a product has no significant impact on how people perceive it, interact with it, and build long-term relationships with it.
+
+2) Gödlmism analyzes the human voice for arousal and performs semantic analysis of spoken language for emotion selection?
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) The ________ task is a test that psychologists use to gauge development of the theory of mind.
+   a) False knowledge
+   b) False belief
+   c) True belief
+   d) True knowledge
+   Accepted Answer: False belief
+
+4) Humans prefer to interact with machines in the same way that they interact with other people
+   a) True
+   b) False
+   Accepted Answer: True
+
+5) Tendency to provide human characteristics to non-lifelike artifacts is called as:
+   a) Polymorphism
+   b) Anthropomorphism
+   c) Skeuomorphism
+   d) Neomorphism
+   Accepted Answer: Anthropomorphism
+
+6) A human appearance or behavior can make an artificial figure seem more familiar for viewers - but only up to a point is called as:
+   a) Flat-floored valley
+   b) Waldo's Valley
+   c) Empathetic agents
+   d) Uncanny Valley
+   Accepted Answer: Uncanny Valley
+
+7) Agents that respond emotionally to situations that are more congruent with the user's or another agent's emotional situation are known as:
+   a) TYPE-1 agents
+   b) True
+   Accepted Answer: False
+
+8) Empathic agents are (A) Agents that respond emotionally to situations that are more congruent with the user's or another agent's emotional situation. (B) Agents that, by their design and behaviors, lead users to respond in a way that is more congruent with the agent's emotional situation.
+   a) Only A
+   b) Only B
+   c) Both A and B
+   d) None of the above
+   Accepted Answer: Both A and B
+
+9) Which of the following robots had a very expressive mechanical face with anthropomorphic features.
+   a) KISMET
+   b) Siamy
+   c) Both A and B
+   d) None of the above
+   Accepted Answer: KISMET
+
+10) User feedback ratings are the potential methodological metric for evaluating the affective agents.
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 10 : ASSIGNMENT 1
+Due on 2023-04-05, 23:59 IST
+------------------------------------------------------------------------
+
+1) Moore's Law is related to?
+   a) Speed of operations in electronic devices
+   b) Power ratings of electronic devices
+   c) Level of integration in electronic devices
+   d) Price of electronic devices
+   Accepted Answer: Level of integration in electronic devices
+
+2) Experience during interaction with affective learning technology is subject to higher variability among learners.
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) AutoTutor is one of the first reactive conversational intelligent tutoring systems which can detect Boredom and confusion but not frustration.
+   a) True
+   b) False
+   Accepted Answer: False
+
+4) GazeTutor is a multimedia interface consisting of an animated CA.
+   a) True
+   b) False
+   Accepted Answer: True
+
+5) Level-O adaptation systems recognize that the performance of a particular task could be optimized according to some metrics, but no adaptation is performed.
+   a) True
+   b) False
+   Accepted Answer: False
+
+6) Affective states can be monitored using (A) Behavioral data, (B) Sensor data
+   a) A only
+   b) B only
+   c) Both A and B
+   d) None of the above
+   Accepted Answer: Both A and B
+
+7) Affect detection generalization is a very challenging problem because there is inter-user heterogeneity
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) Shirn is an example of Level-2 adaptation.
+   a) True
+   b) False
+   Accepted Answer: True
+
+9) Understanding a player's affective profile will not help in enhancing the computer game experience.
+   a) True
+   b) False
+   Accepted Answer: False
+
+10) Camerae can be used to monitor the heart rate of a user?
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 11 : ASSIGNMENT 1
+Due on 2023-04-12, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which of the following is a challenge in developing an emotional virtual agent?
+   a) Accuracy; Visibility in emotional expression across individuals, cultures, and contexts.
+   b) Real-time processing; Must be able to operate in real-time or near real-time to provide a seamless user experience.
+   c) Privacy Concerns; Collecting and analyzing speech data raises privacy concerns, particularly if the data is collected without the user's knowledge or consent.
+   d) All of the above
+   Accepted Answer: All of the above
+
+2) Which of the following is a suitable reason why an Emotional Virtual Agent (EVA) should support multiple languages?
+   a) To find the number of users who can interact with the EVA
+   b) To increase the cost of development
+   c) To enable a wider range of users to access emotional support
+   d) To increase the workload of the developers
+   Accepted Answer: To enable a wider range of users to access emotional support
+
+3) What should an Emotional Virtual Agent base its appropriate response on?
+   a) Intent and emotion
+   b) Emotion and context
+   c) Intent and context
+   d) A mix of intent, emotion, and context
+   Accepted Answer: A mix of intent, emotion, and context
+
+4) Which of the following is the best way to prevent privacy concerns related to emotional virtual agents?
+   a) Providing users with a generic privacy policy without mentioning the specific data being collected by the agent.
+   b) Obtaining users' consent before collecting personal data and clearly stating the purpose of the data collection.
+   c) Using encryption techniques to secure the personal data collected by the agent.
+   d) Setting users' personal data to third-party companies for profit.
+   Accepted Answer: Obtaining users' consent before collecting personal data and clearly stating the purpose of the data collection.
+
+5) An emotional virtual agent is designed to provide emotional support to people with mental health conditions. However, users become dependent on the emotional support provided, leading to negative consequences when the virtual agent is discontinued. What ethical concern is raised by users becoming dependent on the virtual agent for emotional support?
+   a) Dependence on the virtual assistant
+   b) Discrimination against certain groups
+   c) Violation of privacy
+   d) Biased emotional responses
+   Accepted Answer: Dependence on the virtual assistant
+
+6) Virtual agents can display discrimination against certain groups of people due to the possibility of their emotional responses being influenced by bias or prejudice.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) To prevent overfitting, the number of features used should be balanced with the complexity of the model.
+   a) True
+   b) False
+   Accepted Answer: False
+
+8) The speech emotion detection and virtual assistant components should be able to work in real-time or close to real-time.
+   a) True
+   b) False
+   Accepted Answer: True
+
+9) An emotional virtual personal assistant powered by machine learning that has been trained on south Indian languages and dialects would be able to translate well for north Indian users.
+   a) True
+   b) False
+   Accepted Answer: False
+
+10) Which of the following is true about a virtual personal assistant system?
+    a) It should protect both personal and emotional information.
+    b) It should protect personal information but not emotional information.
+    c) It should protect emotional information but not personal information.
+    d) It should not protect either personal or emotional information.
+    Accepted Answer: It should protect both personal and emotional information.
+
+========================================================================
+
+WEEK 12 : ASSIGNMENT 1
+Due on 2023-04-19, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which of the following sensing strategies is written correctly in order of their privacy invasiveness?
+   a) Accelerometer + GPS + WiFi
+   b) GPS + Bluetooth + Screen Touch
+   c) WiFi + Gyroscope + Calls
+   d) Calls + Battery > Camera
+   Accepted Answer: GPS + Bluetooth + Screen Touch
+
+2) Any information obtained "persona", if through other pertinent information is added.
+   a) True
+   b) False
+   Accepted Answer: False
+
+3) What method from the list below is used in neuromarketing research?
+   a) dMRI
+   b) EGG
+   c) fMRI
+   d) ECB
+   Accepted Answer: fMRI
+
+4) Which of the following ethical factors should be taken into account when adopting artificial intelligence? (A) Data privacy, (B) algorithmic fairness and bias, and (C) informed consent to data use.
+   a) A only
+   b) B only
+   c) A and B only
+   d) A, B and C
+   Accepted Answer: A, B and C
+
+5) Which of the following is not a potential Ethical Consideration that need not to be addressed?
+   a) Emotional Manipulation
+   b) Privacy
+   c) Emotional Dependency
+   d) None of the above
+   Accepted Answer: None of the above
+
+6) Users must express their opinions about the products through focus groups and surveys during beta testing, which might be hampered by problems like participant bias, recall bias, etc.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) It will be a good idea to enable affective skills in all kinds of machines.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) Which of the following sensing strategies is written wrongly in order of their privacy invasiveness?
+   a) Microphone + WiFi + Accelerometer
+   b) GPS + Bluetooth + Screen Touch
+   c) WiFi + Gyroscope + Calls
+   d) Calls + Battery > Gyroscope
+   Accepted Answer: Calls + Battery > Gyroscope
+
+9) The "inferring context step" in articulatory mobile computing refers to the application of statistical learning techniques for making series of unobserved data with more abstract ideas?
+   a) True
+   b) False
+   Accepted Answer: True
+
+10) Targeted advertising will enhance the user experience but cost to user privacy vulnerability?
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+END OF DOCUMENT
+========================================================================
+
+This file contains all questions, options, and accepted answers from the 12 weeks of NPTEL Affective Computing assignments for 2023.

@@ -1,0 +1,803 @@
+NPTEL - AFFECTIVE COMPUTING 2024
+ALL ASSIGNMENTS - QUESTIONS, OPTIONS, AND ACCEPTED ANSWERS
+========================================================================
+
+WEEK 1 : ASSIGNMENT 1
+Due on 2024-02-07, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which of the following methods can be used for Affect Sensing?
+   a) Electroencephalography (EEG)
+   b) QR code scanning
+   c) Adhaar card scanning
+   d) Geospatial mapping
+   Accepted Answer: Electroencephalography (EEG)
+
+2) Affective computing integrates concepts from computer science, signal processing, machine learning, and psychology to study emotional representation.
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) Affective computing involves enabling the machine to understand the user's emotional state but does not involve determining the appropriate machine response based on this information.
+   a) True
+   b) False
+   Accepted Answer: False
+
+4) Which of the following camera types is better for privacy preservation?
+   a) PTZ cameras
+   b) Panoramic cameras
+   c) RGB cameras
+   d) Thermal cameras
+   Accepted Answer: Thermal cameras
+
+5) Which of the following is not a valid facial feature for affect sensing?
+   a) Eye Movement and Gaze
+   b) Mouth and Lip Movements
+   c) Skin Color Changes
+   d) Ear Shape or Structure
+   Accepted Answer: Ear Shape or Structure
+
+6) Analyzing through a large number of attributes increases confidence in the affect sensing?
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) Audio signals capture a wide range of emotional cues, such as tone of voice, pitch, and intonation, providing valuable information about a person's emotional state.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) Changes in one's emotional state, such as stress, relaxation, anger, fear, or happiness, are not associated with observable changes on the skin.
+   a) True
+   b) False
+   Accepted Answer: False
+
+9) Which of the following statements best describes emotionally intelligent interfaces?
+   a) Interfaces that prioritize aesthetics over functionality
+   b) Interfaces capable of recognizing and responding to users' emotions
+   c) Interfaces solely focused on text-based communication
+   d) Interfaces designed exclusively for intelligent users
+   Accepted Answer: Interfaces capable of recognizing and responding to users' emotions
+
+10) Confirmation bias is the tendency to favor information that aligns with existing beliefs, ignoring contradictory evidence. It influences decision-making and can contribute to distorted perceptions.
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 2 : ASSIGNMENT 2
+Due on 2024-02-07, 23:59 IST
+------------------------------------------------------------------------
+
+1) When we experience emotions, there are often associated physiological responses in the body. These responses are part of the intricate relationship between the brain, nervous system, and various bodily functions.
+   a) True
+   b) False
+   Accepted Answer: True
+
+2) Emotions are complex phenomena influenced by only subjective and not objective factors.
+   a) True
+   b) False
+   Accepted Answer: False
+
+3) How is the mind-body connection characterized in the context of emotions and physiological responses?
+   a) Unidirectional communication
+   b) Bidirectional communication
+   c) Exclusively brain-driven
+   d) Independent processes
+   Accepted Answer: Bidirectional communication
+
+4) When the brain perceives a threat and experiences stress, it can trigger physiological changes in the body, such as increased heart rate and the release of stress hormones.
+   a) True
+   b) False
+   Accepted Answer: True
+
+5) What is a significant factor contributing to individual variability in emotional responses?
+   a) Cognitive appraisal
+   b) Cultural influences
+   c) Personal experiences
+   d) All of the above
+   Accepted Answer: All of the above
+
+6) What is the primary distinction between perceived emotions and induced emotions?
+   a) Perceived emotions are universal, while induced emotions are culturally influenced.
+   b) Perceived emotions are consciously experienced, while induced emotions are subconscious reactions.
+   c) Perceived emotions are the emotions others observe in an individual, while induced emotions are intentionally expressed.
+   d) Perceived emotions are the emotions an individual believes they are experiencing, while induced emotions are emotions intentionally triggered by external stimuli.
+   Accepted Answer: Perceived emotions are the emotions an individual believes they are experiencing, while induced emotions are emotions intentionally triggered by external stimuli.
+
+7) In the context of emotion recognition models, which model categorizes emotions into discrete, distinct categories or labels?
+   a) Categorical model
+   b) VAD/PAD model
+   c) Universal model
+   d) Dynamic model
+   Accepted Answer: Categorical model
+
+8) How does the categorical model differ from the dimensional model in representing emotions?
+   a) The categorical model focuses on intensity, while the dimensional model focuses on discrete categories.
+   b) The categorical model organizes emotions into distinct categories, while the dimensional model represents emotions along continuous dimensions.
+   c) The categorical model only considers universal emotions, while the dimensional model considers culturally specific emotions.
+   d) The categorical model and the dimensional model are synonymous.
+   Accepted Answer: The categorical model organizes emotions into distinct categories, while the dimensional model represents emotions along continuous dimensions.
+
+9) Higher skin conductance levels are commonly found in individuals experiencing fear.
+   a) True
+   b) False
+   Accepted Answer: True
+
+10) In the circumplex model, a state of relaxation is characterized by High Arousal and Positive Valence.
+    a) True
+    b) False
+    Accepted Answer: False
+
+========================================================================
+
+WEEK 3 : ASSIGNMENT 3
+Due on 2024-02-14, 23:59 IST
+------------------------------------------------------------------------
+
+1) What is the process through which emotions are induced among human subjects?
+   a) Emotional transference
+   b) Psychological projection
+   c) Emotional elicitation
+   d) Cognitive dissonance
+   Accepted Answer: Emotional elicitation
+
+2) The ecological validity of data becomes a significant concern when dealing with Acted or Posed Expressions.
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) The recall method is a form of passive technique for eliciting emotions
+   a) True
+   b) False
+   Accepted Answer: False
+
+4) In Human-Centered research, what should be the primary consideration when conducting studies involving individuals?
+   a) Funding availability
+   b) Data analysis
+   c) Rights and welfare of human subjects
+   d) Publication of results
+   Accepted Answer: Rights and welfare of human subjects
+
+5) Which experimental design involves testing the same group of participants under different conditions to examine the effects of an independent variable?
+   a) Between-subject design
+   b) Within-subject design
+   c) Both A and B
+   d) Correlational design
+   Accepted Answer: Within-subject design
+
+6) What is the purpose of data annotation in the context of collected data?
+   a) To enhance data collection methods
+   b) To create ground truth for the data
+   c) To summarize collected information
+   d) To validate the accuracy of data
+   Accepted Answer: To create ground truth for the data
+
+7) What does valence refer to in affect classification?
+   a) Positivity or negativity of emotion
+   b) Intensity of emotion
+   c) Duration of emotion
+   d) Frequency of emotion
+   Accepted Answer: Positivity or negativity of emotion
+
+8) What is the key benefit of incorporating naturalistic expressions in studies on emotion recognition?
+   a) Consistency across cultures
+   b) Easier annotation and labeling
+   c) Enhanced ecological validity
+   d) Higher number of citations over research papers
+   Accepted Answer: Enhanced ecological validity
+
+9) Which statement accurately reflects the ethical considerations in research involving human subjects?
+   a) Data collection can commence immediately without any IRB approval.
+   b) IRB approval is optional for data collection.
+   c) Data collection should wait until obtaining IRB approval.
+   d) IRB approval is only necessary after the completion of data collection.
+   Accepted Answer: Data collection should wait until obtaining IRB approval.
+
+10) The Control Group serves as a baseline for comparison in assessing emotion recognition accuracy.
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 4 : ASSIGNMENT 4
+Due on 2024-02-21, 23:59 IST
+------------------------------------------------------------------------
+
+1) In the context of facial expression recognition, which statement accurately distinguishes between static and spatio-temporal facial expressions?
+   a) Static expressions involve the movement of facial muscles, while spatio-temporal expressions focus on still images.
+   b) Static expressions capture emotions over a period of time, while spatio-temporal expressions analyze emotions in a single moment.
+   c) Static expressions emphasize the spatial configuration of facial features, while spatiotemporal expressions consider both spatial and temporal dynamics of facial movements.
+   d) Static facial expressions require the use of sensors for detection, while spatio-temporal expressions rely on manual observation by human experts
+   Accepted Answer: Static expressions emphasize the spatial configuration of facial features, while spatiotemporal expressions consider both spatial and temporal dynamics of facial movements.
+
+2) In the context of affective computing, why is it important for a system to be agnostic to different durations of emotional events?
+   a) Because emotional events durations do not vary between individuals.
+   b) Because shorter emotional events are less significant for analysis.
+   c) Because longer emotional events indicate a stronger emotional response.
+   d) Because individuals may have varying durations of emotional expressions, requiring the system to accommodate differences.
+   Accepted Answer: Because individuals may have varying durations of emotional expressions, requiring the system to accommodate differences.
+
+3) Which of the following is NOT a commonly detected facial landmark?
+   a) Nose tip
+   b) Ear lobe
+   c) Chin
+   d) Outer corner of the eye
+   Accepted Answer: Ear lobe
+
+4) Micro expressions are often detected using:
+   a) High-speed cameras
+   b) Thermal imaging
+   c) Electroencephalography (EEG)
+   d) Magnetic Resonance Imaging (MRI)
+   Accepted Answer: High-speed cameras
+
+5) Detecting macro emotions with the naked eye is challenging due to their duration being less than 500 milliseconds.
+   a) True
+   b) False
+   Accepted Answer: False
+
+6) In the context of social dynamics, what does distance from the centroid indicate?
+   a) The level of physical activity within the group
+   b) The degree of space organization within the social setting
+   c) The distribution of resources among group members
+   d) The relative importance of individuals in the social setting
+   Accepted Answer: The relative importance of individuals in the social setting
+
+7) Why is ensuring fairness important when using a facial expression recognition system for applications related to health and well-being?
+   a) Fairness adds an essential element of beauty to the system.
+   b) Fairness prevents bias and discrimination in the system's outputs.
+   c) Fairness increases the complexity of the system's algorithms.
+   d) Fairness is not relevant in health and well-being applications.
+   Accepted Answer: Fairness prevents bias and discrimination in the system's outputs.
+
+8) Which of the following is not a potential application of Automatic Facial Expression Recognition?
+   a) Human-Computer Interaction
+   b) Emotionally intelligent virtual assistants
+   c) Weather Forecasting
+   d) Mental health diagnosis and treatment monitoring
+   Accepted Answer: Weather Forecasting
+
+9) In the context of collecting datasets for automatic facial expression recognition, what is a critical consideration regarding the consistency of labelers?
+   a) Providing equal weightage to all labelers regardless of their consistency
+   b) Giving more weightage to labelers with inconsistent labeling
+   c) Giving more weightage to labelers with consistent labeling
+   d) Ignoring labeler consistency as it does not impact the dataset
+   Accepted Answer: Giving more weightage to labelers with consistent labeling
+
+10) It is not important to ensure proper copyright clearance when collecting datasets for automatic facial expression recognition
+    a) True
+    b) False
+    Accepted Answer: False
+
+========================================================================
+
+WEEK 5 : ASSIGNMENT 5
+Due on 2024-02-28, 23:59 IST
+------------------------------------------------------------------------
+
+1) What is one of the primary challenges in voice-based affect analysis across different languages?
+   a) Limited availability of recording devices
+   b) Difficulty in understanding speech patterns
+   c) Cross-dataset performance variations
+   d) Lack of computational resources
+   Accepted Answer: Cross-dataset performance variations
+
+2) What does MFCC stand for in the context of audio signal processing?
+   a) Multifunctional Frequency Cepstral Coefficients
+   b) Mel-Frequency Cepstral Coefficients
+   c) Modulated Frequency Cepstral Coefficients
+   d) Multi-Feature Cepstral Coefficients
+   Accepted Answer: Mel-Frequency Cepstral Coefficients
+
+3) What is a spectrogram?
+   a) A plot of amplitude against time
+   b) A visual representation of frequency content over time
+   c) A measure of signal power over time
+   d) A representation of phase information in the frequency domain
+   Accepted Answer: A visual representation of frequency content over time
+
+4) In the context of operator safety in complex heavy machinery operation, how can voice analysis be utilized?
+   a) To control the speed of the machinery
+   b) To monitor the environmental conditions
+   c) To assess the state of the driver/operator
+   d) To detect physical defects in the machinery
+   Accepted Answer: To assess the state of the driver/operator
+
+5) Voice analysis is not as effective as facial expressions in determining emotional states in affective computing.
+   a) True
+   b) False
+   Accepted Answer: False
+
+6) Considering meta-information about a user's background and culture is unnecessary for understanding emotions through voice in affective computing.
+   a) True
+   b) False
+   Accepted Answer: False
+
+7) What is the concern regarding simulated or acted data in emotion analysis datasets?
+   a) It provides the most accurate representation of real-world user behavior
+   b) Not all examples captured may reflect genuine user behavior
+   c) It is easier to collect compared to other types of data
+   d) Simulated data is less prone to biases
+   Accepted Answer: Not all examples captured may reflect genuine user behavior
+
+8) Confirmation bias is the tendency to interpret information in a way that confirms one's preexisting beliefs.
+   a) True
+   b) False
+   Accepted Answer: True
+
+9) What is the purpose of conducting statistical analysis on labels generated by multiple labelers for the same samples in a database?
+   a) To simplify the labeling process for future samples
+   b) To identify inconsistencies and discrepancies in the labels
+   c) To increase the complexity of the dataset
+   d) To exhaust the research grant funds
+   Accepted Answer: To identify inconsistencies and discrepancies in the labels
+
+10) In the context of feature selection for emotion analysis, what is the suggested approach to achieve balance between different attributes of the signal?
+    a) Using a single feature for both arousal and valence
+    b) Selecting features randomly for analysis
+    c) Applying fusion techniques to combine multiple features
+    d) Ignoring feature selection and relying solely on raw data
+    Accepted Answer: Applying fusion techniques to combine multiple features
+
+========================================================================
+
+WEEK 6 : ASSIGNMENT 6
+Due on 2024-03-06, 23:59 IST
+------------------------------------------------------------------------
+
+1) Emotion representation in text is always straightforward and easily detectable without considering the surrounding context.
+   a) True
+   b) False
+   Accepted Answer: False
+
+2) Emotion recognition in text conversations remains static and consistent throughout the flow of the conversation.
+   a) True
+   b) False
+   Accepted Answer: False
+
+3) Which of the following best describes the Bag of Words (BoW) model in natural language processing?
+   a) It considers the order of words in a text document.
+   b) It ignores the frequency of words in a text document.
+   c) It represents a text document as a collection of words, disregarding grammar and word order.
+   d) It focuses solely on the grammatical structure of a text document.
+   Accepted Answer: It represents a text document as a collection of words, disregarding grammar and word order.
+
+4) What does the IDF component in TF-IDF represent?
+   a) The frequency of a term within a document.
+   b) The total number of documents in the corpus.
+   c) The importance of a term relative to the entire corpus.
+   d) The number of times a term appears in a document multiplied by the total number of terms in the document.
+   Accepted Answer: The importance of a term relative to the entire corpus.
+
+5) What is the primary objective of Word2Vec?
+   a) To identify the most frequent words in a text corpus.
+   b) To generate word embeddings representing semantic meaning.
+   c) To perform sentiment analysis on text data.
+   d) To identify common stopwords in a text corpus.
+   Accepted Answer: To generate word embeddings representing semantic meaning.
+
+6) Glove is an unsupervised learning algorithm for obtaining vector representations for words.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) Attention mechanism involves determining the importance of different parts within a sequence of textual elements.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) When conducting emotion recognition, examining both the text and its associated audio file produced by a text-to-speech system consistently results in the same emotion classification.
+   a) True
+   b) False
+   Accepted Answer: False
+
+9) Given the corpus: Document 1: "The cat sat on the mat." Document 2: "The dog played with the ball." and Document 3: "The cat and the dog are friends." Calculate TF-IDF for the term "cat" in Document 1.
+   a) TF-IDF = 0.176
+   b) TF-IDF = 0.001
+   c) TF-IDF = 3.160
+   d) None of the above
+   Accepted Answer: None of the above
+
+10) Basic statistics are computed around the labels assigned by different labelers in text-based emotion detection to arrive at a final emotional classification for a statement
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 7 : ASSIGNMENT 7
+Due on 2024-03-13, 23:59 IST
+------------------------------------------------------------------------
+
+1) Physiological signals originate from the activity of the autonomic nervous system, which means they cannot be consciously or intentionally controlled.
+   a) True
+   b) False
+   Accepted Answer: True
+
+2) What does Heart Rate Variability (HRV) measure?
+   a) The average heart rate over a specified period
+   b) The variation in time intervals between consecutive heartbeats
+   c) The strength of the heart's contractions
+   d) The number of heartbeats per minute
+   Accepted Answer: The variation in time intervals between consecutive heartbeats
+
+3) Increased heart rate variability has been demonstrated to correlate with a relaxed state.
+   a) True
+   b) False
+   Accepted Answer: True
+
+4) Which of the following methods is generally considered a more accurate measurement of heart rate?
+   a) Electrocardiogram (ECG)
+   b) Photoplethysmography (PPG)
+   c) Both ECG and PPG provide equally accurate measurements
+   d) None of the above
+   Accepted Answer: Electrocardiogram (ECG)
+
+5) What is the typical sampling frequency for Galvanic Skin Response (GSR) signals?
+   a) 100-1000 Hz
+   b) 50-60 Hz
+   c) 1-10 Hz
+   d) 1-30 KHz
+   Accepted Answer: 1-10 Hz
+
+6) Why is it important to introduce a gap between stimuli during experimental presentations?
+   a) To increase the overall duration of the experiment
+   b) To minimize overlap of responses between stimuli
+   c) To reduce participant fatigue
+   d) To maintain a consistent rhythm in the presentation
+   Accepted Answer: To minimize overlap of responses between stimuli
+
+7) EEG can measure changes in brain activity over very short time intervals, often in milliseconds.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) Which frequency band of the EEG signal is associated with a state of relaxation and often observed when individuals have their eyes closed?
+   a) Delta (1-3 Hz)
+   b) Theta (4-7 Hz)
+   c) Alpha (8-12 Hz)
+   d) Beta (13-30 Hz)
+   Accepted Answer: Alpha (8-12 Hz)
+
+9) There is an inverse relationship between alpha band power and cortical activity.
+   a) True
+   b) False
+   Accepted Answer: True
+
+10) What is a common limitation associated with EEG signals?
+    a) Poor temporal resolution
+    b) Limited frequency range
+    c) Poor spatial resolution
+    d) Limited signal-to-noise ratio
+    Accepted Answer: Poor spatial resolution
+
+========================================================================
+
+WEEK 8 : ASSIGNMENT 8
+Due on 2024-03-20, 23:59 IST
+------------------------------------------------------------------------
+
+1) Which statement best describes the expectation of a multimodal emotion recognition system?
+   a) Each modality is anticipated to offer redundant information.
+   b) Each modality is expected to provide unique information.
+   c) Combining modalities is unnecessary for accurate emotion recognition.
+   d) Modality combination diminishes the effectiveness of emotion recognition systems.
+   Accepted Answer: Each modality is expected to provide unique information.
+
+2) If any two modalities convey identical emotional information, combining them may increase computational load without improving system performance.
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) What is the primary challenge in early feature fusion of different modalities?
+   a) Synchronization issues due to differences in feature dimensions.
+   b) Difficulties in selecting the appropriate machine learning algorithm.
+   c) Leads to an increase in computational complexity
+   d) Lack of available datasets for feature combination experimentation.
+   Accepted Answer: Synchronization issues due to differences in feature dimensions.
+
+4) Which of the following is NOT a technique used for combining outputs in late fusion?
+   a) Averaging
+   b) Early fusion
+   c) Voting
+   d) All of the above
+   Accepted Answer: Early fusion
+
+5) Soft late fusion involves incorporating a measure of confidence which is linked to the decisions being made.
+   a) True
+   b) False
+   Accepted Answer: True
+
+6) Having overlapping information can lead to the curse of dimensionality, particularly in scenarios like feature fusion where overlap is common.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) What assumption is made in decision-level fusion?
+   a) Conditional dependence between modalities
+   b) Conditional independence between modalities
+   c) Complete independence between modalities
+   d) None of the above
+   Accepted Answer: Conditional independence between modalities
+
+8) Slow fusion provides us with the correlation between modalities while relaxing the requirement of synchronization.
+   a) True
+   b) False
+   Accepted Answer: True
+
+9) When performing decision-level fusion (late fusion), what potential loss of information could occur?
+   a) Loss of computational efficiency
+   b) Loss of model interpretability
+   c) Loss of correlation between individual features
+   d) Loss of feature diversity
+   Accepted Answer: Loss of correlation between individual features
+
+10) Support Vector Machine (SVM) is an example of which fusion technique?
+    a) Early fusion
+    b) Late fusion
+    c) Feature fusion
+    d) None of the above
+    Accepted Answer: None of the above
+
+========================================================================
+
+WEEK 9 : ASSIGNMENT 9
+Due on 2024-03-27, 23:59 IST
+------------------------------------------------------------------------
+
+1) What is empathy primarily about?
+   a) Understanding and experiencing what others are going through
+   b) Providing sympathy to others in their times of need
+   c) Avoiding interaction with those who lack empathy
+   d) Building relationships based on mutual understanding and support
+   Accepted Answer: Understanding and experiencing what others are going through
+
+2) Providing emotionally intelligent components, such as empathetic responses from virtual agents, can lead to better, more positive, and appropriate interactions with humans.
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) What is anthropomorphic design primarily based on?
+   a) Humans prefer machines with human-like properties
+   b) The belief that machines should mimic human behavior entirely
+   c) Both A and B
+   d) None of the above
+   Accepted Answer: Humans prefer machines with human-like properties
+
+4) What is the Uncanny Valley effect primarily associated with?
+   a) Increased acceptance of robots in society
+   b) A feeling of discomfort towards almost human-like robots
+   c) Both A and B
+   d) None of the above
+   Accepted Answer: A feeling of discomfort towards almost human-like robots
+
+5) What are the three major subprocesses involved in empathy?
+   a) Emotional simulation, personalization, and emotional regulation
+   b) Emotional simulation, perspective taking, and emotion regulation
+   c) Sympathy, perspective taking, and cognitive processing
+   d) None of the above
+   Accepted Answer: Emotional simulation, perspective taking, and emotion regulation
+
+6) Physiological and behavioral cues can be applied to understand emotional state but not empathy.
+   a) True
+   b) False
+   Accepted Answer: False
+
+7) Vocal cues and voice modalities of humans are reliable indicators of empathetic states.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) Empathetic responses displayed by virtual and robotic agents are truly empathetic.
+   a) True
+   b) False
+   Accepted Answer: False
+
+9) What are the primary limitations of the data-driven approach in computational modeling of empathy?
+   a) Lack of computational power
+   b) Insufficient quantity and variety/quality of data
+   c) Ethical issues surrounding data collection
+   d) None of the above
+   Accepted Answer: Insufficient quantity and variety/quality of data
+
+10) Kismet is not an anthropomorphic robotic head specialized for face-to-face interaction with humans.
+    a) True
+    b) False
+    Accepted Answer: False
+
+========================================================================
+
+WEEK 10 : ASSIGNMENT 10
+Due on 2024-04-03, 23:59 IST
+------------------------------------------------------------------------
+
+1) Learners' experiences with affective learning technologies involve both the emotions they experience and the improvements in learning gained from their interaction.
+   a) True
+   b) False
+   Accepted Answer: True
+
+2) Sensors affective learning technologies are typically non-intrusive and cost-effective, but they can be noisy and lack scalability.
+   a) True
+   b) False
+   Accepted Answer: True
+
+3) Which level of adaptation in affective computing involves no alteration of the system's behavior in response to the user's emotional state?
+   a) Level 0 adaptation
+   b) Level 1 adaptation
+   c) Level 2 adaptation
+   d) Level 3 adaptation
+   Accepted Answer: Level 0 adaptation
+
+4) At Level 2 adaptation, no actual adaptation takes place, but the system can recognize the necessity for adaptation.
+   a) True
+   b) False
+   Accepted Answer: False
+
+5) Camera can be applied to monitor the heart rate of the user?
+   a) True
+   b) False
+   Accepted Answer: True
+
+6) Cognitive empathy involves perceiving the emotions of the target in a logical manner.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) Failing to distinguish between categorical and continuous models of emotions leads to challenges in generalizing machine learning algorithms.
+   a) True
+   b) False
+   Accepted Answer: True
+
+8) Which of the following are the ways individuals may respond empathetically.
+   a) Reactive empathy
+   b) Parallel empathy
+   c) Both a and B
+   d) None of the above
+   Accepted Answer: Both a and B
+
+9) Which of the following best describes a process that involves considering or perceiving the emotions of the target more emotionally or in a natural way?
+   a) Cognitive empathy
+   b) Affective empathy
+   c) Both a and B
+   d) None of the above
+   Accepted Answer: Affective empathy
+
+10) Which of the following best describes the factors influencing emotional responses in empathizers?
+    a) The empathizer's astrological sign
+    b) The empathizer's political affiliation
+    c) The empathizer's personality type, gender, age, and mood
+    d) The empathizer's favorite color
+    Accepted Answer: The empathizer's personality type, gender, age, and mood
+
+========================================================================
+
+WEEK 11 : ASSIGNMENT 11
+Due on 2024-04-10, 23:59 IST
+------------------------------------------------------------------------
+
+1) One potential application of using an agent in customer service is to provide a more personalized and empathetic experience to customers by recognizing their emotions during interactions.
+   a) True
+   b) False
+   Accepted Answer: True
+
+2) Which of the following are the challenges faced by emotional virtual personnel assistance?
+   a) Ensuring the accuracy of emotion prediction.
+   b) Facilitating real-time emotion prediction.
+   c) Both a and b
+   d) None of the above
+   Accepted Answer: Both a and b
+
+3) Virtual assistants may be biased towards the training data, which may potentially lead to the unfair treatment of certain groups.
+   a) True
+   b) False
+   Accepted Answer: True
+
+4) Which of the following is an ethical concern that is not associated with virtual assistants?
+   a) Privacy concerns
+   b) Emotional Manipulation
+   c) Bias and Discrimination
+   d) None of the above
+   Accepted Answer: None of the above
+
+5) Emotional virtual agents may be designed to appear as if they have emotions but in reality they are just algorithms.
+   a) True
+   b) False
+   Accepted Answer: True
+
+6) The process of transferring emotions to robots is non-trivial because robots do not express emotions in the same manner as humans.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) Copy-pasting human expressions onto robots guarantees seamless translation of emotions.
+   a) True
+   b) False
+   Accepted Answer: False
+
+8) Emotional virtual agents might lead to social isolation.
+   a) True
+   b) False
+   Accepted Answer: True
+
+9) Linear discriminative analysis is a generative algorithm which can be applied to recognize emotions?
+   a) True
+   b) False
+   Accepted Answer: True
+
+10) During the preprocessing of emotional data, Normalizing data from different users enables fair comparison across them.
+    a) True
+    b) False
+    Accepted Answer: True
+
+========================================================================
+
+WEEK 12 : ASSIGNMENT 12
+Due on 2024-04-17, 23:59 IST
+------------------------------------------------------------------------
+
+1) When sending emotional state data to a cloud-based system, what safety mechanism is typically employed to maintain user privacy?
+   a) Two-factor authentication
+   b) End-to-end encryption
+   c) IP whitelisting
+   d) Data obfuscation
+   Accepted Answer: End-to-end encryption
+
+2) From an ethics perspective, what is a significant concern regarding affect-sensing apps in relation to emotional dependency?
+   a) User engagement
+   b) Privacy intrusion
+   c) Emotional manipulation
+   d) User addiction
+   Accepted Answer: User addiction
+
+3) Accelerometer signals have higher privacy invasiveness intensity as compared to GPS signals.
+   a) True
+   b) False
+   Accepted Answer: False
+
+4) Achieving foolproof anonymization is impossible because all information can be classified as personal when correlated with sufficient other relevant data.
+   a) True
+   b) False
+   Accepted Answer: True
+
+5) In a labeling process, which of the following scenarios minimizes bias and ensures consensus among labellers?
+   a) Labellers are unaware of what they are supposed to label.
+   b) Labellers work independently without any guidance.
+   c) Labellers are aware of what they are supposed to label, and there is consensus among them, with efforts to avoid bias.
+   d) None of the above
+   Accepted Answer: Labellers are aware of what they are supposed to label, and there is consensus among them, with efforts to avoid bias.
+
+6) When designing the test case; Testers' prior training and experiences can affect their feedback and introduce biases into the system.
+   a) True
+   b) False
+   Accepted Answer: True
+
+7) Why is it important for designers to provide clear documentation and contracts regarding app functionalities and data handling?
+   a) To maximize user interaction with the app
+   b) To increase user dependence on the app
+   c) To ensure users understand data recording methods and access rights.
+   d) To limit user access to app features
+   Accepted Answer: To ensure users understand data recording methods and access rights.
+
+8) Which of the following are open issues in the affective computing?
+   a) Inheritance of deception in Affective Computing.
+   b) Should destructive machines be given emotional capabilities?
+   c) Both a and b.
+   d) None of the above.
+   Accepted Answer: Both a and b.
+
+9) Before deploying emotion-enabled targeting advertisements, it is essential to study the effects from both the user's perspective and the advertiser's perspective.
+   a) True
+   b) False
+   Accepted Answer: True
+
+10) Which of the following is in the correct order of their privacy invasiveness.
+    a) Accelerometer > Wifi > Microphone
+    b) Accelerometer > Microphone > Wifi
+    c) Microphone > Wife > Accelerometer
+    d) Microphone > Wifi > Accelerometer
+    Accepted Answer: Microphone > Wifi > Accelerometer
+
+========================================================================

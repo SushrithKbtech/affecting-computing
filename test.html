@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NPTEL Affective Computing — Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ── Variables ─────────────────────────────────────── */
+:root {
+  --bg:          #0b0d12;
+  --bg2:         #0f1119;
+  --surface:     #13161f;
+  --surface2:    #191d29;
+  --border:      #1e2335;
+  --border2:     #262d44;
+  --accent:      #e8a020;
+  --accent-dim:  #c47f10;
+  --accent-glow: rgba(232,160,32,0.12);
+  --accent-glow2:rgba(232,160,32,0.06);
+  --text:        #dde3f0;
+  --text2:       #7d8aab;
+  --text3:       #454f6b;
+  --ok:          #3ecf8e;
+  --ok-bg:       rgba(62,207,142,0.08);
+  --err:         #f06a6a;
+  --err-bg:      rgba(240,106,106,0.08);
+  --info:        #5b9ef5;
+  --sidebar:     240px;
+  --hh:          58px;
+  --radius:      8px;
+  --mono:        'JetBrains Mono', monospace;
+  --display:     'Syne', sans-serif;
+}
+
+/* ── Reset ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 14px; }
+body {
+  font-family: var(--mono);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+button { font-family: var(--mono); cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+/* ── Header ─────────────────────────────────────────── */
+#header {
+  position: sticky; top: 0; z-index: 100;
+  height: var(--hh);
+  background: rgba(11,13,18,0.9);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px;
+}
+.h-brand {
+  display: flex; align-items: center; gap: 11px;
+}
+.h-logo {
+  width: 34px; height: 34px; border-radius: 7px;
+  background: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 800; font-size: 15px; color: #000;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+.h-name {
+  font-family: var(--display); font-weight: 700; font-size: 14px;
+  letter-spacing: 0.2px;
+}
+.h-name em { color: var(--accent); font-style: normal; }
+.h-right { display: flex; align-items: center; gap: 10px; }
+.h-badge {
+  font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px;
+  border: 1px solid var(--border2); color: var(--text3);
+}
+#themeBtn {
+  background: var(--surface2); border: 1px solid var(--border2);
+  color: var(--text2); font-size: 12px; padding: 6px 12px;
+  border-radius: var(--radius); transition: all .18s;
+}
+#themeBtn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── Layout ─────────────────────────────────────────── */
+#app {
+  display: flex;
+  height: calc(100vh - var(--hh));
+}
+
+/* ── Sidebar ─────────────────────────────────────────── */
+#sidebar {
+  width: var(--sidebar);
+  flex-shrink: 0;
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.sb-section { padding: 16px 14px; border-bottom: 1px solid var(--border); }
+.sb-label {
+  font-size: 9px; letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--text3); font-weight: 600; margin-bottom: 10px;
+}
+/* Year pills */
+.year-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+.yp {
+  padding: 4px 11px; border-radius: 5px; font-size: 12px; font-weight: 600;
+  border: 1px solid var(--border2); color: var(--text2);
+  background: transparent; transition: all .15s;
+}
+.yp:hover { border-color: var(--accent); color: var(--accent); }
+.yp.on { background: var(--accent); border-color: var(--accent); color: #000; }
+
+/* Week list */
+#weekList {
+  flex: 1; overflow-y: auto; padding: 10px 8px;
+}
+.wbtn {
+  width: 100%; text-align: left;
+  padding: 7px 10px 7px 12px;
+  background: transparent; border: none; color: var(--text2);
+  font-size: 12px; cursor: pointer;
+  border-radius: 6px; transition: all .14s;
+  display: flex; align-items: center; gap: 9px;
+  margin-bottom: 1px;
+}
+.wbtn:hover { background: var(--surface2); color: var(--text); }
+.wbtn.on {
+  background: var(--accent-glow);
+  color: var(--accent);
+  border-left: 2px solid var(--accent);
+  padding-left: 10px;
+}
+.wbtn .wn {
+  font-size: 9px; background: var(--border); color: var(--text3);
+  padding: 1px 5px; border-radius: 3px; min-width: 20px;
+  text-align: center; transition: all .14s; flex-shrink: 0;
+}
+.wbtn.on .wn { background: var(--accent); color: #000; }
+.wbtn-sep { height: 1px; background: var(--border); margin: 8px 4px; }
+
+/* ── Main ────────────────────────────────────────────── */
+#main {
+  flex: 1; overflow-y: auto;
+  padding: 32px 36px;
+}
+
+/* ── Loading / Error ─────────────────────────────────── */
+.loader {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; height: 60vh; gap: 16px;
+}
+.spinner {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 3px solid var(--border2);
+  border-top-color: var(--accent);
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loader-text { font-size: 12px; color: var(--text3); }
+.error-box {
+  background: var(--err-bg); border: 1px solid rgba(240,106,106,.25);
+  border-radius: var(--radius); padding: 20px 24px;
+  max-width: 540px; margin: 40px auto;
+}
+.error-box h3 { color: var(--err); font-family: var(--display); margin-bottom: 8px; }
+.error-box p { font-size: 12px; color: var(--text2); line-height: 1.7; }
+.error-box code {
+  display: block; margin-top: 10px; padding: 8px 10px;
+  background: var(--surface2); border-radius: 4px;
+  font-size: 11px; color: var(--text3); word-break: break-all;
+}
+
+/* ── Landing ─────────────────────────────────────────── */
+#landing { animation: fadeUp .4s ease; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.lnd-kicker {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--accent); font-weight: 600; margin-bottom: 14px;
+}
+.lnd-title {
+  font-family: var(--display); font-size: 40px; font-weight: 800;
+  line-height: 1.12; color: var(--text); margin-bottom: 14px;
+  max-width: 520px;
+}
+.lnd-title span { color: var(--accent); }
+.lnd-sub {
+  font-size: 13px; color: var(--text2); line-height: 1.85;
+  max-width: 460px; margin-bottom: 32px;
+}
+.lnd-stats {
+  display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 36px;
+}
+.stat { display: flex; flex-direction: column; gap: 3px; }
+.stat-n {
+  font-family: var(--display); font-size: 28px; font-weight: 800;
+  color: var(--accent); line-height: 1;
+}
+.stat-l { font-size: 11px; color: var(--text3); }
+.lnd-years {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: 14px; max-width: 700px;
+}
+.year-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 22px 24px; cursor: pointer;
+  transition: all .2s;
+}
+.year-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 24px var(--accent-glow2);
+  transform: translateY(-2px);
+}
+.yc-year {
+  font-family: var(--display); font-size: 38px; font-weight: 800;
+  color: var(--accent); line-height: 1; margin-bottom: 8px;
+}
+.yc-meta { font-size: 11px; color: var(--text3); line-height: 1.7; }
+.yc-loading .yc-year { color: var(--text3); }
+
+/* ── All-weeks grid ──────────────────────────────────── */
+.wk-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px; margin-top: 4px;
+}
+.wk-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 9px; padding: 16px 18px; cursor: pointer; transition: all .18s;
+}
+.wk-card:hover { border-color: var(--accent); }
+.wk-card:hover .wkc-n { color: var(--accent); }
+.wkc-n {
+  font-family: var(--display); font-size: 26px; font-weight: 800;
+  color: var(--text3); line-height: 1; margin-bottom: 8px; transition: color .18s;
+}
+.wkc-meta { font-size: 11px; color: var(--text3); }
+
+/* ── Page header ─────────────────────────────────────── */
+.pg-hd { margin-bottom: 24px; animation: fadeUp .3s ease; }
+.pg-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.pg-tag {
+  font-size: 9px; letter-spacing: 1.4px; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px;
+  border: 1px solid var(--border2); color: var(--text3);
+}
+.pg-title {
+  font-family: var(--display); font-size: 26px; font-weight: 800;
+  line-height: 1.2; color: var(--text);
+}
+.pg-title span { color: var(--accent); }
+.pg-meta { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+/* ── Score banner ────────────────────────────────────── */
+.score-banner {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  padding: 14px 20px; margin-bottom: 24px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius);
+  animation: fadeUp .3s ease;
+}
+.score-num {
+  font-family: var(--display); font-size: 32px; font-weight: 800;
+  line-height: 1;
+}
+.score-num.good { color: var(--ok); }
+.score-num.bad  { color: var(--err); }
+.score-num.mid  { color: var(--accent); }
+.score-info { display: flex; flex-direction: column; gap: 2px; }
+.score-label { font-size: 11px; color: var(--text2); }
+.score-pct { font-size: 11px; color: var(--text3); }
+.score-bar-wrap { flex: 1; min-width: 140px; }
+.score-bar-bg {
+  height: 5px; background: var(--border); border-radius: 3px; overflow: hidden;
+}
+.score-bar-fill {
+  height: 100%; border-radius: 3px; transition: width .8s cubic-bezier(.4,0,.2,1);
+}
+.score-bar-fill.good { background: var(--ok); }
+.score-bar-fill.bad  { background: var(--err); }
+.score-bar-fill.mid  { background: var(--accent); }
+
+/* ── Question list ───────────────────────────────────── */
+#qlist { animation: fadeUp .3s ease; }
+
+/* ── Question card ───────────────────────────────────── */
+.qcard {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; margin-bottom: 14px; overflow: hidden;
+  transition: border-color .15s;
+}
+.qcard:hover { border-color: var(--border2); }
+.qcard.is-correct { border-color: rgba(62,207,142,.35); }
+.qcard.is-wrong   { border-color: rgba(240,106,106,.35); }
+
+.qcard-head {
+  padding: 14px 18px 11px;
+  border-bottom: 1px solid var(--border);
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.qcard-num {
+  font-size: 9px; font-weight: 600; letter-spacing: .6px;
+  background: var(--border); color: var(--text3);
+  padding: 2px 7px; border-radius: 4px;
+  flex-shrink: 0; margin-top: 3px;
+}
+.qcard-text {
+  font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.7;
+}
+
+.qcard-body { padding: 12px 18px 16px; }
+
+/* ── Option ──────────────────────────────────────────── */
+.opt {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 9px 13px; border-radius: 7px;
+  border: 1px solid var(--border);
+  margin-bottom: 7px; cursor: pointer; transition: all .13s;
+  user-select: none;
+}
+.opt:last-child { margin-bottom: 0; }
+.opt:hover { border-color: var(--border2); background: rgba(255,255,255,.018); }
+.opt.sel {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+.opt.is-correct {
+  border-color: rgba(62,207,142,.5);
+  background: var(--ok-bg);
+}
+.opt.is-wrong {
+  border-color: rgba(240,106,106,.5);
+  background: var(--err-bg);
+}
+
+.opt-radio {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid var(--border2);
+  flex-shrink: 0; margin-top: 2px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .13s;
+}
+.opt.sel .opt-radio { border-color: var(--accent); background: var(--accent); }
+.opt.is-correct .opt-radio { border-color: var(--ok); background: var(--ok); }
+.opt.is-wrong   .opt-radio { border-color: var(--err); background: var(--err); }
+.opt-dot {
+  width: 5px; height: 5px; border-radius: 50%; background: #000;
+  display: none;
+}
+.opt.sel .opt-dot,
+.opt.is-correct .opt-dot,
+.opt.is-wrong   .opt-dot { display: block; }
+
+.opt-lbl { font-size: 11px; font-weight: 600; color: var(--text3); flex-shrink: 0; width: 14px; margin-top: 1px; }
+.opt-text { font-size: 12.5px; color: var(--text); line-height: 1.6; flex: 1; }
+.opt.is-correct .opt-text { color: var(--ok); font-weight: 500; }
+.opt.is-wrong   .opt-text { color: var(--err); }
+
+.opt-badge {
+  font-size: 9px; font-weight: 700; letter-spacing: .5px;
+  padding: 1px 6px; border-radius: 3px; flex-shrink: 0; align-self: center;
+}
+.opt-badge.ok  { background: var(--ok-bg); color: var(--ok); }
+.opt-badge.err { background: var(--err-bg); color: var(--err); }
+
+/* Feedback row below options */
+.qfeedback {
+  margin-top: 11px; padding: 9px 13px;
+  background: rgba(240,106,106,.04);
+  border: 1px solid rgba(240,106,106,.15);
+  border-radius: 6px; font-size: 11.5px; color: var(--text2);
+  line-height: 1.6;
+}
+.qfeedback strong { color: var(--err); }
+
+/* ── Action bar ──────────────────────────────────────── */
+.action-bar {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-top: 28px; padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.btn {
+  padding: 9px 20px; border-radius: var(--radius);
+  font-size: 12.5px; font-weight: 600; border: none; transition: all .18s;
+}
+.btn-primary {
+  background: var(--accent); color: #000;
+}
+.btn-primary:hover {
+  background: #f0b030;
+  box-shadow: 0 4px 16px var(--accent-glow);
+  transform: translateY(-1px);
+}
+.btn-outline {
+  background: transparent; color: var(--text2);
+  border: 1px solid var(--border2);
+}
+.btn-outline:hover { border-color: var(--text); color: var(--text); }
+.btn-danger {
+  background: transparent; color: var(--err);
+  border: 1px solid rgba(240,106,106,.25);
+}
+.btn-danger:hover { background: var(--err-bg); border-color: var(--err); }
+
+/* ── Progress indicator (top of quiz) ───────────────── */
+.progress-row {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 18px;
+}
+.progress-label { font-size: 11px; color: var(--text3); flex-shrink: 0; }
+.progress-bg {
+  flex: 1; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden;
+}
+.progress-fill {
+  height: 100%; background: var(--accent); border-radius: 2px;
+  transition: width .4s ease;
+}
+
+/* ── Light theme ─────────────────────────────────────── */
+body.light {
+  --bg:          #f1f3f8;
+  --bg2:         #eaecf3;
+  --surface:     #ffffff;
+  --surface2:    #f4f5fb;
+  --border:      #dde2ef;
+  --border2:     #c6cee3;
+  --text:        #1b2138;
+  --text2:       #5a6480;
+  --text3:       #8e9ab8;
+  --ok-bg:       rgba(22,163,74,.07);
+  --err-bg:      rgba(220,38,38,.06);
+  --accent-glow: rgba(232,160,32,.1);
+  --accent-glow2:rgba(232,160,32,.06);
+}
+body.light .opt-dot { background: #fff; }
+body.light .h-logo { box-shadow: 0 2px 12px var(--accent-glow); }
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 780px) {
+  #sidebar { display: none; }
+  #main { padding: 18px 16px; }
+  .lnd-title { font-size: 28px; }
+  .action-bar { padding-bottom: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header id="header">
+  <div class="h-brand">
+    <div class="h-logo">AC</div>
+    <div class="h-name">NPTEL <em>Affective Computing</em></div>
+  </div>
+  <div class="h-right">
+    <span class="h-badge">2023–2026</span>
+    <button id="themeBtn">☀ Light</button>
+  </div>
+</header>
+
+<!-- ═══════════════ APP ═══════════════ -->
+<div id="app">
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div class="sb-section">
+      <div class="sb-label">Year</div>
+      <div class="year-pills" id="yearPills"></div>
+    </div>
+    <div id="weekList"></div>
+  </aside>
+
+  <!-- Main content -->
+  <main id="main">
+    <div class="loader" id="loadingScreen">
+      <div class="spinner"></div>
+      <div class="loader-text">Loading quiz data…</div>
+    </div>
+  </main>
+
+</div>
+
+<script>
+'use strict';
+
+/* ──────────────────────────────────────────────────────
+   CONFIG — change these URLs to wherever your files live
+   ────────────────────────────────────────────────────── */
+const DATA_URLS = {
+  '2023': '2023.txt',
+  '2024': '2024.txt',
+  '2025': '2025.txt',
+  '2026': '2026.txt',
+};
+const YEARS = Object.keys(DATA_URLS);
+
+/* ──────────────────────────────────────────────────────
+   STATE
+   ────────────────────────────────────────────────────── */
+const state = {
+  data:        {},          // { '2023': {weeks:[...]}, ... }
+  loadStatus:  {},          // { '2023': 'loading'|'ok'|'error' }
+  activeYear:  null,
+  activeWeek:  null,        // number | 'all'
+  answers:     {},          // { 'YEAR-WEEK-ID': 'a'|'b'|... }
+  submitted:   false,
+  theme:       'dark',
+};
+
+/* ──────────────────────────────────────────────────────
+   DATA LOADING
+   ────────────────────────────────────────────────────── */
+async function loadYear(year) {
+  if (state.loadStatus[year] === 'ok') return true;
+  state.loadStatus[year] = 'loading';
+  try {
+    const res = await fetch(DATA_URLS[year]);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+    state.data[year] = json;
+    state.loadStatus[year] = 'ok';
+    return true;
+  } catch (e) {
+    state.loadStatus[year] = 'error';
+    console.error(`Failed to load ${year}:`, e);
+    return false;
+  }
+}
+
+async function loadAllYears() {
+  await Promise.all(YEARS.map(y => loadYear(y)));
+}
+
+/* ──────────────────────────────────────────────────────
+   HELPERS
+   ────────────────────────────────────────────────────── */
+function answerKey(year, week, qid) {
+  return `${year}-${week}-${qid}`;
+}
+
+function getWeek(year, weekNum) {
+  const d = state.data[year];
+  if (!d) return null;
+  return d.weeks.find(w => w.week === weekNum) || null;
+}
+
+function getAllWeeks(year) {
+  const d = state.data[year];
+  return d ? d.weeks : [];
+}
+
+function scoreForWeek(year, week) {
+  const total = week.questions.length;
+  const correct = week.questions.filter(q => {
+    const k = answerKey(year, week.week, q.id);
+    return state.answers[k] === q.acceptedAnswer;
+  }).length;
+  return { correct, total };
+}
+
+function answeredForWeek(year, week) {
+  return week.questions.filter(q => state.answers[answerKey(year, week.week, q.id)]).length;
+}
+
+function pct(n, t) { return t === 0 ? 0 : Math.round((n / t) * 100); }
+
+function scoreClass(p) {
+  if (p >= 70) return 'good';
+  if (p >= 40) return 'mid';
+  return 'bad';
+}
+
+function fmtDate(d) {
+  if (!d) return '';
+  const dt = new Date(d);
+  if (isNaN(dt)) return d;
+  return dt.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function esc(s) {
+  const d = document.createElement('div');
+  d.textContent = String(s);
+  return d.innerHTML;
+}
+
+/* ──────────────────────────────────────────────────────
+   SIDEBAR RENDER
+   ────────────────────────────────────────────────────── */
+function renderSidebar() {
+  // Year pills
+  const pills = document.getElementById('yearPills');
+  pills.innerHTML = YEARS.map(y => `
+    <button class="yp ${state.activeYear === y ? 'on' : ''}"
+            onclick="selectYear('${y}')">${y}</button>
+  `).join('') + `
+    <button class="yp ${state.activeYear === 'all' ? 'on' : ''}"
+            onclick="selectYear('all')">All</button>`;
+
+  // Week list
+  const wl = document.getElementById('weekList');
+  if (!state.activeYear || state.activeYear === 'all') {
+    wl.innerHTML = '';
+    return;
+  }
+  const year = state.activeYear;
+  const status = state.loadStatus[year];
+  if (status !== 'ok') {
+    wl.innerHTML = `<div style="padding:16px 14px;font-size:11px;color:var(--text3);">${
+      status === 'loading' ? 'Loading…' : 'Failed to load'
+    }</div>`;
+    return;
+  }
+
+  const weeks = getAllWeeks(year);
+  wl.innerHTML = `
+    <div style="padding:12px 14px 4px;">
+      <div class="sb-label">Week</div>
+    </div>
+    ${weeks.map(w => {
+      const ans = answeredForWeek(year, w);
+      const isOn = state.activeWeek === w.week;
+      return `<button class="wbtn ${isOn ? 'on' : ''}" onclick="selectWeek(${w.week})">
+        <span class="wn">${w.week}</span>
+        <span>${'Week ' + w.week}</span>
+        ${ans > 0 && !state.submitted ? `<span style="margin-left:auto;font-size:9px;color:var(--text3)">${ans}/${w.questions.length}</span>` : ''}
+      </button>`;
+    }).join('')}
+    <div class="wbtn-sep"></div>
+    <button class="wbtn ${state.activeWeek === 'all' ? 'on' : ''}" onclick="selectWeek('all')">
+      <span class="wn">★</span>
+      <span>All Weeks</span>
+    </button>
+  `;
+}
+
+/* ──────────────────────────────────────────────────────
+   NAVIGATION
+   ────────────────────────────────────────────────────── */
+async function selectYear(year) {
+  state.submitted = false;
+
+  if (year === 'all') {
+    state.activeYear = 'all';
+    state.activeWeek = null;
+    renderSidebar();
+    renderAllYears();
+    return;
+  }
+
+  state.activeYear = year;
+  state.activeWeek = null;
+  renderSidebar();
+  showLoader();
+
+  const ok = await loadYear(year);
+  if (!ok) {
+    renderError(year);
+    return;
+  }
+
+  // default to week 1
+  const weeks = getAllWeeks(year);
+  if (weeks.length > 0) {
+    state.activeWeek = weeks[0].week;
+  }
+  renderSidebar();
+  renderQuiz();
+}
+
+function selectWeek(week) {
+  state.submitted = false;
+  state.activeWeek = week;
+  renderSidebar();
+  renderQuiz();
+  document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ──────────────────────────────────────────────────────
+   MAIN RENDER DISPATCH
+   ────────────────────────────────────────────────────── */
+function renderQuiz() {
+  const year = state.activeYear;
+  if (!year || year === 'all') { renderAllYears(); return; }
+
+  const week = state.activeWeek;
+  if (!week || week === 'all') { renderWeekGrid(); return; }
+
+  const wk = getWeek(year, week);
+  if (!wk) { renderWeekGrid(); return; }
+
+  renderSingleWeek(year, wk);
+}
+
+/* ──────────────────────────────────────────────────────
+   ALL YEARS LANDING
+   ────────────────────────────────────────────────────── */
+function renderLanding() {
+  const totalLoaded = YEARS.filter(y => state.loadStatus[y] === 'ok').length;
+  const totalQ = YEARS.reduce((acc, y) => {
+    if (state.data[y]) acc += state.data[y].weeks.reduce((a, w) => a + w.questions.length, 0);
+    return acc;
+  }, 0);
+
+  document.getElementById('main').innerHTML = `
+    <div id="landing">
+      <div class="lnd-kicker">NPTEL · IIT Madras</div>
+      <h1 class="lnd-title">Affective<br><span>Computing</span> Quiz</h1>
+      <p class="lnd-sub">
+        Practice all weekly assignments across four years of NPTEL's Affective Computing course.
+        Select a year to begin, or browse all years below.
+      </p>
+      <div class="lnd-stats">
+        <div class="stat"><span class="stat-n">4</span><span class="stat-l">Years</span></div>
+        <div class="stat"><span class="stat-n">48</span><span class="stat-l">Weeks</span></div>
+        <div class="stat"><span class="stat-n">${totalQ || '470+'}</span><span class="stat-l">Questions</span></div>
+      </div>
+      <div class="lnd-years">
+        ${YEARS.map(y => {
+          const ok = state.loadStatus[y] === 'ok';
+          const d  = state.data[y];
+          const wks = ok && d ? d.weeks.length : null;
+          const qs  = ok && d ? d.weeks.reduce((a, w) => a + w.questions.length, 0) : null;
+          return `<div class="year-card ${!ok ? 'yc-loading' : ''}" onclick="selectYear('${y}')">
+            <div class="yc-year">${y}</div>
+            <div class="yc-meta">
+              ${ok ? `${wks} weeks &nbsp;·&nbsp; ${qs} questions` : state.loadStatus[y] === 'loading' ? 'Loading…' : 'Failed to load'}
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`;
+}
+
+function renderAllYears() {
+  const main = document.getElementById('main');
+  main.innerHTML = `
+    <div class="pg-hd">
+      <div class="pg-row"><span class="pg-tag">Overview</span></div>
+      <div class="pg-title">All <span>Years</span></div>
+      <div class="pg-meta">Select a year to start a quiz</div>
+    </div>
+    <div class="lnd-years">
+      ${YEARS.map(y => {
+        const ok = state.loadStatus[y] === 'ok';
+        const d  = state.data[y];
+        const wks = ok && d ? d.weeks.length : null;
+        const qs  = ok && d ? d.weeks.reduce((a, w) => a + w.questions.length, 0) : null;
+        return `<div class="year-card" onclick="selectYear('${y}')">
+          <div class="yc-year">${y}</div>
+          <div class="yc-meta">
+            ${ok ? `${wks} weeks &nbsp;·&nbsp; ${qs} questions`
+                 : state.loadStatus[y] === 'loading' ? 'Loading…' : '<span style="color:var(--err)">Failed to load</span>'}
+          </div>
+        </div>`;
+      }).join('')}
+    </div>`;
+}
+
+/* ──────────────────────────────────────────────────────
+   WEEK GRID
+   ────────────────────────────────────────────────────── */
+function renderWeekGrid() {
+  const year = state.activeYear;
+  const weeks = getAllWeeks(year);
+  document.getElementById('main').innerHTML = `
+    <div class="pg-hd">
+      <div class="pg-row">
+        <span class="pg-tag">${year}</span>
+        <span class="pg-tag">All Weeks</span>
+      </div>
+      <div class="pg-title">Year <span>${year}</span></div>
+      <div class="pg-meta">${weeks.length} assignments</div>
+    </div>
+    <div class="wk-grid">
+      ${weeks.map(w => `
+        <div class="wk-card" onclick="selectWeek(${w.week})">
+          <div class="wkc-n">W${w.week}</div>
+          <div class="wkc-meta">
+            Assignment ${w.assignment}<br>
+            ${w.questions.length} questions<br>
+            Due ${fmtDate(w.dueDate)}
+          </div>
+        </div>`).join('')}
+    </div>`;
+}
+
+/* ──────────────────────────────────────────────────────
+   SINGLE WEEK QUIZ
+   ────────────────────────────────────────────────────── */
+function renderSingleWeek(year, wk) {
+  const main = document.getElementById('main');
+  const questions = wk.questions;
+  const answered = answeredForWeek(year, wk);
+  const { correct, total } = state.submitted ? scoreForWeek(year, wk) : { correct: 0, total: questions.length };
+  const p = pct(correct, total);
+  const sc = scoreClass(p);
+
+  let html = `
+    <div class="pg-hd">
+      <div class="pg-row">
+        <span class="pg-tag">${year}</span>
+        <span class="pg-tag">Week ${wk.week}</span>
+        <span class="pg-tag">Assignment ${wk.assignment}</span>
+      </div>
+      <div class="pg-title">Week <span>${wk.week}</span></div>
+      <div class="pg-meta">Due ${fmtDate(wk.dueDate)} &nbsp;·&nbsp; ${questions.length} questions</div>
+    </div>`;
+
+  // Score banner (after submit)
+  if (state.submitted) {
+    html += `
+      <div class="score-banner">
+        <div>
+          <div class="score-num ${sc}">${correct}/${total}</div>
+        </div>
+        <div class="score-info">
+          <span class="score-label">Questions correct</span>
+          <span class="score-pct">${p}% score</span>
+        </div>
+        <div class="score-bar-wrap">
+          <div class="score-bar-bg">
+            <div class="score-bar-fill ${sc}" style="width:${p}%"></div>
+          </div>
+        </div>
+      </div>`;
+  } else {
+    // Progress bar while answering
+    html += `
+      <div class="progress-row">
+        <span class="progress-label">${answered} / ${total} answered</span>
+        <div class="progress-bg">
+          <div class="progress-fill" style="width:${pct(answered, total)}%"></div>
+        </div>
+      </div>`;
+  }
+
+  html += `<div id="qlist">`;
+  questions.forEach((q, i) => {
+    html += renderQuestion(year, wk.week, q, i + 1);
+  });
+  html += `</div>`;
+
+  // Action buttons
+  if (!state.submitted) {
+    html += `
+      <div class="action-bar">
+        <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>
+        <button class="btn btn-outline" onclick="clearAnswers()">Clear Answers</button>
+      </div>`;
+  } else {
+    html += `
+      <div class="action-bar">
+        <button class="btn btn-primary" onclick="retakeQuiz()">Retake Quiz</button>
+        <button class="btn btn-outline" onclick="selectWeek('all')">All Weeks</button>
+      </div>`;
+  }
+
+  main.innerHTML = html;
+}
+
+/* ──────────────────────────────────────────────────────
+   QUESTION RENDER
+   ────────────────────────────────────────────────────── */
+function renderQuestion(year, weekNum, q, num) {
+  const key = answerKey(year, weekNum, q.id);
+  const userAnswer = state.answers[key];
+  const isAnswered = !!userAnswer;
+  const isCorrect = userAnswer === q.acceptedAnswer;
+
+  let cardClass = '';
+  if (state.submitted && isAnswered) cardClass = isCorrect ? 'is-correct' : 'is-wrong';
+
+  let opts = q.options.map(opt => {
+    let cls = '';
+    if (userAnswer === opt.label) {
+      if (state.submitted) {
+        cls = opt.label === q.acceptedAnswer ? 'is-correct' : 'is-wrong';
+      } else {
+        cls = 'sel';
+      }
+    } else if (state.submitted && opt.label === q.acceptedAnswer) {
+      cls = 'is-correct';
+    }
+
+    const badge = state.submitted
+      ? (opt.label === q.acceptedAnswer
+          ? `<span class="opt-badge ok">✓ Correct</span>`
+          : (userAnswer === opt.label ? `<span class="opt-badge err">✗ Wrong</span>` : ''))
+      : '';
+
+    const disabled = state.submitted ? '' : `onclick="pickAnswer('${year}',${weekNum},${q.id},'${opt.label}')"`;
+    return `
+      <div class="opt ${cls}" ${disabled}>
+        <div class="opt-radio"><div class="opt-dot"></div></div>
+        <span class="opt-lbl">${esc(opt.label)})</span>
+        <span class="opt-text">${esc(opt.text)}</span>
+        ${badge}
+      </div>`;
+  }).join('');
+
+  let feedback = '';
+  if (state.submitted && isAnswered && !isCorrect) {
+    const correctOpt = q.options.find(o => o.label === q.acceptedAnswer);
+    feedback = `
+      <div class="qfeedback">
+        Your answer: <strong>${userAnswer})</strong> — 
+        Correct: <strong>${q.acceptedAnswer}) ${esc(correctOpt ? correctOpt.text : '')}</strong>
+      </div>`;
+  }
+
+  return `
+    <div class="qcard ${cardClass}">
+      <div class="qcard-head">
+        <span class="qcard-num">Q${num}</span>
+        <span class="qcard-text">${esc(q.text)}</span>
+      </div>
+      <div class="qcard-body">
+        ${opts}
+        ${feedback}
+      </div>
+    </div>`;
+}
+
+/* ──────────────────────────────────────────────────────
+   ANSWER ACTIONS
+   ────────────────────────────────────────────────────── */
+function pickAnswer(year, weekNum, qid, label) {
+  if (state.submitted) return;
+  const key = answerKey(year, weekNum, qid);
+  state.answers[key] = label;
+
+  // Re-render just this question's card in-place for performance
+  const wk = getWeek(year, weekNum);
+  if (!wk) return;
+  const q = wk.questions.find(x => x.id === qid);
+  const num = wk.questions.indexOf(q) + 1;
+  if (!q) return;
+
+  // Find existing card and replace
+  const cards = document.querySelectorAll('.qcard');
+  const idx = num - 1;
+  if (cards[idx]) {
+    cards[idx].outerHTML = renderQuestion(year, weekNum, q, num);
+  }
+
+  // Update progress bar
+  const answered = answeredForWeek(year, wk);
+  const total = wk.questions.length;
+  const bar = document.querySelector('.progress-fill');
+  const label2 = document.querySelector('.progress-label');
+  if (bar) bar.style.width = pct(answered, total) + '%';
+  if (label2) label2.textContent = `${answered} / ${total} answered`;
+}
+
+function submitQuiz() {
+  state.submitted = true;
+  renderQuiz();
+  document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function retakeQuiz() {
+  // Clear answers for current week
+  const year = state.activeYear;
+  const wk = getWeek(year, state.activeWeek);
+  if (wk) {
+    wk.questions.forEach(q => {
+      delete state.answers[answerKey(year, wk.week, q.id)];
+    });
+  }
+  state.submitted = false;
+  renderQuiz();
+  document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function clearAnswers() {
+  if (!confirm('Clear all answers for this week?')) return;
+  const year = state.activeYear;
+  const wk = getWeek(year, state.activeWeek);
+  if (wk) {
+    wk.questions.forEach(q => {
+      delete state.answers[answerKey(year, wk.week, q.id)];
+    });
+  }
+  state.submitted = false;
+  renderSidebar();
+  renderQuiz();
+}
+
+/* ──────────────────────────────────────────────────────
+   UTILITIES
+   ────────────────────────────────────────────────────── */
+function showLoader() {
+  document.getElementById('main').innerHTML = `
+    <div class="loader">
+      <div class="spinner"></div>
+      <div class="loader-text">Loading…</div>
+    </div>`;
+}
+
+function renderError(year) {
+  document.getElementById('main').innerHTML = `
+    <div class="error-box">
+      <h3>Failed to load ${year}</h3>
+      <p>Could not fetch quiz data. Make sure the file is accessible at the URL below and is valid JSON.</p>
+      <code>${DATA_URLS[year]}</code>
+    </div>`;
+}
+
+/* ──────────────────────────────────────────────────────
+   THEME TOGGLE
+   ────────────────────────────────────────────────────── */
+function initTheme() {
+  const saved = localStorage.getItem('nptel-theme') || 'dark';
+  applyTheme(saved);
+  document.getElementById('themeBtn').addEventListener('click', () => {
+    applyTheme(state.theme === 'dark' ? 'light' : 'dark');
+  });
+}
+
+function applyTheme(t) {
+  state.theme = t;
+  document.body.classList.toggle('light', t === 'light');
+  document.getElementById('themeBtn').textContent = t === 'dark' ? '☀ Light' : '🌙 Dark';
+  localStorage.setItem('nptel-theme', t);
+}
+
+/* ──────────────────────────────────────────────────────
+   INIT
+   ────────────────────────────────────────────────────── */
+async function init() {
+  initTheme();
+
+  // Start all fetches immediately in parallel
+  YEARS.forEach(y => { state.loadStatus[y] = 'loading'; });
+
+  // Render landing with loading state, then update as data arrives
+  renderLanding();
+  renderSidebar();
+
+  // Kick off all loads concurrently
+  const loads = YEARS.map(async y => {
+    await loadYear(y);
+    // Re-render landing cards as each year resolves
+    if (!state.activeYear) renderLanding();
+  });
+
+  await Promise.all(loads);
+
+  // Done loading — if still on landing, refresh it
+  if (!state.activeYear) {
+    renderLanding();
+  }
+  renderSidebar();
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

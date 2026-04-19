@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NPTEL Affective Computing — Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  * {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  body {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .tab-active {
+    @apply border-b-4 border-primary font-bold text-primary;
+  }
+
+  .tab {
+    @apply px-4 py-3 border-b-4 border-transparent font-semibold hover:border-primary/50 transition-colors;
+  }
+
+  .week-btn-active {
+    @apply bg-primary text-primary-content font-bold;
+  }
+
+  .correct-answer {
+    @apply bg-success bg-opacity-20 border-l-4 border-success p-4 rounded;
+  }
+
+  .wrong-answer {
+    @apply bg-error bg-opacity-20 border-l-4 border-error p-4 rounded;
+  }
+
+  .sidebar-scrollable {
+    @apply max-h-[calc(100vh-200px)] overflow-y-auto;
+  }
+
+  .question-card {
+    @apply bg-base-100 border border-base-300 rounded-lg p-6 mb-6 hover:border-primary hover:shadow-lg transition-all;
+  }
+
+  .question-text {
+    @apply text-lg font-semibold mb-6 text-base-content leading-relaxed;
+  }
+
+  .option-wrapper {
+    @apply mb-4 p-4 border border-base-200 rounded-lg hover:bg-base-200 cursor-pointer transition-colors;
+  }
+
+  .option-wrapper:has(input:checked) {
+    @apply border-primary bg-primary bg-opacity-10;
+  }
+
+  .option-label {
+    @apply flex items-start gap-4 cursor-pointer;
+  }
+
+  .radio-button {
+    @apply w-6 h-6 mt-1 cursor-pointer flex-shrink-0;
+  }
+
+  .option-text {
+    @apply text-base leading-relaxed flex-1;
+  }
+
+  .week-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+
+  .year-card {
+    @apply card bg-base-200 border border-base-300 hover:shadow-lg cursor-pointer transition-all;
+  }
+
+  .year-card:hover {
+    @apply border-primary;
+  }
+
+  .header-title {
+    @apply text-2xl font-bold;
+  }
+
+  .score-display {
+    @apply text-3xl font-bold text-success;
+  }
+
+  .action-buttons {
+    @apply flex gap-4 mt-8 flex-wrap;
+  }
+
+  .btn-custom-primary {
+    @apply px-6 py-3 font-semibold;
+  }
+
+  .spinner {
+    @apply w-8 h-8 border-4 border-base-300 border-t-primary rounded-full animate-spin;
+  }
+
+  .fade-in {
+    @apply animate-fade-in;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+</style>
+</head>
+<body class="bg-base-100">
+<div class="min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-base-200 border-b border-base-300 sticky top-0 z-40">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="badge badge-lg badge-primary font-bold text-lg">AC</div>
+        <div>
+          <h1 class="text-xl font-bold">NPTEL</h1>
+          <p class="text-xs text-base-content/70">Affective Computing</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="badge badge-outline text-xs">2023–2026</span>
+        <select id="themeSelector" class="select select-bordered select-sm w-32">
+          <option value="dim">Dim</option>
+          <option value="cmyk">CMYK</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="flex flex-1 overflow-hidden">
+    <!-- Desktop Sidebar -->
+    <aside class="w-64 bg-base-200 border-r border-base-300 overflow-hidden hidden lg:flex flex-col">
+      <div class="p-4 border-b border-base-300">
+        <h2 class="font-bold text-lg mb-3">Weeks</h2>
+        <div class="sidebar-scrollable">
+          <div class="space-y-2" id="weeksList"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-auto">
+      <div class="container mx-auto px-4 lg:px-6 py-6">
+        <!-- Year Tabs -->
+        <div class="tabs tabs-bordered mb-6 gap-2 overflow-x-auto">
+          <button class="tab tab-active" data-year="landing" onclick="switchYear('landing')">Home</button>
+          <button class="tab" data-year="2023" onclick="switchYear('2023')">2023</button>
+          <button class="tab" data-year="2024" onclick="switchYear('2024')">2024</button>
+          <button class="tab" data-year="2025" onclick="switchYear('2025')">2025</button>
+          <button class="tab" data-year="2026" onclick="switchYear('2026')">2026</button>
+          <button class="tab" data-year="all" onclick="switchYear('all')">All Years</button>
+        </div>
+
+        <!-- Content Area -->
+        <div id="mainContent" class="fade-in"></div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <label for="sidebarToggle" class="btn btn-ghost btn-circle fixed bottom-6 right-6 lg:hidden z-30">☰</label>
+    </main>
+  </div>
+</div>
+
+<!-- Mobile Drawer -->
+<input id="sidebarToggle" type="checkbox" class="drawer-toggle hidden">
+<div class="drawer drawer-end lg:hidden">
+  <div class="drawer-side z-40">
+    <label for="sidebarToggle" class="drawer-overlay"></label>
+    <div class="bg-base-200 w-64 p-4 flex flex-col">
+      <h2 class="font-bold text-lg mb-3">Weeks</h2>
+      <div class="sidebar-scrollable">
+        <div class="space-y-2" id="weeksList-mobile"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+/* ──────────────────────────────────────────────────────
+   CONFIG — change these URLs to wherever your files live
+   ────────────────────────────────────────────────────── */
+const DATA_URLS = {
+  '2023': '2023.txt',
+  '2024': '2024.txt',
+  '2025': '2025.txt',
+  '2026': '2026.txt',
+};
+const YEARS = Object.keys(DATA_URLS);
+
+/* ──────────────────────────────────────────────────────
+   STATE
+   ────────────────────────────────────────────────────── */
+const state = {
+  data:        {},
+  loadStatus:  {},
+  activeYear:  null,
+  activeWeek:  null,
+  answers:     {},
+  submitted:   false,
+  theme:       'dim',
+};
+
+/* ──────────────────────────────────────────────────────
+   DATA LOADING
+   ────────────────────────────────────────────────────── */
+async function loadYear(year) {
+  if (state.loadStatus[year] === 'ok') return true;
+  state.loadStatus[year] = 'loading';
+  try {
+    const res = await fetch(DATA_URLS[year]);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+    state.data[year] = json;
+    state.loadStatus[year] = 'ok';
+    return true;
+  } catch (e) {
+    state.loadStatus[year] = 'error';
+    console.error(`Failed to load ${year}:`, e);
+    return false;
+  }
+}
+
+async function loadAllYears() {
+  await Promise.all(YEARS.map(y => loadYear(y)));
+}
+
+/* ──────────────────────────────────────────────────────
+   HELPERS
+   ────────────────────────────────────────────────────── */
+function answerKey(year, week, qid) {
+  return `${year}-${week}-${qid}`;
+}
+
+function getWeek(year, weekNum) {
+  const d = state.data[year];
+  if (!d) return null;
+  return d.weeks.find(w => w.week === weekNum) || null;
+}
+
+function getAllWeeks(year) {
+  const d = state.data[year];
+  return d ? d.weeks : [];
+}
+
+function scoreForWeek(year, week) {
+  const total = week.questions.length;
+  const correct = week.questions.filter(q => {
+    const k = answerKey(year, week.week, q.id);
+    return state.answers[k] === q.acceptedAnswer;
+  }).length;
+  return { correct, total };
+}
+
+function answeredForWeek(year, week) {
+  return week.questions.filter(q => state.answers[answerKey(year, week.week, q.id)]).length;
+}
+
+function pct(n, t) { return t === 0 ? 0 : Math.round((n / t) * 100); }
+
+function scoreClass(p) {
+  if (p >= 70) return 'good';
+  if (p >= 40) return 'mid';
+  return 'bad';
+}
+
+function fmtDate(d) {
+  if (!d) return '';
+  const dt = new Date(d);
+  if (isNaN(dt)) return d;
+  return dt.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function esc(s) {
+  const d = document.createElement('div');
+  d.textContent = String(s);
+  return d.innerHTML;
+}
+
+/* ──────────────────────────────────────────────────────
+   SIDEBAR RENDER
+   ────────────────────────────────────────────────────── */
+function renderWeeksList() {
+  const weeksList = document.getElementById('weeksList');
+  const weeksListMobile = document.getElementById('weeksList-mobile');
+
+  weeksList.innerHTML = '';
+  weeksListMobile.innerHTML = '';
+
+  if (!state.activeYear || state.activeYear === 'all' || state.activeYear === 'landing') {
+    const placeholder = document.createElement('p');
+    placeholder.className = 'text-sm text-base-content/50 p-3';
+    placeholder.textContent = 'Select a year to view weeks';
+    weeksList.appendChild(placeholder.cloneNode(true));
+    weeksListMobile.appendChild(placeholder.cloneNode(true));
+    return;
+  }
+
+  const status = state.loadStatus[state.activeYear];
+  if (status !== 'ok') {
+    const statusText = status === 'loading' ? 'Loading…' : 'Failed to load';
+    const placeholder = document.createElement('p');
+    placeholder.className = 'text-sm text-base-content/50 p-3';
+    placeholder.textContent = statusText;
+    weeksList.appendChild(placeholder.cloneNode(true));
+    weeksListMobile.appendChild(placeholder.cloneNode(true));
+    return;
+  }
+
+  const weeks = getAllWeeks(state.activeYear);
+  
+  weeks.forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = `btn btn-sm w-full justify-start ${state.activeWeek === w.week ? 'week-btn-active' : 'btn-ghost'}`;
+    btn.textContent = `Week ${w.week}`;
+    btn.onclick = () => selectWeek(w.week);
+    weeksList.appendChild(btn.cloneNode(true));
+    weeksListMobile.appendChild(btn.cloneNode(true));
+  });
+
+  const allBtn = document.createElement('button');
+  allBtn.className = `btn btn-sm w-full justify-start ${state.activeWeek === 'all' ? 'week-btn-active' : 'btn-ghost'}`;
+  allBtn.textContent = 'All Weeks';
+  allBtn.onclick = () => selectWeek('all');
+  weeksList.appendChild(allBtn.cloneNode(true));
+  weeksListMobile.appendChild(allBtn.cloneNode(true));
+}
+
+/* ──────────────────────────────────────────────────────
+   NAVIGATION
+   ────────────────────────────────────────────────────── */
+async function selectYear(year) {
+  state.submitted = false;
+  state.activeYear = year;
+  state.activeWeek = null;
+
+  document.querySelectorAll('[data-year]').forEach(tab => tab.classList.remove('tab-active'));
+  document.querySelector(`[data-year="${year}"]`).classList.add('tab-active');
+
+  if (year !== 'landing' && year !== 'all') {
+    renderWeeksList();
+    const ok = await loadYear(year);
+    if (!ok) {
+      renderError(year);
+      return;
+    }
+    const weeks = getAllWeeks(year);
+    if (weeks.length > 0) {
+      state.activeWeek = weeks[0].week;
+    }
+    renderWeeksList();
+  }
+  renderContent();
+}
+
+function selectWeek(week) {
+  state.submitted = false;
+  state.activeWeek = week;
+  renderWeeksList();
+  renderContent();
+  document.getElementById('sidebarToggle').checked = false;
+  document.getElementById('mainContent').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ──────────────────────────────────────────────────────
+   MAIN RENDER DISPATCH
+   ────────────────────────────────────────────────────── */
+function renderContent() {
+  const year = state.activeYear;
+  
+  if (!year || year === 'landing') {
+    renderLandingPage();
+    return;
+  }
+  
+  if (year === 'all') {
+    renderAllYears();
+    return;
+  }
+
+  const week = state.activeWeek;
+  if (!week || week === 'all') {
+    renderWeekGrid();
+    return;
+  }
+
+  const wk = getWeek(year, week);
+  if (!wk) {
+    renderWeekGrid();
+    return;
+  }
+
+  renderSingleWeek(year, wk);
+}
+
+/* ──────────────────────────────────────────────────────
+   LANDING PAGE
+   ────────────────────────────────────────────────────── */
+function renderLandingPage() {
+  const mainContent = document.getElementById('mainContent');
+  const totalLoaded = YEARS.filter(y => state.loadStatus[y] === 'ok').length;
+  const totalQ = YEARS.reduce((acc, y) => {
+    if (state.data[y]) acc += state.data[y].weeks.reduce((a, w) => a + w.questions.length, 0);
+    return acc;
+  }, 0);
+
+  mainContent.innerHTML = `
+    <div class="card bg-base-200 shadow-lg p-12 mb-12">
+      <div class="text-center">
+        <p class="text-xs font-bold text-primary mb-4 tracking-widest uppercase">NPTEL · IIT Madras</p>
+        <h2 class="text-5xl font-bold mb-6">Affective <span class="text-primary">Computing</span> Quiz</h2>
+        <p class="text-lg mb-8 text-base-content/70 leading-relaxed max-w-xl mx-auto">
+          Practice all weekly assignments across four years of NPTEL's Affective Computing course.
+          Select a year to begin your quiz journey.
+        </p>
+        <div class="flex gap-4 justify-center flex-wrap mb-8">
+          <div class="stat">
+            <div class="stat-value text-primary">4</div>
+            <div class="stat-title">Years</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value text-primary">${totalQ || '470+'}</div>
+            <div class="stat-title">Questions</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value text-primary text-xl">${totalLoaded}/4</div>
+            <div class="stat-title">Loaded</div>
+          </div>
+        </div>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <button class="btn btn-primary btn-lg" onclick="selectYear('2025')">Start Quiz</button>
+          <button class="btn btn-outline btn-lg" onclick="selectYear('all')">View All Years</button>
+        </div>
+      </div>
+    </div>
+    <div class="mb-8">
+      <h3 class="header-title mb-4">Quick Start</h3>
+      <p class="text-base-content/70 mb-6">Select a year to get started:</p>
+    </div>
+    <div class="week-grid">
+      ${YEARS.map(y => {
+        const data = state.data[y];
+        const weeks = data ? Math.max(...data.weeks.map(w => w.week)) : 0;
+        const status = state.loadStatus[y];
+        return `
+          <button onclick="selectYear('${y}')" class="year-card shadow-md hover:shadow-xl p-8 text-left">
+            <h3 class="text-4xl font-bold mb-4 text-primary">${y}</h3>
+            <p class="text-base-content/70 mb-2">Weeks: ${weeks}</p>
+            <p class="text-sm text-base-content/60">Status: ${status === 'ok' ? '✓ Ready' : status === 'loading' ? 'Loading...' : 'Error'}</p>
+          </button>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+/* ──────────────────────────────────────────────────────
+   ALL YEARS VIEW
+   ────────────────────────────────────────────────────── */
+function renderAllYears() {
+  const mainContent = document.getElementById('mainContent');
+  
+  mainContent.innerHTML = `
+    <div class="mb-8">
+      <h2 class="header-title mb-2">All <span class="text-primary">Years</span></h2>
+      <p class="text-base-content/70">Select a year to view assignments</p>
+    </div>
+    <div class="week-grid">
+      ${YEARS.map(y => {
+        const data = state.data[y];
+        const weeks = data ? Math.max(...data.weeks.map(w => w.week)) : 0;
+        const assignments = data ? data.weeks.length : 0;
+        return `
+          <button onclick="selectYear('${y}')" class="year-card shadow-md hover:shadow-xl p-8 text-left">
+            <h3 class="text-3xl font-bold mb-4 text-primary">${y}</h3>
+            <p class="text-base-content/70 mb-2">Weeks: ${weeks}</p>
+            <p class="text-sm text-base-content/60">Assignments: ${assignments}</p>
+          </button>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+/* ──────────────────────────────────────────────────────
+   WEEK GRID
+   ────────────────────────────────────────────────────── */
+function renderWeekGrid() {
+  const year = state.activeYear;
+  const weeks = getAllWeeks(year);
+  const mainContent = document.getElementById('mainContent');
+
+  mainContent.innerHTML = `
+    <div class="mb-8">
+      <h2 class="header-title mb-2">Year <span class="text-primary">${year}</span></h2>
+      <p class="text-base-content/70">${weeks.length} assignments available</p>
+    </div>
+    <div class="week-grid">
+      ${weeks.map(w => `
+        <button onclick="selectWeek(${w.week})" class="year-card shadow-md hover:shadow-xl p-6 text-left">
+          <h3 class="text-2xl font-bold mb-3 text-primary">Week ${w.week}</h3>
+          <p class="text-base-content/70 mb-2">Assignment ${w.assignment}</p>
+          <p class="text-sm text-base-content/60 mb-2">Due: ${fmtDate(w.dueDate)}</p>
+          <p class="text-sm text-base-content/60">${w.questions.length} questions</p>
+        </button>
+      `).join('')}
+    </div>
+  `;
+}
+
+/* ──────────────────────────────────────────────────────
+   SINGLE WEEK QUIZ
+   ────────────────────────────────────────────────────── */
+function renderSingleWeek(year, wk) {
+  const mainContent = document.getElementById('mainContent');
+  const questions = wk.questions;
+  const answered = answeredForWeek(year, wk);
+  const { correct, total } = state.submitted ? scoreForWeek(year, wk) : { correct: 0, total: questions.length };
+  const p = pct(correct, total);
+  const sc = scoreClass(p);
+
+  let html = `
+    <div class="mb-8">
+      <h2 class="header-title mb-2">Week <span class="text-primary">${wk.week}</span></h2>
+      <p class="text-base-content/70">Due: ${fmtDate(wk.dueDate)} • ${questions.length} questions</p>
+  `;
+
+  if (state.submitted) {
+    html += `
+      <div class="alert alert-${sc} mt-4 shadow-lg">
+        <span>
+          <strong>Quiz Result:</strong> You scored <span class="score-display">${correct}/${total}</span> (${p}%)
+        </span>
+      </div>
+    `;
+  } else {
+    const progressPct = pct(answered, questions.length);
+    html += `
+      <div class="mt-4">
+        <div class="flex justify-between text-xs text-base-content/70 mb-2">
+          <span>Progress</span>
+          <span>${answered}/${questions.length} answered</span>
+        </div>
+        <progress class="progress progress-primary" value="${progressPct}" max="100"></progress>
+      </div>
+    `;
+  }
+
+  html += `
+    </div>
+    <div class="space-y-6">
+  `;
+
+  questions.forEach((q, i) => {
+    html += renderQuestion(year, wk.week, q, i + 1);
+  });
+
+  html += `
+    </div>
+    <div class="action-buttons">
+      ${state.submitted ? `
+        <button class="btn btn-primary" onclick="retakeQuiz()">Retake Quiz</button>
+      ` : `
+        <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>
+      `}
+      <button class="btn btn-outline" onclick="clearAnswers()">Clear Answers</button>
+    </div>
+  `;
+
+  mainContent.innerHTML = html;
+}
+
+/* ──────────────────────────────────────────────────────
+   QUESTION RENDER
+   ────────────────────────────────────────────────────── */
+function renderQuestion(year, weekNum, q, num) {
+  const key = answerKey(year, weekNum, q.id);
+  const userAnswer = state.answers[key];
+  const isAnswered = !!userAnswer;
+  const isCorrect = userAnswer === q.acceptedAnswer;
+
+  let optionsHtml = q.options.map(opt => {
+    const isSelected = userAnswer === opt.label;
+    const showCorrect = state.submitted && opt.label === q.acceptedAnswer;
+    const showWrong = state.submitted && isSelected && !isCorrect;
+
+    let className = 'option-wrapper';
+    if (state.submitted) {
+      if (showCorrect) className += ' correct-answer';
+      if (showWrong) className += ' wrong-answer';
+    }
+
+    const disabled = state.submitted ? 'disabled' : '';
+
+    return `
+      <div class="${className}">
+        <label class="option-label">
+          <input type="radio" class="radio-button" name="q${q.id}" value="${opt.label}"
+            ${isSelected ? 'checked' : ''}
+            ${disabled}
+            onchange="pickAnswer('${year}',${weekNum},${q.id},'${opt.label}')">
+          <span class="option-text"><strong>${opt.label})</strong> ${opt.text}</span>
+        </label>
+      </div>
+    `;
+  }).join('');
+
+  let feedback = '';
+  if (state.submitted && isAnswered && !isCorrect) {
+    const correctOpt = q.options.find(o => o.label === q.acceptedAnswer);
+    feedback = `
+      <div class="mt-4 p-4 bg-error/10 rounded border border-error/30">
+        <p class="text-sm text-error"><strong>Your answer:</strong> ${userAnswer}</p>
+        <p class="text-sm text-error"><strong>Correct answer:</strong> ${q.acceptedAnswer}</p>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="question-card">
+      <div class="mb-4">
+        <div class="flex gap-3 mb-4">
+          <span class="badge badge-outline">Q${num}</span>
+        </div>
+        <p class="question-text">${q.text}</p>
+      </div>
+      <div class="space-y-3">
+        ${optionsHtml}
+      </div>
+      ${feedback}
+    </div>
+  `;
+}
+
+/* ──────────────────────────────────────────────────────
+   ANSWER ACTIONS
+   ────────────────────────────────────────────────────── */
+function pickAnswer(year, weekNum, qid, label) {
+  if (state.submitted) return;
+  const key = answerKey(year, weekNum, qid);
+  state.answers[key] = label;
+
+  // Re-render just this question's card in-place for performance
+  const wk = getWeek(year, weekNum);
+  if (!wk) return;
+  const q = wk.questions.find(x => x.id === qid);
+  const num = wk.questions.indexOf(q) + 1;
+  if (!q) return;
+
+  // Find existing card and replace
+  const cards = document.querySelectorAll('.qcard');
+  const idx = num - 1;
+  if (cards[idx]) {
+    cards[idx].outerHTML = renderQuestion(year, weekNum, q, num);
+  }
+
+  // Update progress bar
+  const answered = answeredForWeek(year, wk);
+  const total = wk.questions.length;
+  const bar = document.querySelector('.progress-fill');
+  const label2 = document.querySelector('.progress-label');
+  if (bar) bar.style.width = pct(answered, total) + '%';
+  if (label2) label2.textContent = `${answered} / ${total} answered`;
+}
+
+function submitQuiz() {
+  state.submitted = true;
+  renderQuiz();
+  document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function retakeQuiz() {
+  // Clear answers for current week
+  const year = state.activeYear;
+  const wk = getWeek(year, state.activeWeek);
+  if (wk) {
+    wk.questions.forEach(q => {
+      delete state.answers[answerKey(year, wk.week, q.id)];
+    });
+  }
+  state.submitted = false;
+  renderQuiz();
+  document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function clearAnswers() {
+  if (!confirm('Clear all answers for this week?')) return;
+  const year = state.activeYear;
+  const wk = getWeek(year, state.activeWeek);
+  if (wk) {
+    wk.questions.forEach(q => {
+      delete state.answers[answerKey(year, wk.week, q.id)];
+    });
+  }
+  state.submitted = false;
+  renderSidebar();
+  renderQuiz();
+}
+
+/* ──────────────────────────────────────────────────────
+   UTILITIES
+   ────────────────────────────────────────────────────── */
+function showLoader() {
+  document.getElementById('main').innerHTML = `
+    <div class="loader">
+      <div class="spinner"></div>
+      <div class="loader-text">Loading…</div>
+    </div>`;
+}
+
+function renderError(year) {
+  document.getElementById('main').innerHTML = `
+    <div class="error-box">
+      <h3>Failed to load ${year}</h3>
+      <p>Could not fetch quiz data. Make sure the file is accessible at the URL below and is valid JSON.</p>
+      <code>${DATA_URLS[year]}</code>
+    </div>`;
+}
+
+/* ──────────────────────────────────────────────────────
+   THEME TOGGLE
+   ────────────────────────────────────────────────────── */
+function initTheme() {
+  const saved = localStorage.getItem('nptel-theme') || 'dark';
+  applyTheme(saved);
+  document.getElementById('themeBtn').addEventListener('click', () => {
+    applyTheme(state.theme === 'dark' ? 'light' : 'dark');
+  });
+}
+
+function applyTheme(t) {
+  state.theme = t;
+  document.body.classList.toggle('light', t === 'light');
+  document.getElementById('themeBtn').textContent = t === 'dark' ? '☀ Light' : '🌙 Dark';
+  localStorage.setItem('nptel-theme', t);
+}
+
+/* ──────────────────────────────────────────────────────
+   INIT
+   ────────────────────────────────────────────────────── */
+async function init() {
+  initTheme();
+
+  // Start all fetches immediately in parallel
+  YEARS.forEach(y => { state.loadStatus[y] = 'loading'; });
+
+  // Render landing with loading state, then update as data arrives
+  renderLanding();
+  renderSidebar();
+
+  // Kick off all loads concurrently
+  const loads = YEARS.map(async y => {
+    await loadYear(y);
+    // Re-render landing cards as each year resolves
+    if (!state.activeYear) renderLanding();
+  });
+
+  await Promise.all(loads);
+
+  // Done loading — if still on landing, refresh it
+  if (!state.activeYear) {
+    renderLanding();
+  }
+  renderSidebar();
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
